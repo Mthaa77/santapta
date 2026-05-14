@@ -73,7 +73,7 @@ export default function MedicalAidSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/10 text-sanca-gold-dark text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/15 text-sanca-gold-dark dark:text-sanca-gold text-sm font-semibold mb-4 shadow-sm border border-sanca-gold/20">
             <CreditCard className="h-4 w-4" />
             Costs & Medical Aid
           </span>

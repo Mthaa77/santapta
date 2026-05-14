@@ -911,3 +911,230 @@ Stage Summary:
   3. Performance optimization (lazy load chart components, optimize images)
   4. Add crisis intervention sticky banner
   5. Add more scroll-reveal animations and micro-interactions
+---
+Task ID: 7-a
+Agent: Frontend Developer — Myths Section
+Task: Build an Interactive Myths vs Facts Section
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections)
+- Studied existing component patterns (DiagnosisTips for animation/Card conventions, globals.css for utility classes)
+- Verified all required lucide-react icons exist (Lightbulb, X, CheckCircle2, ChevronDown, AlertTriangle)
+- Created /home/z/my-project/src/components/sanca/MythsSection.tsx (~195 lines):
+  - Section ID `myths` with white background, decorative sage gradient orbs, and section-top-gradient
+  - Section header with Lightbulb badge ("Myth Busters"), heading "The Truth About Addiction" with text-gradient-gold, subtitle about dispelling misconceptions
+  - 8 South Africa-contextual myth cards in 2-column grid (md:grid-cols-2), 1-column on mobile:
+    1. "Addiction is a choice — you just need willpower" → Addiction is a chronic brain disease
+    2. "Only hard drugs like heroin are addictive" → Alcohol, prescription medication, and even dagga can be addictive
+    3. "You can't be addicted if you have a job" → High-functioning addiction is real and dangerous
+    4. "Rehab is only for wealthy people" → SANCA is a non-profit, DSD-registered organisation
+    5. "Once an addict, always an addict" → Recovery is possible and sustainable
+    6. "Dagga is harmless — it's just a plant" → Modern dagga potency is 3–5× stronger
+    7. "Sending someone to rehab against their will doesn't work" → Research shows involuntary treatment can be effective
+    8. "You have to hit rock bottom before getting help" → Early intervention leads to better outcomes
+  - Collapsed state: Red-tinted left border, "MYTH" badge (red bg, X icon), myth statement, ChevronDown indicator
+  - Expanded state: Myth struck through in red + FACT section (green left border, green bg, "FACT" badge with CheckCircle2, fact statement, detailed explanation, collapse hint)
+  - Smooth height animation using framer-motion AnimatePresence on the fact detail area
+  - useState with Set<number> for tracking multiple expanded cards (toggle)
+  - whileInView entrance animations with staggered delays
+  - hover-lift on all cards
+- Bottom CTA: "Know the facts. Save a life." card with "Get Help Now" button scrolling to #contact
+- Added MythsSection import and placement in page.tsx (after DiagnosisTips, before MedicalAidSection)
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- MythsSection component created at src/components/sanca/MythsSection.tsx (~195 lines)
+- 8 interactive myth/fact cards with South Africa-contextual content
+- Framer Motion AnimatePresence for smooth expand/collapse animations
+- SANCA brand identity throughout (forest green, warm gold, cream, sage)
+- Mobile responsive with 1-column on mobile, 2-column on desktop
+- hover-lift effect on cards, whileInView entrance animations with staggered delays
+- Component integrated into page.tsx between DiagnosisTips and MedicalAidSection
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 7-b
+Agent: Crisis Banner Developer
+Task: Build Crisis Intervention Sticky Banner
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections/features)
+- Reviewed FloatingActions.tsx (bottom-6 right-4, z-50) and ChatBot.tsx (bottom-6 left-6, z-50) positioning to avoid overlap
+- Reviewed globals.css for SANCA brand color variables (sanca-green, sanca-green-dark, sanca-gold, sanca-gold-dark)
+- Created /home/z/my-project/src/components/sanca/CrisisBanner.tsx with:
+  - Fixed position at bottom-20 sm:bottom-24, z-40 (below FloatingActions/ChatBot at z-50, positioned above them visually)
+  - Slides up from bottom using framer-motion with spring animation (stiffness: 300, damping: 30)
+  - AnimatePresence for smooth enter/exit transitions
+  - Appears when scrollY > 800px, hides when scrollY <= 800px
+  - Background: Gradient from sanca-green-dark to sanca-green with backdrop-blur-md
+  - Left side: AlertTriangle icon (sanca-gold) + "Need immediate help?" text (white, truncated on small screens)
+  - Right side: Two compact action buttons:
+    - "Call 012 542 1121" (Phone icon, white bg, green text, rounded-full, tel: link)
+    - "WhatsApp" (MessageCircle icon, sanca-gold bg, white text, rounded-full, wa.me link)
+  - Close button (X icon, white/50, hover white, rounded-full hover:bg-white/10)
+  - Positioned absolute on mobile (top-right), static on desktop (inline with buttons)
+  - Session-based dismissal using sessionStorage (key: sanca_crisis_banner_dismissed)
+  - Lazy state initialization via useState(() => ...) to read sessionStorage without useEffect setState
+  - useCallback for scroll handler to avoid unnecessary re-renders
+  - Gold bottom border (1px h-px bg-sanca-gold)
+  - role="alert" and aria-label for accessibility
+  - Mobile responsive: text truncates, buttons use min-h-[36px] for touch targets
+- Updated /home/z/my-project/src/app/page.tsx:
+  - Added CrisisBanner import from '@/components/sanca/CrisisBanner'
+  - Placed after ChatBot component (before closing </div>)
+- Fixed lint error: Moved sessionStorage check from useEffect (react-hooks/set-state-in-effect) to useState lazy initializer
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- CrisisBanner component created at src/components/sanca/CrisisBanner.tsx (~70 lines)
+- Dismissible sticky banner with one-click emergency access (Call + WhatsApp)
+- Positioned at bottom-20/24 to avoid overlap with FloatingActions (right) and ChatBot (left)
+- Session-based dismissal: auto-shows again on new browser session, stays dismissed within session
+- Scroll-triggered: appears after user scrolls past hero section (>800px)
+- SANCA brand identity: green gradient, gold accents, AlertTriangle icon
+- Mobile responsive with touch-friendly button sizes
+- Component integrated into page.tsx after ChatBot
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 7-c
+Agent: Dark Mode & CSS Enhancement Developer
+Task: Add comprehensive dark mode to components and premium CSS effects
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11, plus Phase 4-5 completed: ultra-premium SANCA website with 21+ sections)
+- Read all 6 target component files and globals.css (1533 lines of existing styles)
+- Added dark mode Tailwind classes to 6 component files:
+
+  **AboutSection.tsx**:
+  - Section background: `dark:bg-[#0a2a18]`
+  - Headings: `dark:text-white` on main heading, Values heading, Heritage heading
+  - Descriptions: `dark:text-white/70` on all muted-foreground paragraphs
+  - Badge: `dark:bg-sanca-gold/15 dark:text-sanca-gold`
+  - Value cards: `dark:bg-[#0D3B22]`
+  - Timeline cards: `dark:bg-[#0D3B22]`
+
+  **DiagnosisTips.tsx**:
+  - Section background: `dark:bg-[#0a2a18]`
+  - Badge: `dark:bg-sanca-gold/15 dark:text-sanca-gold`
+  - Heading: `dark:text-white`, description: `dark:text-white/70`
+  - Inactive category buttons: `dark:bg-[#0D3B22]`
+  - Expanded detail Card: `dark:bg-[#0D3B22]`
+
+  **ProgrammesSection.tsx**:
+  - Section background: `dark:bg-[#0a2a18]`
+  - Badge: `dark:bg-sanca-gold/15 dark:text-sanca-gold`
+  - Heading: `dark:text-white`, description: `dark:text-white/70`
+  - Active tab: `dark:bg-sanca-gold dark:text-white`
+  - Inactive tab: `dark:bg-[#0D3B22]`
+  - Content Card: `dark:bg-[#0D3B22]`
+  - Features text: `dark:text-white/70`
+
+  **FacilitiesSection.tsx**:
+  - Section background: `dark:bg-[#0a2a18]`
+  - Badge: `dark:bg-sanca-gold/15 dark:text-sanca-gold`
+  - Heading: `dark:text-white`, description: `dark:text-white/70`
+  - Facility Cards: `dark:bg-[#0D3B22]`
+
+  **FAQSection.tsx**:
+  - Section background: `dark:bg-[#0a2a18]`
+  - Badge: `dark:bg-sanca-gold/15 dark:text-sanca-gold`
+  - Heading: `dark:text-white`, description: `dark:text-white/70`
+  - Category heading: `dark:text-white`
+  - FAQ Card: `dark:bg-[#0D3B22]`
+
+  **ContactSection.tsx**:
+  - Section background: `dark:bg-[#0a2a18]`
+  - Form Card: `dark:bg-[#0D3B22]`
+  - All input fields (5): `dark:bg-[#1a3a25] dark:border-sanca-green/30 dark:text-white`
+  - Contact cards: `dark:bg-[#0D3B22]`
+
+- Appended premium CSS effects to globals.css after all existing content (no modifications to previous styles):
+  - `.glow-green` — Green box-shadow glow
+  - `.glow-gold` — Gold box-shadow glow
+  - `.text-glow-gold` — Gold text-shadow glow
+  - `.transition-premium` — all 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+  - `.transition-spring` — all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) bouncy
+  - `.scroll-dot` — 8px circular dot with transition
+  - `.scroll-dot-active` — Active dot with gold bg and scale
+  - `.dark .crisis-banner` — Darker background variant for crisis banner
+  - `@media print` block — Hides nav, floating actions, chat, page loader, scroll progress; reformats for print with page breaks, simple card borders, URL display for links
+
+- Ran ESLint — zero errors
+- Verified dev server compiles successfully (HTTP 200 response)
+
+Stage Summary:
+- 6 component files updated with comprehensive dark mode Tailwind classes
+- Dark mode uses consistent color palette: #0a2a18 (section bg), #0D3B22 (card bg), #1a3a25 (input bg), sanca-gold (badges/active states), white/70 (muted text)
+- 9 new CSS utility classes added to globals.css (glow effects, transitions, scroll dots, crisis banner dark mode, print styles)
+- All new styles appended after existing content — zero modifications to previous CSS
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 13
+Agent: Cron Review Agent (Phase 7)
+Task: QA testing, bug fixes, dark mode expansion, new features (Myths, Crisis Banner)
+
+Work Log:
+- Read worklog.md to assess project status (Tasks 1-12 completed: ultra-premium SANCA website with 27+ sections)
+- Performed comprehensive QA using agent-browser with VLM screenshot analysis at 4 scroll positions
+- QA findings: low-contrast section badge in MedicalAid, FABs already have aria-labels, no critical JS errors
+- **Bug Fix**: MedicalAidSection badge contrast — increased bg opacity from /10 to /15, added font-semibold, shadow-sm, border, and dark:text-sanca-gold variant
+- **New Feature**: MythsSection component (228 lines) with:
+  - Interactive "Myth Busters" section with 8 South Africa-contextual myths vs facts
+  - Expandable cards with red MYTH badge / green FACT badge
+  - Struck-through myth text with green-bordered fact explanations
+  - Framer Motion AnimatePresence for smooth expand/collapse
+  - whileInView entrance animations with staggered delays
+  - Bottom CTA: "Know the facts. Save a life." scrolling to #contact
+- **New Feature**: CrisisBanner component (98 lines) with:
+  - Fixed-position sticky crisis banner at bottom-20/bottom-24 (above FABs)
+  - Appears when scrollY > 800px, slides up with spring animation
+  - Gradient green background with backdrop-blur
+  - "Need immediate help?" text with AlertTriangle icon
+  - Call and WhatsApp compact pill buttons
+  - Dismiss button with sessionStorage persistence (session-only, resets on new visit)
+  - role="alert" and aria-label for accessibility
+  - Mobile responsive with proper touch targets
+  - Gold bottom border accent
+- **Dark Mode Expansion**: Added dark: Tailwind classes to 6 major components:
+  - AboutSection: dark section bg, headings, descriptions, badge, cards
+  - DiagnosisTips: dark section bg, badge, buttons, expanded cards
+  - ProgrammesSection: dark section bg, active/inactive tabs, content cards, features
+  - FacilitiesSection: dark section bg, facility cards
+  - FAQSection: dark section bg, FAQ cards, category headings
+  - ContactSection: dark section bg, form card, contact cards, all 5 input fields
+- **Premium CSS Effects** appended to globals.css:
+  - Glow effects: .glow-green, .glow-gold, .text-glow-gold
+  - Premium transitions: .transition-premium, .transition-spring
+  - Scroll indicator dots: .scroll-dot, .scroll-dot-active
+  - Dark mode crisis banner: .dark .crisis-banner
+  - Enhanced print styles: @media print block hiding nav/FAB/chat/loader
+- All 3 parallel agents completed successfully
+- Ran final lint check — zero errors
+- Verified dev server — all pages compile with 200 status codes
+
+Stage Summary:
+- **Current project status**: Ultra-premium SANCA Pretoria website with 30+ sections/features, all rendering correctly
+- **Completed modifications this phase**:
+  - New MythsSection interactive myth-busting cards (8 SA-contextual myths)
+  - New CrisisBanner sticky intervention banner with emergency buttons
+  - Dark mode expanded to 6 additional major components (About, Diagnosis, Programmes, Facilities, FAQ, Contact)
+  - MedicalAidSection badge contrast fix
+  - 6 new premium CSS utilities (glow effects, transitions, scroll dots, print styles)
+- **Full component list** (30+ sections/features):
+  PageLoader, ScrollProgress, Navbar (dark mode), Hero, SelfAssessment (celebration), RecoveryVisualizer, DiagnosisTips (dark mode), MythsSection, MedicalAid (contrast fix), About (dark mode), Team, RecoveryJourney, Programmes (dark mode), Facilities (dark mode), Admissions, PackingList, DrugSeverityMeter, DrugInfo, DrugStats (3 charts), Families (flip cards), ResourceLibrary, Events, FAQ (dark mode), Testimonials, SuccessStories, SobrietyCalculator, Volunteer, Newsletter, ContactSection (dark mode), EmergencyCTA, CrisisBanner, ChatBot (AI), FloatingActions, Footer (dark mode), ThemeToggle
+- **Component file count**: 36 files, 9,726 total lines
+- **Unresolved issues/risks**:
+  - Non-critical framer-motion scroll position warning in console (cosmetic only)
+  - Dark mode still needs expansion to remaining sections (SelfAssessment, DrugInfo, DrugStats, Families, etc.)
+  - Very long page (~33K px) could benefit from section navigation indicators
+- **Priority recommendations for next phase**:
+  1. Expand dark mode to remaining sections (SelfAssessment, DrugInfo, DrugStats, Families, etc.)
+  2. Add section navigation dots/scrollspy for orientation on long page
+  3. Performance optimization (lazy load chart components with React.lazy/Suspense)
+  4. Add Google Maps embed for each facility location
+  5. Add PWA capabilities (manifest.json, service worker)
+  6. Add privacy policy/terms page content

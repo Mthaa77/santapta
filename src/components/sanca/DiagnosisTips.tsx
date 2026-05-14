@@ -133,7 +133,7 @@ export default function DiagnosisTips() {
   const [activeTip, setActiveTip] = useState<string | null>(null);
 
   return (
-    <section className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden section-top-gradient">
+    <section className="py-20 sm:py-28 bg-sanca-cream dark:bg-[#0a2a18] relative overflow-hidden section-top-gradient">
       <div className="absolute top-0 left-0 w-80 h-80 bg-sanca-gold/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -145,14 +145,14 @@ export default function DiagnosisTips() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/10 text-sanca-gold-dark text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/10 dark:bg-sanca-gold/15 text-sanca-gold-dark dark:text-sanca-gold text-sm font-medium mb-4">
             <Lightbulb className="h-4 w-4" />
             Recognition & Guidance
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
             Spot the <span className="text-gradient-gold">Warning Signs</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
             Whether you&apos;re concerned about yourself, a loved one, a colleague, or your child —
             knowing what to look for is the first step.
           </p>
@@ -173,7 +173,7 @@ export default function DiagnosisTips() {
               className={`p-5 rounded-2xl border-2 text-left transition-all duration-300 ${
                 activeTip === tip.id
                   ? `${tip.bgColor} ${tip.borderColor} shadow-premium-md`
-                  : 'bg-white border-gray-100 shadow-premium-sm hover:shadow-premium-md'
+                  : 'bg-white dark:bg-[#0D3B22] border-gray-100 shadow-premium-sm hover:shadow-premium-md'
               }`}
             >
               <div className={`w-10 h-10 rounded-xl ${tip.bgColor} flex items-center justify-center mb-3 ${tip.color}`}>
@@ -198,7 +198,7 @@ export default function DiagnosisTips() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <Card className={`shadow-premium-lg border-2 ${tip.borderColor} overflow-hidden`}>
+                <Card className={`shadow-premium-lg dark:bg-[#0D3B22] border-2 ${tip.borderColor} overflow-hidden`}>
                   <div className={`${tip.bgColor} p-6 border-b ${tip.borderColor}`}>
                     <div className="flex items-center gap-3">
                       <div className={`w-12 h-12 rounded-xl ${tip.bgColor} flex items-center justify-center ${tip.color}`}>

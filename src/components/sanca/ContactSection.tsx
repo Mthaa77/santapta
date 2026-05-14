@@ -172,7 +172,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-20 sm:py-28 bg-sanca-cream overflow-hidden section-top-gradient"
+      className="relative py-20 sm:py-28 bg-sanca-cream dark:bg-[#0a2a18] overflow-hidden section-top-gradient"
     >
       {/* Decorative gradient orbs */}
       <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-sanca-green/5 blur-3xl pointer-events-none" />
@@ -234,7 +234,7 @@ export default function ContactSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <Card className="p-6 sm:p-8 shadow-premium-md border-sanca-green/5 relative overflow-hidden">
+            <Card className="p-6 sm:p-8 shadow-premium-md dark:bg-[#0D3B22] border-sanca-green/5 relative overflow-hidden">
               {/* Gold top accent */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
@@ -307,7 +307,7 @@ export default function ContactSection() {
                         value={form.name}
                         onChange={(e) => setField('name', e.target.value)}
                         placeholder="Enter your full name"
-                        className={`w-full px-4 py-3 rounded-xl border bg-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green ${
+                        className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#1a3a25] dark:border-sanca-green/30 dark:text-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green ${
                           errors.name ? 'border-red-400 focus:ring-red-200 focus:border-red-400' : 'border-gray-200'
                         }`}
                       />
@@ -342,7 +342,7 @@ export default function ContactSection() {
                           value={form.email}
                           onChange={(e) => setField('email', e.target.value)}
                           placeholder="you@example.com"
-                          className={`w-full px-4 py-3 rounded-xl border bg-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green ${
+                          className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#1a3a25] dark:border-sanca-green/30 dark:text-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green ${
                             errors.email ? 'border-red-400 focus:ring-red-200 focus:border-red-400' : 'border-gray-200'
                           }`}
                         />
@@ -375,7 +375,7 @@ export default function ContactSection() {
                           value={form.phone}
                           onChange={(e) => setField('phone', e.target.value)}
                           placeholder="e.g. 012 345 6789"
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white dark:bg-[#1a3a25] dark:border-sanca-green/30 dark:text-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green"
                         />
                       </motion.div>
                     </div>
@@ -395,7 +395,7 @@ export default function ContactSection() {
                         id="contact-subject"
                         value={form.subject}
                         onChange={(e) => setField('subject', e.target.value)}
-                        className={`w-full px-4 py-3 rounded-xl border bg-white transition-all duration-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green appearance-none cursor-pointer ${
+                        className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#1a3a25] dark:border-sanca-green/30 dark:text-white transition-all duration-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green appearance-none cursor-pointer ${
                           errors.subject ? 'border-red-400 focus:ring-red-200 focus:border-red-400' : 'border-gray-200'
                         } ${!form.subject ? 'text-gray-400' : ''}`}
                         style={{
@@ -442,7 +442,7 @@ export default function ContactSection() {
                         value={form.message}
                         onChange={(e) => setField('message', e.target.value)}
                         placeholder="Tell us how we can help you…"
-                        className={`w-full px-4 py-3 rounded-xl border bg-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green resize-y min-h-[120px] ${
+                        className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-[#1a3a25] dark:border-sanca-green/30 dark:text-white transition-all duration-300 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sanca-green/20 focus:border-sanca-green resize-y min-h-[120px] ${
                           errors.message ? 'border-red-400 focus:ring-red-200 focus:border-red-400' : 'border-gray-200'
                         }`}
                       />
@@ -534,7 +534,7 @@ export default function ContactSection() {
                 </>
               );
 
-              const cardClasses = `group p-4 rounded-2xl bg-white border border-gray-100 shadow-premium-sm hover-lift transition-all duration-300`;
+              const cardClasses = `group p-4 rounded-2xl bg-white dark:bg-[#0D3B22] border border-gray-100 shadow-premium-sm hover-lift transition-all duration-300`;
 
               return (
                 <motion.div

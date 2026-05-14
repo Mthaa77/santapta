@@ -134,7 +134,7 @@ export default function ProgrammesSection() {
   const activeProgramme = programmes.find((p) => p.id === activeTab)!;
 
   return (
-    <section id="programmes" className="py-20 sm:py-28 bg-sanca-sage/50 relative overflow-hidden section-top-gradient">
+    <section id="programmes" className="py-20 sm:py-28 bg-sanca-sage/50 dark:bg-[#0a2a18] relative overflow-hidden section-top-gradient">
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-sanca-green/5 rounded-full translate-y-1/2 translate-x-1/2 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -146,14 +146,14 @@ export default function ProgrammesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
             <Stethoscope className="h-4 w-4" />
             Treatment Programmes
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
             A Path for <span className="text-gradient-gold">Every Journey</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
             SANCA recognises the need for a basket of services — considering each person&apos;s
             unique needs, circumstances, and stage of dependency.
           </p>
@@ -172,8 +172,8 @@ export default function ProgrammesSection() {
                 onClick={() => setActiveTab(prog.id)}
                 className={`flex items-center gap-2 px-4 sm:px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                   isActive
-                    ? 'bg-sanca-green text-white shadow-premium-md'
-                    : 'bg-white text-muted-foreground hover:bg-sanca-green/5 hover:text-sanca-green shadow-premium-sm'
+                    ? 'bg-sanca-green dark:bg-sanca-gold dark:text-white text-white shadow-premium-md'
+                    : 'bg-white dark:bg-[#0D3B22] text-muted-foreground hover:bg-sanca-green/5 hover:text-sanca-green shadow-premium-sm'
                 }`}
               >
                 <Icon className="h-4 w-4" />
@@ -193,7 +193,7 @@ export default function ProgrammesSection() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
           >
-            <Card className="shadow-premium-xl border-0 overflow-hidden">
+            <Card className="shadow-premium-xl border-0 dark:bg-[#0D3B22] overflow-hidden">
               <div className="grid lg:grid-cols-2">
                 {/* Left: Image & Quick Info */}
                 <div className="relative bg-gradient-to-br from-sanca-green-dark to-sanca-green p-8 sm:p-10 text-white overflow-hidden">
@@ -260,7 +260,7 @@ export default function ProgrammesSection() {
                         className="flex items-start gap-2 text-sm"
                       >
                         <CheckCircle2 className="h-4 w-4 text-sanca-emerald mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <span className="text-muted-foreground dark:text-white/70">{feature}</span>
                       </motion.div>
                     ))}
                   </div>

@@ -137,7 +137,7 @@ export default function FacilitiesSection() {
   };
 
   return (
-    <section id="facilities" className="py-20 sm:py-28 bg-white relative overflow-hidden section-top-gradient">
+    <section id="facilities" className="py-20 sm:py-28 bg-white dark:bg-[#0a2a18] relative overflow-hidden section-top-gradient">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,14 +149,14 @@ export default function FacilitiesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
             <MapPin className="h-4 w-4" />
             Our Facilities
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
             Three Locations, <span className="text-gradient-gold">One Mission</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
             Covering a geographic spread from Pretoria North to Soshanguve and Hammanskraal —
             accessible care where you need it.
           </p>
@@ -176,7 +176,7 @@ export default function FacilitiesSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
               >
-                <Card className={`shadow-premium-md hover:shadow-premium-lg transition-all duration-500 border-0 overflow-hidden ${isExpanded ? 'ring-2 ring-sanca-green/20' : ''}`}>
+                <Card className={`dark:bg-[#0D3B22] shadow-premium-md hover:shadow-premium-lg transition-all duration-500 border-0 overflow-hidden ${isExpanded ? 'ring-2 ring-sanca-green/20' : ''}`}>
                   {/* Header */}
                   <button
                     onClick={() => toggle(facility.id)}

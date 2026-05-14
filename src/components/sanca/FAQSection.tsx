@@ -125,7 +125,7 @@ export default function FAQSection() {
   })).filter((cat) => cat.items.length > 0);
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-white relative overflow-hidden section-top-gradient">
+    <section id="faq" className="py-20 sm:py-28 bg-white dark:bg-[#0a2a18] relative overflow-hidden section-top-gradient">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-sanca-green/5 rounded-full translate-y-1/2 translate-x-1/2 blur-3xl" />
 
@@ -138,14 +138,14 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
             <HelpCircle className="h-4 w-4" />
             Frequently Asked Questions
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
             Questions & <span className="text-gradient-gold">Answers</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
             Everything you need to know about getting help at SANCA Pretoria. Can&apos;t find
             your answer? Contact us directly.
           </p>
@@ -181,13 +181,13 @@ export default function FAQSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: catIndex * 0.1 }}
             >
-              <h3 className="font-serif text-xl font-bold text-sanca-green-dark mb-4 flex items-center gap-2">
+              <h3 className="font-serif text-xl font-bold text-sanca-green-dark dark:text-white mb-4 flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-sanca-green/10 flex items-center justify-center text-sm font-bold text-sanca-green">
                   {catIndex + 1}
                 </div>
                 {category.category}
               </h3>
-              <Card className="shadow-premium-md border-0 overflow-hidden">
+              <Card className="shadow-premium-md border-0 dark:bg-[#0D3B22] overflow-hidden">
                 <Accordion type="single" collapsible className="w-full">
                   {category.items.map((item, itemIndex) => (
                     <AccordionItem

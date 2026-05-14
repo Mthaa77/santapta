@@ -5,6 +5,7 @@ import HeroSection from '@/components/sanca/HeroSection';
 import SelfAssessment from '@/components/sanca/SelfAssessment';
 import RecoveryVisualizer from '@/components/sanca/RecoveryVisualizer';
 import DiagnosisTips from '@/components/sanca/DiagnosisTips';
+import MythsSection from '@/components/sanca/MythsSection';
 import MedicalAidSection from '@/components/sanca/MedicalAidSection';
 import AboutSection from '@/components/sanca/AboutSection';
 import ProgrammesSection from '@/components/sanca/ProgrammesSection';
@@ -27,6 +28,7 @@ import ContactSection from '@/components/sanca/ContactSection';
 import EmergencyCTA from '@/components/sanca/EmergencyCTA';
 import FloatingActions from '@/components/sanca/FloatingActions';
 import ChatBot from '@/components/sanca/ChatBot';
+import CrisisBanner from '@/components/sanca/CrisisBanner';
 import ResourceLibrary from '@/components/sanca/ResourceLibrary';
 import EventsSection from '@/components/sanca/EventsSection';
 import PageLoader from '@/components/sanca/PageLoader';
@@ -45,6 +47,7 @@ export default function Home() {
         <RecoveryVisualizer />
         <div className="section-divider-thin" />
         <DiagnosisTips />
+        <MythsSection />
         <MedicalAidSection />
         <div className="section-divider-thin" />
         <AboutSection />
@@ -78,6 +81,7 @@ export default function Home() {
       <Footer />
       <FloatingActions />
       <ChatBot />
+      <CrisisBanner />
     </div>
   );
 }

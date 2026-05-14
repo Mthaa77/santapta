@@ -90,10 +90,10 @@ function ValuesGrid() {
   return (
     <div ref={ref} className={isVisible ? 'animate-reveal-scale' : 'opacity-0'}>
       <div className="text-center mb-10">
-        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
+        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark dark:text-white mb-2">
           Our Values: <span className="text-shimmer">C.A.I.R.U.P.</span>
         </h3>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground dark:text-white/70">
           The principles that guide everything we do
         </p>
       </div>
@@ -109,7 +109,7 @@ function ValuesGrid() {
             whileHover={{ y: -5, scale: 1.02 }}
             className="group"
           >
-            <Card className={`p-5 text-center shadow-premium-sm hover:shadow-premium-lg transition-all duration-300 border ${value.color.split(' ').pop()} cursor-default h-full`}>
+            <Card className={`p-5 text-center shadow-premium-sm hover:shadow-premium-lg transition-all duration-300 border dark:bg-[#0D3B22] ${value.color.split(' ').pop()} cursor-default h-full`}>
               <div className={`w-14 h-14 rounded-2xl ${value.color.split(' ')[0]} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
                 <span className="font-serif text-2xl font-bold text-sanca-green-dark">{value.letter}</span>
               </div>
@@ -128,10 +128,10 @@ function HeritageTimeline() {
   return (
     <div ref={ref} className={isVisible ? 'animate-slide-up-bounce' : 'opacity-0'}>
       <div className="text-center mb-10">
-        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
+        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark dark:text-white mb-2">
           Our <span className="text-gradient-gold">Heritage</span>
         </h3>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground dark:text-white/70">
           A legacy of service spanning nearly seven decades
         </p>
       </div>
@@ -152,7 +152,7 @@ function HeritageTimeline() {
             }`}
           >
             <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-              <Card className="p-5 shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-0 inline-block">
+              <Card className="p-5 shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-0 dark:bg-[#0D3B22] inline-block">
                 <span className="text-xs font-bold text-sanca-gold uppercase tracking-wider">
                   {item.year}
                 </span>
@@ -178,7 +178,7 @@ function HeritageTimeline() {
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 sm:py-28 bg-white relative overflow-hidden section-top-gradient">
+    <section id="about" className="py-20 sm:py-28 bg-white dark:bg-[#0a2a18] relative overflow-hidden section-top-gradient">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
@@ -191,14 +191,14 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
             <Heart className="h-4 w-4" />
             About SANCA Pretoria
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
             68 Years of <span className="text-gradient-gold">Healing</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
             One of the original eight founding affiliates of SANCA National, the Pretoria Society has served communities with compassion and clinical excellence since 1957.
           </p>
         </motion.div>
