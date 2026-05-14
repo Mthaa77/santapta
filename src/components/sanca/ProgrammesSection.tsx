@@ -134,7 +134,7 @@ export default function ProgrammesSection() {
   const activeProgramme = programmes.find((p) => p.id === activeTab)!;
 
   return (
-    <section id="programmes" className="py-20 sm:py-28 bg-sanca-sage/50 relative overflow-hidden">
+    <section id="programmes" className="py-20 sm:py-28 bg-sanca-sage/50 relative overflow-hidden section-top-gradient">
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-sanca-green/5 rounded-full translate-y-1/2 translate-x-1/2 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

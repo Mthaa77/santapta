@@ -901,3 +901,171 @@
 .dark .gold-shimmer::after {
   background: linear-gradient(90deg, transparent, rgba(232, 200, 119, 0.08), transparent);
 }
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS — Task 13
+   ========================================== */
+
+/* Fade in from left */
+@keyframes reveal-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Fade in from right */
+@keyframes reveal-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Scale up reveal */
+@keyframes reveal-scale {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Slide up with bounce */
+@keyframes slide-up-bounce {
+  0% { opacity: 0; transform: translateY(40px); }
+  60% { opacity: 1; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Shimmer text */
+@keyframes text-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-reveal-left { animation: reveal-left 0.7s ease-out forwards; }
+.animate-reveal-right { animation: reveal-right 0.7s ease-out forwards; }
+.animate-reveal-scale { animation: reveal-scale 0.6s ease-out forwards; }
+.animate-slide-up-bounce { animation: slide-up-bounce 0.8s ease-out forwards; }
+
+/* Shimmer text effect */
+.text-shimmer {
+  background: linear-gradient(90deg, #1B5E3B 0%, #C5963A 25%, #E8C877 50%, #C5963A 75%, #1B5E3B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 6s linear infinite;
+}
+
+/* Parallax section divider */
+.parallax-divider {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+}
+
+.parallax-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath d='M0 80V40C240 0 480 80 720 40C960 0 1200 80 1440 40V80H0Z' fill='%23FAF6ED'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.parallax-divider-green::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath d='M0 80V40C240 0 480 80 720 40C960 0 1200 80 1440 40V80H0Z' fill='%231B5E3B'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 100% 100%;
+}
+
+/* Premium card with animated gradient border */
+.card-animated-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-animated-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1B5E3B, #C5963A, #059669, #E8C877, #1B5E3B);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Floating label style */
+.floating-label {
+  position: relative;
+}
+
+.floating-label::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: #1B5E3B;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Premium stat counter */
+.stat-counter {
+  position: relative;
+  display: inline-block;
+}
+
+.stat-counter::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #C5963A, #E8C877);
+  border-radius: 2px;
+}
+
+/* Icon container with gradient bg */
+.icon-gradient {
+  background: linear-gradient(135deg, #1B5E3B, #059669);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(27, 94, 59, 0.3);
+}
+
+.icon-gradient-gold {
+  background: linear-gradient(135deg, #C5963A, #E8C877);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(197, 150, 58, 0.3);
+}
+
+/* Scroll indicator pulse */
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(6px); }
+}
+
+.scroll-indicator-pulse {
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+/* Dark mode parallax dividers */
+.dark .parallax-divider::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath d='M0 80V40C240 0 480 80 720 40C960 0 1200 80 1440 40V80H0Z' fill='%230D3B22'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.dark .card-animated-border::before {
+  background: linear-gradient(90deg, #2D8B57, #E8C877, #059669, #C5963A, #2D8B57);
+  background-size: 200% auto;
+}

@@ -19,7 +19,7 @@ const donationImpacts = [
 
 export default function VolunteerSection() {
   return (
-    <section id="volunteer" className="py-20 sm:py-28 relative overflow-hidden">
+    <section id="volunteer" className="py-20 sm:py-28 relative overflow-hidden section-top-gradient">
       {/* Background */}
       <div className="absolute inset-0 bg-white" />
       <div className="absolute inset-0 opacity-[0.03]" style={{

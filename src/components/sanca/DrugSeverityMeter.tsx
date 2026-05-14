@@ -103,7 +103,7 @@ export default function DrugSeverityMeter() {
   const selectedSubstance = substances.find(s => s.id === selected);
 
   return (
-    <section id="drug-severity" className="py-20 sm:py-28 bg-white relative overflow-hidden">
+    <section id="drug-severity" className="py-20 sm:py-28 bg-white relative overflow-hidden section-top-gradient">
       <div className="absolute top-0 left-0 w-full section-divider" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

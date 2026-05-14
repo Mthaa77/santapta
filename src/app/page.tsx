@@ -15,8 +15,10 @@ import DrugInfoSection from '@/components/sanca/DrugInfoSection';
 import DrugStatsSection from '@/components/sanca/DrugStatsSection';
 import FamiliesSection from '@/components/sanca/FamiliesSection';
 import RecoveryJourney from '@/components/sanca/RecoveryJourney';
+import TeamSection from '@/components/sanca/TeamSection';
 import FAQSection from '@/components/sanca/FAQSection';
 import TestimonialsSection from '@/components/sanca/TestimonialsSection';
+import SuccessStories from '@/components/sanca/SuccessStories';
 import VolunteerSection from '@/components/sanca/VolunteerSection';
 import NewsletterSection from '@/components/sanca/NewsletterSection';
 import EmergencyCTA from '@/components/sanca/EmergencyCTA';
@@ -41,6 +43,7 @@ export default function Home() {
         <MedicalAidSection />
         <div className="section-divider-thin" />
         <AboutSection />
+        <TeamSection />
         <RecoveryJourney />
         <div className="section-divider-thin" />
         <ProgrammesSection />
@@ -58,6 +61,7 @@ export default function Home() {
         <div className="section-divider-thin" />
         <FAQSection />
         <TestimonialsSection />
+        <SuccessStories />
         <div className="section-divider-thin" />
         <VolunteerSection />
         <NewsletterSection />

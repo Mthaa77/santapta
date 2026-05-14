@@ -124,7 +124,7 @@ export default function ResourceLibrary() {
       : resources.filter((r) => r.category === activeCategory);
 
   return (
-    <section id="resources" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden">
+    <section id="resources" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden section-top-gradient">
       {/* Top accent line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 

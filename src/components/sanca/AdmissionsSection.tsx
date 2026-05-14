@@ -131,7 +131,7 @@ export default function AdmissionsSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="admissions" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden">
+    <section id="admissions" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden section-top-gradient">
       <div className="absolute top-20 left-0 w-80 h-80 bg-sanca-green/5 rounded-full -translate-x-1/2 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

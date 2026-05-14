@@ -572,3 +572,99 @@ Stage Summary:
   4. Add more dark mode component overrides for full dark mode consistency
   5. Add accessibility audit (WCAG 2.1 AA compliance)
   6. Add internationalization (i18n) support for Afrikaans and Zulu
+
+---
+Task ID: 12
+Agent: Cron Review Agent (Phase 6)
+Task: QA testing, styling improvements, and new features
+
+Work Log:
+- Read worklog.md to assess project status (Phase 5 completed: 25+ sections, stable, zero lint errors)
+- Performed comprehensive QA using agent-browser with VLM analysis across hero, mid, and bottom sections
+- VLM analysis confirmed: no visual bugs, clean layout, consistent colors, professional appearance
+- Console check: only non-critical framer-motion warning, zero errors
+- No bugs found — site is stable and rendering correctly
+- Launched 2 parallel sub-agents for major features:
+  - **Task 12**: SuccessStories (4 anonymized recovery story cards with quotes, sobriety milestones) + TeamSection (4 professional role cards with Medical Team, Social Workers, Counsellors, Support Staff)
+  - **Task 13**: useScrollReveal hook + enhanced globals.css (170+ lines of new animations: reveal-left, reveal-right, reveal-scale, slide-up-bounce, text-shimmer; premium utilities: parallax-divider, card-animated-border, floating-label, stat-counter, icon-gradient, scroll-indicator-pulse; dark mode overrides) + enhanced AboutSection with scroll-reveal animations + enhanced FacilitiesSection with Google Maps embeds + enhanced TestimonialsSection with scroll-indicator-pulse
+- Added section-top-gradient class to ALL sections (12 additional files: FAQ, DrugInfo, Volunteer, ResourceLibrary, Families, DrugStats, SelfAssessment, SuccessStories, DrugSeverityMeter, Programmes, Admissions, DiagnosisTips) for consistent visual flow
+- Final lint check: zero errors
+- Final console check: clean (only non-critical framer-motion warning)
+
+Stage Summary:
+- **Current project status**: Ultra-premium SANCA Pretoria website with 29+ sections/features, all rendering correctly with zero lint errors and zero runtime errors
+- **Completed modifications this phase**:
+  - SuccessStories: 4 anonymized recovery story cards with quotes, sobriety milestones, programme badges
+  - TeamSection: 4 professional role cards (Medical Team, Social Workers, Counsellors, Support Staff)
+  - useScrollReveal hook: IntersectionObserver-based scroll reveal with configurable options
+  - globals.css: 170+ lines of new animations, premium utilities, parallax dividers, dark mode overrides
+  - AboutSection: Enhanced with scroll-reveal animations, card-animated-border, text-shimmer
+  - FacilitiesSection: Google Maps iframe embeds for all 4 facilities with "Get Directions" links
+  - TestimonialsSection: scroll-indicator-pulse on active carousel dot
+  - section-top-gradient added to all 12 remaining sections for consistent premium visual flow
+- **Full component list** (29 sections/features):
+  PageLoader, ScrollProgress, Navbar (with ThemeToggle), Hero (enhanced stats), SelfAssessment (with celebration), DiagnosisTips, MedicalAid, About (scroll-reveal), Team, RecoveryJourney, Programmes, Facilities (with Maps), Admissions, PackingList, DrugSeverityMeter, DrugInfo, DrugStats (3 charts), Families (flip cards), ResourceLibrary (filter tabs), FAQ, Testimonials (scroll-pulse), SuccessStories, VolunteerSection, NewsletterSection, EmergencyCTA, FloatingActions (with tooltips), ChatBot (AI-powered), Footer
+- **Unresolved issues/risks**:
+  - Non-critical framer-motion scroll position warning in console (cosmetic only)
+  - Google Maps iframes use placeholder embeds — production would need actual Google Maps API keys
+- **Priority recommendations for next phase**:
+  1. Add PWA capabilities (manifest, service worker, offline support)
+  2. Performance optimization (lazy load chart components, optimize images, implement code splitting)
+  3. Add more dark mode component overrides for full dark mode consistency
+  4. Add accessibility audit (WCAG 2.1 AA compliance)
+  5. Add internationalization (i18n) support for Afrikaans and Zulu
+  6. Add Google Maps API integration for real facility locations
+
+---
+Task ID: 13
+Agent: Scroll Reveal & Animation Enhancement Developer
+Task: Create scroll-reveal animation hook and enhance multiple components with premium animations
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections, enhanced CSS, dark mode, AI chatbot, resource library, page loader, newsletter, volunteer)
+- Created /home/z/my-project/src/hooks/use-scroll-reveal.ts:
+  - IntersectionObserver-based custom hook with configurable threshold, rootMargin, and once options
+  - Returns { ref, isVisible } for attaching to elements and conditionally applying animation classes
+  - Default: threshold=0.1, rootMargin='0px 0px -50px 0px', once=true
+- Enhanced /home/z/my-project/src/app/globals.css with 170+ lines of new scroll-reveal CSS appended after existing content (no modifications to any previous styles):
+  - 5 new keyframe animations: reveal-left, reveal-right, reveal-scale, slide-up-bounce, text-shimmer
+  - 4 new animation utility classes: .animate-reveal-left, .animate-reveal-right, .animate-reveal-scale, .animate-slide-up-bounce
+  - .text-shimmer: Green-gold-green gradient text with shimmer animation (6s linear infinite)
+  - .parallax-divider / .parallax-divider-green: SVG wave dividers with cream/green fill
+  - .card-animated-border: Premium card with animated gradient top border (shimmer 3s)
+  - .floating-label: Green badge label positioned above element using data-label attribute
+  - .stat-counter: Inline-block with gold gradient underline
+  - .icon-gradient / .icon-gradient-gold: Green/gold gradient icon containers with box-shadow
+  - .scroll-indicator-pulse: Pulsing scroll indicator animation (2s ease-in-out infinite)
+  - Dark mode overrides: .dark .parallax-divider, .dark .card-animated-border
+- Enhanced /home/z/my-project/src/components/sanca/AboutSection.tsx:
+  - Imported useScrollReveal hook
+  - Added section-top-gradient class to section element
+  - Refactored into 4 sub-components (MissionCard, VisionCard, ValuesGrid, HeritageTimeline), each calling useScrollReveal internally to avoid react-hooks/refs lint errors
+  - MissionCard: animate-reveal-left entrance + card-animated-border class
+  - VisionCard: animate-reveal-right entrance + card-animated-border class
+  - ValuesGrid: animate-reveal-scale entrance + text-shimmer on C.A.I.R.U.P. text
+  - HeritageTimeline: animate-slide-up-bounce entrance
+  - Replaced simple whileInView x-offset animations with CSS scroll-reveal animations for smoother entrance effects
+- Enhanced /home/z/my-project/src/components/sanca/FacilitiesSection.tsx:
+  - Added section-top-gradient class to section element
+  - Added mapEmbedUrl and mapSearchUrl properties to all 4 facility data objects (generic Pretoria coordinates)
+  - Added Google Maps iframe embed in expanded content (180px height, rounded, bordered, lazy loading)
+  - Added Navigation icon import from lucide-react
+  - Added "Get Directions" button linking to Google Maps search URL (opens in new tab)
+  - Split original "Enquire About Admission" button into two: "Get Directions" (flex-1) + "Enquire" (compact)
+  - Added parallax-divider-green at the bottom of the section for visual transition
+- Enhanced /home/z/my-project/src/components/sanca/TestimonialsSection.tsx:
+  - Added scroll-indicator-pulse class to the active carousel navigation dot
+  - Active dot now pulses with scroll-pulse animation (2s ease-in-out infinite) for enhanced visual feedback
+- Fixed react-hooks/refs lint errors by restructuring AboutSection to call useScrollReveal inside each sub-component instead of passing the reveal object as a prop
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- useScrollReveal hook created at src/hooks/use-scroll-reveal.ts — reusable IntersectionObserver hook for scroll-triggered CSS animations
+- globals.css enhanced with 170+ lines of new scroll-reveal animations, parallax dividers, card effects, icon containers, shimmer text, and dark mode overrides
+- AboutSection enhanced with scroll-reveal hook: 4 sub-components each use the hook independently for CSS-driven entrance animations (reveal-left, reveal-right, reveal-scale, slide-up-bounce)
+- FacilitiesSection enhanced with Google Maps embeds, "Get Directions" buttons, and parallax divider
+- TestimonialsSection enhanced with scroll-indicator-pulse on active carousel dot
+- Zero lint errors, dev server rendering successfully

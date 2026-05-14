@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Heart, Eye, Target, Sparkles, Users, Shield, Award, Leaf } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 
 const values = [
   { letter: 'C', word: 'Caring', desc: 'Compassionate support for every individual', icon: Heart, color: 'bg-rose-50 text-rose-600 border-rose-200' },
@@ -20,9 +21,164 @@ const timeline = [
   { year: 'Present', title: '32 Societies Nationwide', desc: 'SANCA Pretoria operates 3 clinics across Pretoria, Soshanguve & Hammanskraal.' },
 ];
 
+function MissionCard() {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
+  return (
+    <div ref={ref} className={isVisible ? 'animate-reveal-left' : 'opacity-0'}>
+      <Card className="h-full p-6 sm:p-8 shadow-premium-lg border-0 bg-gradient-to-br from-sanca-green to-sanca-green-dark text-white relative overflow-hidden card-animated-border">
+        <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="relative">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+              <Target className="h-6 w-6 text-sanca-gold-light" />
+            </div>
+            <h3 className="font-serif text-2xl font-bold">Our Mission</h3>
+          </div>
+          <p className="text-white/90 leading-relaxed">
+            To prevent and treat substance misuse, empowering individuals with the knowledge
+            and tools they need to make positive choices. Our team of compassionate
+            professionals works tirelessly to provide comprehensive and effective treatment
+            programmes that address the physical, emotional, and spiritual aspects of
+            substance abuse.
+          </p>
+          <div className="mt-6 p-4 rounded-xl bg-white/10 border border-white/10">
+            <p className="text-sm italic text-sanca-gold-light">
+              &ldquo;Everyone deserves a chance at a healthy and fulfilling life, free from
+              the chains of addiction.&rdquo;
+            </p>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+function VisionCard() {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.15 });
+  return (
+    <div ref={ref} className={isVisible ? 'animate-reveal-right' : 'opacity-0'}>
+      <Card className="h-full p-6 sm:p-8 shadow-premium-lg border-0 bg-gradient-to-br from-sanca-gold to-sanca-gold-dark text-white relative overflow-hidden card-animated-border">
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+        <div className="relative">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+              <Eye className="h-6 w-6 text-sanca-green-light" />
+            </div>
+            <h3 className="font-serif text-2xl font-bold">Our Vision</h3>
+          </div>
+          <p className="text-white/90 leading-relaxed">
+            To guide SANCA member organisations in providing high-quality, compassionate
+            services for individuals with Substance Use Disorders, their families, and
+            communities. We strive to build resilient, innovative organisations, foster
+            lasting partnerships, and promote evidence-based treatment and prevention
+            through professional expertise and research-driven service delivery.
+          </p>
+          <div className="mt-6 p-4 rounded-xl bg-white/10 border border-white/10">
+            <p className="text-sm italic text-white/90">
+              Like the vibrant threads of a tapestry, they intertwine, creating a beautiful
+              mosaic of hope and healing.
+            </p>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+function ValuesGrid() {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
+  return (
+    <div ref={ref} className={isVisible ? 'animate-reveal-scale' : 'opacity-0'}>
+      <div className="text-center mb-10">
+        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
+          Our Values: <span className="text-shimmer">C.A.I.R.U.P.</span>
+        </h3>
+        <p className="text-muted-foreground">
+          The principles that guide everything we do
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {values.map((value, i) => (
+          <motion.div
+            key={value.letter}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: i * 0.1 }}
+            whileHover={{ y: -5, scale: 1.02 }}
+            className="group"
+          >
+            <Card className={`p-5 text-center shadow-premium-sm hover:shadow-premium-lg transition-all duration-300 border ${value.color.split(' ').pop()} cursor-default h-full`}>
+              <div className={`w-14 h-14 rounded-2xl ${value.color.split(' ')[0]} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
+                <span className="font-serif text-2xl font-bold text-sanca-green-dark">{value.letter}</span>
+              </div>
+              <h4 className="font-serif font-bold text-foreground mb-1">{value.word}</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">{value.desc}</p>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function HeritageTimeline() {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
+  return (
+    <div ref={ref} className={isVisible ? 'animate-slide-up-bounce' : 'opacity-0'}>
+      <div className="text-center mb-10">
+        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
+          Our <span className="text-gradient-gold">Heritage</span>
+        </h3>
+        <p className="text-muted-foreground">
+          A legacy of service spanning nearly seven decades
+        </p>
+      </div>
+
+      <div className="relative max-w-3xl mx-auto">
+        {/* Timeline line */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sanca-green via-sanca-gold to-sanca-emerald hidden md:block" />
+
+        {timeline.map((item, i) => (
+          <motion.div
+            key={item.year}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.15 }}
+            className={`flex items-center gap-6 mb-8 last:mb-0 ${
+              i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            }`}
+          >
+            <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+              <Card className="p-5 shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-0 inline-block">
+                <span className="text-xs font-bold text-sanca-gold uppercase tracking-wider">
+                  {item.year}
+                </span>
+                <h4 className="font-serif text-lg font-bold text-sanca-green-dark mt-1">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
+              </Card>
+            </div>
+
+            {/* Center dot */}
+            <div className="hidden md:flex w-10 h-10 rounded-full bg-sanca-green items-center justify-center shadow-premium-sm flex-shrink-0 border-4 border-white">
+              <div className="w-3 h-3 rounded-full bg-sanca-gold" />
+            </div>
+
+            <div className="flex-1 hidden md:block" />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 sm:py-28 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 sm:py-28 bg-white relative overflow-hidden section-top-gradient">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
@@ -49,164 +205,17 @@ export default function AboutSection() {
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Card className="h-full p-6 sm:p-8 shadow-premium-lg border-0 bg-gradient-to-br from-sanca-green to-sanca-green-dark text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
-                    <Target className="h-6 w-6 text-sanca-gold-light" />
-                  </div>
-                  <h3 className="font-serif text-2xl font-bold">Our Mission</h3>
-                </div>
-                <p className="text-white/90 leading-relaxed">
-                  To prevent and treat substance misuse, empowering individuals with the knowledge
-                  and tools they need to make positive choices. Our team of compassionate
-                  professionals works tirelessly to provide comprehensive and effective treatment
-                  programmes that address the physical, emotional, and spiritual aspects of
-                  substance abuse.
-                </p>
-                <div className="mt-6 p-4 rounded-xl bg-white/10 border border-white/10">
-                  <p className="text-sm italic text-sanca-gold-light">
-                    &ldquo;Everyone deserves a chance at a healthy and fulfilling life, free from
-                    the chains of addiction.&rdquo;
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Card className="h-full p-6 sm:p-8 shadow-premium-lg border-0 bg-gradient-to-br from-sanca-gold to-sanca-gold-dark text-white relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
-                    <Eye className="h-6 w-6 text-sanca-green-light" />
-                  </div>
-                  <h3 className="font-serif text-2xl font-bold">Our Vision</h3>
-                </div>
-                <p className="text-white/90 leading-relaxed">
-                  To guide SANCA member organisations in providing high-quality, compassionate
-                  services for individuals with Substance Use Disorders, their families, and
-                  communities. We strive to build resilient, innovative organisations, foster
-                  lasting partnerships, and promote evidence-based treatment and prevention
-                  through professional expertise and research-driven service delivery.
-                </p>
-                <div className="mt-6 p-4 rounded-xl bg-white/10 border border-white/10">
-                  <p className="text-sm italic text-white/90">
-                    Like the vibrant threads of a tapestry, they intertwine, creating a beautiful
-                    mosaic of hope and healing.
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
+          <MissionCard />
+          <VisionCard />
         </div>
 
         {/* C.A.I.R.U.P. Values */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
-        >
-          <div className="text-center mb-10">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
-              Our Values: <span className="text-gradient-gold">C.A.I.R.U.P.</span>
-            </h3>
-            <p className="text-muted-foreground">
-              The principles that guide everything we do
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {values.map((value, i) => (
-              <motion.div
-                key={value.letter}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="group"
-              >
-                <Card className={`p-5 text-center shadow-premium-sm hover:shadow-premium-lg transition-all duration-300 border ${value.color.split(' ').pop()} cursor-default h-full`}>
-                  <div className={`w-14 h-14 rounded-2xl ${value.color.split(' ')[0]} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
-                    <span className="font-serif text-2xl font-bold text-sanca-green-dark">{value.letter}</span>
-                  </div>
-                  <h4 className="font-serif font-bold text-foreground mb-1">{value.word}</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{value.desc}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        <div className="mb-20">
+          <ValuesGrid />
+        </div>
 
         {/* Heritage Timeline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="text-center mb-10">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
-              Our <span className="text-gradient-gold">Heritage</span>
-            </h3>
-            <p className="text-muted-foreground">
-              A legacy of service spanning nearly seven decades
-            </p>
-          </div>
-
-          <div className="relative max-w-3xl mx-auto">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sanca-green via-sanca-gold to-sanca-emerald hidden md:block" />
-
-            {timeline.map((item, i) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-                className={`flex items-center gap-6 mb-8 last:mb-0 ${
-                  i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                  <Card className="p-5 shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-0 inline-block">
-                    <span className="text-xs font-bold text-sanca-gold uppercase tracking-wider">
-                      {item.year}
-                    </span>
-                    <h4 className="font-serif text-lg font-bold text-sanca-green-dark mt-1">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
-                  </Card>
-                </div>
-
-                {/* Center dot */}
-                <div className="hidden md:flex w-10 h-10 rounded-full bg-sanca-green items-center justify-center shadow-premium-sm flex-shrink-0 border-4 border-white">
-                  <div className="w-3 h-3 rounded-full bg-sanca-gold" />
-                </div>
-
-                <div className="flex-1 hidden md:block" />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        <HeritageTimeline />
       </div>
     </section>
   );

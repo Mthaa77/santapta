@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
   const next = () => setCurrent((current + 1) % testimonials.length);
 
   return (
-    <section className="py-20 sm:py-28 bg-sanca-sage/30 relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-sanca-sage/30 relative overflow-hidden section-top-gradient">
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-sanca-gold/5 rounded-full translate-y-1/2 translate-x-1/2 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -176,7 +176,7 @@ export default function TestimonialsSection() {
                       key={i}
                       onClick={() => setCurrent(i)}
                       className={`h-2 rounded-full transition-all duration-300 ${
-                        i === current ? 'w-8 bg-sanca-green' : 'w-2 bg-gray-200 hover:bg-gray-300'
+                        i === current ? 'w-8 bg-sanca-green scroll-indicator-pulse' : 'w-2 bg-gray-200 hover:bg-gray-300'
                       }`}
                     />
                   ))}

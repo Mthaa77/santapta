@@ -125,7 +125,7 @@ export default function FAQSection() {
   })).filter((cat) => cat.items.length > 0);
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-white relative overflow-hidden">
+    <section id="faq" className="py-20 sm:py-28 bg-white relative overflow-hidden section-top-gradient">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-sanca-green/5 rounded-full translate-y-1/2 translate-x-1/2 blur-3xl" />
 

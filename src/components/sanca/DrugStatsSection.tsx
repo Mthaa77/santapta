@@ -118,7 +118,7 @@ export default function DrugStatsSection() {
   const [activeTab, setActiveTab] = useState<TabId>('substance');
 
   return (
-    <section id="drug-stats" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden">
+    <section id="drug-stats" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden section-top-gradient">
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 

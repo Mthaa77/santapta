@@ -168,7 +168,7 @@ export default function SelfAssessment() {
   const result = getResult(totalScore);
 
   return (
-    <section id="assessment" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden">
+    <section id="assessment" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden section-top-gradient">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-sanca-green/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-sanca-gold/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />

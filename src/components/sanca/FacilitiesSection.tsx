@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Phone, Clock, Users, Building2, TreePine, GraduationCap, ArrowRight, ChevronDown, Mail } from 'lucide-react';
+import { MapPin, Phone, Clock, Users, Building2, TreePine, GraduationCap, ArrowRight, ChevronDown, Mail, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -19,6 +19,8 @@ const facilities = [
     whatsapp: '+27 81 318 1511',
     email: 'info@sancapta.co.za',
     capacity: '52 patients (adults)',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.8!2d28.18!3d-25.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNinapark%2C+Pretoria+North!5e0!3m2!1sen!2sza!4v1',
+    mapSearchUrl: 'https://www.google.com/maps/search/SANCA+Castle+Carey+Clinic+Ninapark+Pretoria',
     hours: {
       admin: 'Monday–Friday: 08:00–17:00',
       alcoholAdmissions: '06:00–16:00 and 19:00–22:00 daily',
@@ -47,6 +49,8 @@ const facilities = [
     whatsapp: '+27 81 318 1511',
     email: 'info@sancapta.co.za',
     capacity: '8 adolescent males',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.8!2d28.18!3d-25.67!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s116+Waterbok+St%2C+Ninapark%2C+Akasia!5e0!3m2!1sen!2sza!4v1',
+    mapSearchUrl: 'https://www.google.com/maps/search/116+Waterbok+Street+Ninapark+Akasia+Pretoria',
     hours: {
       admin: 'Monday–Friday: 08:00–17:00',
       alcoholAdmissions: 'By appointment',
@@ -75,6 +79,8 @@ const facilities = [
     whatsapp: '+27 81 318 1511',
     email: 'info@sancapta.co.za',
     capacity: 'Open intake',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.5!2d28.1!3d-25.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBlock+H%2C+Soshanguve!5e0!3m2!1sen!2sza!4v1',
+    mapSearchUrl: 'https://www.google.com/maps/search/1631+Block+H+Soshanguve+0152',
     hours: {
       admin: 'Monday–Friday: 08:00–17:00',
       alcoholAdmissions: 'By appointment',
@@ -103,6 +109,8 @@ const facilities = [
     whatsapp: '+27 81 318 1511',
     email: 'info@sancapta.co.za',
     capacity: 'Open intake',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3590!2d28.27!3d-25.47!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJubilee+Road%2C+Temba%2C+Hammanskraal!5e0!3m2!1sen!2sza!4v1',
+    mapSearchUrl: 'https://www.google.com/maps/search/Stand+2025+Jubilee+Road+Temba+Hammanskraal',
     hours: {
       admin: 'Monday–Friday: 08:00–17:00',
       alcoholAdmissions: 'By appointment',
@@ -129,7 +137,7 @@ export default function FacilitiesSection() {
   };
 
   return (
-    <section id="facilities" className="py-20 sm:py-28 bg-white relative overflow-hidden">
+    <section id="facilities" className="py-20 sm:py-28 bg-white relative overflow-hidden section-top-gradient">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,7 +268,7 @@ export default function FacilitiesSection() {
                               )}
                             </div>
 
-                            {/* Features */}
+                            {/* Features & Map */}
                             <div>
                               <h4 className="font-semibold text-sm text-sanca-green-dark mb-4">
                                 Services & Features
@@ -273,15 +281,49 @@ export default function FacilitiesSection() {
                                   </div>
                                 ))}
                               </div>
-                              <Button
-                                variant="outline"
-                                size="sm"
-                                className="mt-4 border-sanca-green/30 text-sanca-green hover:bg-sanca-green/5"
-                                onClick={() => document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' })}
-                              >
-                                Enquire About Admission
-                                <ArrowRight className="ml-1 h-3.5 w-3.5" />
-                              </Button>
+
+                              {/* Map embed */}
+                              <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 shadow-premium-sm">
+                                <iframe
+                                  src={facility.mapEmbedUrl}
+                                  width="100%"
+                                  height="180"
+                                  style={{ border: 0 }}
+                                  allowFullScreen
+                                  loading="lazy"
+                                  referrerPolicy="no-referrer-when-downgrade"
+                                  title={`${facility.name} location map`}
+                                  className="w-full"
+                                />
+                              </div>
+
+                              {/* Map link button */}
+                              <div className="flex gap-2 mt-3">
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="border-sanca-green/30 text-sanca-green hover:bg-sanca-green/5 flex-1"
+                                  asChild
+                                >
+                                  <a
+                                    href={facility.mapSearchUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    <Navigation className="mr-1 h-3.5 w-3.5" />
+                                    Get Directions
+                                  </a>
+                                </Button>
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="border-sanca-green/30 text-sanca-green hover:bg-sanca-green/5"
+                                  onClick={() => document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
+                                  Enquire
+                                  <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                                </Button>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -293,6 +335,9 @@ export default function FacilitiesSection() {
             );
           })}
         </div>
+
+        {/* Parallax divider between facilities section and next */}
+        <div className="parallax-divider-green mt-12" />
       </div>
     </section>
   );

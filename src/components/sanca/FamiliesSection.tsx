@@ -240,7 +240,7 @@ function FlipCard({ card }: { card: FlipCardData }) {
 
 export default function FamiliesSection() {
   return (
-    <section id="families" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden">
+    <section id="families" className="py-20 sm:py-28 bg-sanca-cream relative overflow-hidden section-top-gradient">
       {/* Top accent bar */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
