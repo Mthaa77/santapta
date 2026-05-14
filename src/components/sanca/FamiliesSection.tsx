@@ -19,6 +19,7 @@ import {
   MapPin,
   Phone,
 } from 'lucide-react';
+import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -306,6 +307,47 @@ export default function FamiliesSection() {
             );
           })}
         </div>
+
+        {/* ─── Waiting Room Image Strip ─── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-16 -mx-4 sm:-mx-6 lg:-mx-8"
+        >
+          <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-2xl mx-4 sm:mx-6 lg:mx-8 hover-lift group">
+            <Image
+              src="/images/sanca/waiting-room.jpg"
+              alt="Calm and welcoming SANCA Pretoria waiting room with comfortable seating"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="100vw"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-sanca-green-dark/70 via-sanca-green-dark/40 to-sanca-green-dark/70" />
+            {/* Caption overlay */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center px-6">
+                <p className="text-white text-xl sm:text-2xl font-serif font-semibold leading-snug drop-shadow-lg">
+                  A welcoming space where healing begins
+                </p>
+                <p className="text-white/80 text-sm mt-2 drop-shadow-md">
+                  Our comfortable waiting area at Castle Carey Clinic
+                </p>
+              </div>
+            </div>
+            {/* Gold accent corners */}
+            <div className="absolute top-0 left-0 w-10 h-10 z-10 pointer-events-none">
+              <div className="absolute top-2 left-2 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+              <div className="absolute top-2 left-2 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+            </div>
+            <div className="absolute bottom-0 right-0 w-10 h-10 z-10 pointer-events-none">
+              <div className="absolute bottom-2 right-2 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+              <div className="absolute bottom-2 right-2 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+            </div>
+          </div>
+        </motion.div>
 
         {/* ─── Interactive Flip Cards ─── */}
         <motion.div

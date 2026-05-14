@@ -63,7 +63,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center shadow-gold overflow-hidden">
                 <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
-                <img src="/images/sanca/sanca-logo.jpeg" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-1" />
+                <img src="/images/sanca/sanca-logo-official.png" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-1" />
               </div>
               <div>
                 <p className="font-serif font-bold text-xl tracking-tight">SANCA Pretoria</p>

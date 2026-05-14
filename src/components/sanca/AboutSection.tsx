@@ -17,7 +17,7 @@ const values = [
 
 const timeline = [
   { year: '1956', title: 'SANCA National Founded', desc: 'A bold vision took root when the first national conference was opened by the Mayor of Johannesburg. SANCA was officially registered as a Welfare Organisation, igniting a movement of hope across South Africa.' },
-  { year: '1957', title: 'Pretoria Society Established', desc: 'Our story began as one of just eight founding affiliated societies of SANCA National — a small team with an enormous heart, determined to bring healing to the people of Pretoria and beyond.', hasImage: true, imageSrc: '/images/sanca/pienaar-bust.jpg', imageAlt: 'Bronze bust of A.J. Pienaar, founder member of SANRA National', imageCaption: 'A.J. Pienaar — Founder Member, SANRA National (1957–1978)' },
+  { year: '1957', title: 'Pretoria Society Established', desc: 'Our story began as one of just eight founding affiliated societies of SANCA National — a small team with an enormous heart, determined to bring healing to the people of Pretoria and beyond.', hasImage: true, imageSrc: '/images/sanca/pienaar-bust-courtyard.jpeg', imageAlt: 'Bronze bust of A.J. Pienaar in the courtyard at SANCA Pretoria', imageCaption: 'A.J. Pienaar — Founder Member, SANRA National (1957–1978)' },
   { year: '1970', title: 'Expanded Mandate', desc: 'Recognising the growing challenges facing our communities, SANCA courageously expanded its mission beyond alcoholism to address all forms of substance misuse — meeting people where they were, with no judgement and no turning away.' },
   { year: 'Present', title: '32 Societies Nationwide', desc: 'Today, SANCA Pretoria operates three welcoming clinics across Pretoria, Soshanguve, and Hammanskraal — each one a beacon of hope, serving the greater Tshwane area with the same compassion that sparked our founding.' },
 ];
@@ -212,35 +212,70 @@ function PosterShowcase() {
       transition={{ duration: 0.7 }}
       className="grid md:grid-cols-5 gap-6 items-center mb-20"
     >
-      {/* Poster image */}
+      {/* Poster images */}
       <div className="md:col-span-2">
-        <div className="relative rounded-2xl overflow-hidden shadow-premium-2xl border-4 border-sanca-gold/20 hover-lift group">
-          {/* Gold accent corners */}
-          <div className="absolute top-0 left-0 w-8 h-8 z-10 pointer-events-none">
-            <div className="absolute top-2 left-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
-            <div className="absolute top-2 left-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
-          </div>
-          <div className="absolute bottom-0 right-0 w-8 h-8 z-10 pointer-events-none">
-            <div className="absolute bottom-2 right-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
-            <div className="absolute bottom-2 right-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
+        <div className="grid grid-cols-2 gap-3">
+          {/* SANCA Poster */}
+          <div className="relative rounded-2xl overflow-hidden shadow-premium-2xl border-4 border-sanca-gold/20 hover-lift group">
+            {/* Gold accent corners */}
+            <div className="absolute top-0 left-0 w-8 h-8 z-10 pointer-events-none">
+              <div className="absolute top-2 left-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
+              <div className="absolute top-2 left-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
+            </div>
+            <div className="absolute bottom-0 right-0 w-8 h-8 z-10 pointer-events-none">
+              <div className="absolute bottom-2 right-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
+              <div className="absolute bottom-2 right-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
+            </div>
+
+            <div className="relative aspect-[3/4]">
+              <Image
+                src="/images/sanca/sanca-poster.png"
+                alt="SANCA Pretoria official promotional poster showcasing services and contact information"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 20vw"
+              />
+              {/* Bottom overlay with tagline */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-12 pb-3 px-3">
+                <p className="text-white text-xs font-serif font-semibold leading-snug">
+                  SANCA Pretoria
+                </p>
+                <p className="text-white/80 text-[10px] mt-0.5">
+                  Your Health Matters
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="relative aspect-[3/4] sm:aspect-[3/4]">
-            <Image
-              src="/images/sanca/sanca-poster.png"
-              alt="SANCA Pretoria official promotional poster showcasing services and contact information"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 40vw"
-            />
-            {/* Bottom overlay with tagline */}
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-16 pb-4 px-5">
-              <p className="text-white text-sm font-serif font-semibold leading-snug">
-                SANCA Pretoria
-              </p>
-              <p className="text-white/80 text-xs mt-0.5">
-                Your Physical &amp; Mental Health Matters
-              </p>
+          {/* Garden Patio */}
+          <div className="relative rounded-2xl overflow-hidden shadow-premium-2xl border-4 border-sanca-gold/20 hover-lift group">
+            {/* Gold accent corners */}
+            <div className="absolute top-0 right-0 w-8 h-8 z-10 pointer-events-none">
+              <div className="absolute top-2 right-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
+              <div className="absolute top-2 right-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
+            </div>
+            <div className="absolute bottom-0 left-0 w-8 h-8 z-10 pointer-events-none">
+              <div className="absolute bottom-2 left-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
+              <div className="absolute bottom-2 left-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
+            </div>
+
+            <div className="relative aspect-[3/4]">
+              <Image
+                src="/images/sanca/garden-patio.jpeg"
+                alt="Tranquil garden patio at SANCA Pretoria with ornate stone seating and lush greenery"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 20vw"
+              />
+              {/* Bottom overlay with tagline */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-12 pb-3 px-3">
+                <p className="text-white text-xs font-serif font-semibold leading-snug">
+                  Healing Gardens
+                </p>
+                <p className="text-white/80 text-[10px] mt-0.5">
+                  A Place of Peace
+                </p>
+              </div>
             </div>
           </div>
         </div>

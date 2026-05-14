@@ -27,8 +27,8 @@ export default function HeroSection() {
       {/* Background Image with Parallax */}
       <motion.div className="absolute inset-0" style={{ y: backgroundY }}>
         <img
-          src="/hero-bg.png"
-          alt="Serene garden sanctuary"
+          src="/images/sanca/facility-garden-building.jpg"
+          alt="SANCA Pretoria facility nestled in lush gardens and greenery"
           className="w-full h-[120%] object-cover"
         />
         {/* Multi-layer overlay for cinematic effect */}
@@ -69,7 +69,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 backdrop-blur-md border border-sanca-gold/40 text-white text-sm mb-8 badge-pulse shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),inset_0_1px_2px_rgba(197,150,58,0.1)]"
           >
-            <img src="/images/sanca/sanca-logo.jpeg" alt="" className="h-5 w-5 object-contain rounded-sm" />
+            <img src="/images/sanca/sanca-logo-official.png" alt="" className="h-5 w-5 object-contain rounded-sm" />
             <Shield className="h-4 w-4 text-sanca-gold" />
             <span>Est. 1957 — Nearly Seven Decades of Restoring Lives and Rebuilding Futures</span>
           </motion.div>

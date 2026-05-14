@@ -83,7 +83,7 @@ export default function PageLoader() {
             }}
             className="relative z-10 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-sanca-green to-sanca-green-dark flex items-center justify-center shadow-2xl overflow-hidden"
           >
-            <img src="/images/sanca/sanca-logo.jpeg" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-2" />
+            <img src="/images/sanca/sanca-logo-official.png" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-2" />
           </motion.div>
 
           {/* Loading text */}

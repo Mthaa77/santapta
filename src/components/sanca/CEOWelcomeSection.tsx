@@ -143,12 +143,51 @@ export default function CEOWelcomeSection() {
               </div>
             </motion.div>
 
+            {/* Marble Logo Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-premium-2xl border-4 border-white dark:border-[#0D3B22] hover-lift group">
+                {/* Gold accent corner decorations */}
+                <div className="absolute top-0 left-0 w-10 h-10 z-10 pointer-events-none">
+                  <div className="absolute top-2 left-2 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+                  <div className="absolute top-2 left-2 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+                </div>
+                <div className="absolute bottom-0 right-0 w-10 h-10 z-10 pointer-events-none">
+                  <div className="absolute bottom-2 right-2 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+                  <div className="absolute bottom-2 right-2 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+                </div>
+
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/sanca/sanca-logo-marble.jpeg"
+                    alt="SANCA Pretoria official logo on marble background with embossed 3D finish"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
+                  {/* Bottom overlay gradient with caption */}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-16 pb-4 px-5">
+                    <p className="text-white text-sm font-serif font-semibold leading-snug">
+                      SANCA Pretoria
+                    </p>
+                    <p className="text-white/80 text-xs mt-0.5">
+                      Official Emblem — Est. 1957
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Quote Card */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.25 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
             >
               <Card className="p-6 shadow-premium-md border-0 bg-gradient-to-br from-sanca-green-dark to-sanca-green text-white relative overflow-hidden hover-lift">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -171,7 +210,7 @@ export default function CEOWelcomeSection() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
             >
               <Card className="p-6 shadow-premium-md border-0 hover-lift">
                 <h4 className="font-serif text-lg font-bold text-sanca-green-dark dark:text-white mb-4">
@@ -201,7 +240,7 @@ export default function CEOWelcomeSection() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.55 }}
+              transition={{ duration: 0.6, delay: 0.65 }}
             >
               <Card className="p-5 shadow-premium-sm border-0 bg-sanca-cream dark:bg-[#0D3B22]">
                 <div className="grid grid-cols-3 gap-4 text-center">

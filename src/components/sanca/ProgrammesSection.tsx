@@ -16,7 +16,7 @@ const programmes = [
     duration: '4–6 Weeks',
     capacity: '52 Patients',
     target: 'Adults',
-    image: '/images/sanca/castle-carey-welcome.jpg',
+    image: '/images/sanca/facility-garden-building.jpg',
     description:
       'When you need the deepest level of support, our flagship residential programme is here for you. Nestled within tranquil, landscaped gardens in the peaceful suburb of Ninapark, Castle Carey Clinic offers medically supervised detoxification and round-the-clock compassionate care. Here, surrounded by the quiet beauty of nature, you can focus entirely on your healing — knowing you are safe, supported, and never alone on this journey.',
     features: [
@@ -47,7 +47,7 @@ const programmes = [
     duration: 'Tailored',
     capacity: '8 Males',
     target: 'Ages 13–18',
-    image: '/images/sanca/clinic-entrance.jpg',
+    image: '/images/sanca/clinic-entrance-gate.jpg',
     description:
       'We know how deeply it hurts to watch your child struggle. Lapalamé is a dedicated inpatient facility designed specifically for adolescent males aged 13–18, offering age-appropriate therapeutic care in a nurturing, structured environment. With its distinctive stone archway entrance and welcoming grounds, Lapalamé provides a safe space where young people can begin to rebuild. Parents are not just included — they are essential partners in their child\'s recovery journey, because healing young lives means healing families together.',
     features: [
@@ -107,7 +107,7 @@ const programmes = [
     duration: 'Ongoing',
     capacity: 'Open',
     target: 'Graduates',
-    image: '/images/sanca/garden-courtyard.jpg',
+    image: '/images/sanca/garden-patio.jpeg',
     description:
       'Leaving treatment is not the end of your journey — it is the beginning of a beautiful new chapter. Our aftercare programme equips you with the practical skills, confidence, and ongoing support to maintain your sobriety and navigate the challenges of daily life with grace. We begin planning your aftercare early, so that when the time comes, you step forward with a clear plan, inner strength, and a community that stands behind you — today, tomorrow, and always.',
     features: [

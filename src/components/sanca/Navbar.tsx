@@ -111,7 +111,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.98 }}
           >
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-sanca-green rounded-xl flex items-center justify-center shadow-premium-sm group-hover:shadow-premium-md transition-shadow card-animated-border overflow-hidden">
-              <img src="/images/sanca/sanca-logo.jpeg" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-1" />
+              <img src="/images/sanca/sanca-logo-official.png" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-1" />
             </div>
             <div className="hidden sm:block">
               <p
@@ -207,7 +207,7 @@ export default function Navbar() {
                     <div className="absolute inset-0 bg-gradient-to-br from-sanca-green/5 via-transparent to-sanca-gold/5 dark:from-sanca-green/20 dark:via-transparent dark:to-sanca-gold/10" />
                     <div className="relative flex items-center gap-4">
                       <div className="w-14 h-14 bg-gradient-to-br from-sanca-green to-sanca-green-dark rounded-2xl flex items-center justify-center shadow-premium-md overflow-hidden card-animated-border">
-                        <img src="/images/sanca/sanca-logo.jpeg" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-1.5" />
+                        <img src="/images/sanca/sanca-logo-official.png" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-1.5" />
                       </div>
                       <div>
                         <p className="font-serif font-bold text-lg leading-tight text-sanca-green-dark dark:text-white">SANCA</p>

@@ -131,20 +131,28 @@ const facilities = [
 
 const virtualTourImages = [
   {
+    src: '/images/sanca/clinic-entrance-gate.jpg',
+    label: 'Main Entrance Gate',
+  },
+  {
+    src: '/images/sanca/facility-landscaped.jpg',
+    label: 'Landscaped Grounds',
+  },
+  {
+    src: '/images/sanca/waiting-room.jpg',
+    label: 'Waiting Room',
+  },
+  {
+    src: '/images/sanca/garden-patio.jpeg',
+    label: 'Garden Patio',
+  },
+  {
     src: '/images/sanca/garden-courtyard.jpg',
     label: 'Healing Garden',
   },
   {
-    src: '/images/sanca/facility-building.jpg',
-    label: 'Facility Exterior',
-  },
-  {
-    src: '/images/sanca/clinic-entrance.jpg',
-    label: 'Clinic Entrance',
-  },
-  {
-    src: '/images/sanca/castle-carey-welcome.jpg',
-    label: 'Welcome Area',
+    src: '/images/sanca/facility-garden-building.jpg',
+    label: 'Facility Building',
   },
 ];
 
@@ -194,7 +202,7 @@ export default function FacilitiesSection() {
               Step Inside Our Facilities
             </h3>
           </div>
-          <div className="hidden md:flex items-center justify-center gap-4 lg:gap-6">
+          <div className="hidden md:flex items-center justify-center gap-4 lg:gap-6 flex-wrap">
             {virtualTourImages.map((img, i) => (
               <motion.div
                 key={img.label}
@@ -204,7 +212,7 @@ export default function FacilitiesSection() {
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
                 className="flex flex-col items-center gap-2"
               >
-                <div className="relative w-48 h-32 rounded-xl overflow-hidden shadow-premium-md border-2 border-sanca-gold/20 hover-lift group">
+                <div className="relative w-44 h-28 lg:w-48 lg:h-32 rounded-xl overflow-hidden shadow-premium-md border-2 border-sanca-gold/20 hover-lift group">
                   <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-sanca-gold to-sanca-gold-light z-10" />
                   <img
                     src={img.src}
