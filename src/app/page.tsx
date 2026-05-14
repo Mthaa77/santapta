@@ -4,12 +4,14 @@ import Navbar from '@/components/sanca/Navbar';
 import HeroSection from '@/components/sanca/HeroSection';
 import SelfAssessment from '@/components/sanca/SelfAssessment';
 import MoodTracker from '@/components/sanca/MoodTracker';
+import RecoveryAffirmations from '@/components/sanca/RecoveryAffirmations';
 import RecoveryVisualizer from '@/components/sanca/RecoveryVisualizer';
 import DiagnosisTips from '@/components/sanca/DiagnosisTips';
 import MythsSection from '@/components/sanca/MythsSection';
 import MedicalAidSection from '@/components/sanca/MedicalAidSection';
 import AboutSection from '@/components/sanca/AboutSection';
 import ProgrammesSection from '@/components/sanca/ProgrammesSection';
+import TreatmentComparison from '@/components/sanca/TreatmentComparison';
 import FacilitiesSection from '@/components/sanca/FacilitiesSection';
 import AdmissionsSection from '@/components/sanca/AdmissionsSection';
 import PackingListSection from '@/components/sanca/PackingListSection';
@@ -47,6 +49,7 @@ export default function Home() {
         <HeroSection />
         <SelfAssessment />
         <MoodTracker />
+        <RecoveryAffirmations />
         <RecoveryVisualizer />
         <div className="parallax-divider" />
         <DiagnosisTips />
@@ -58,6 +61,7 @@ export default function Home() {
         <RecoveryJourney />
         <div className="parallax-divider" />
         <ProgrammesSection />
+        <TreatmentComparison />
         <FacilitiesSection />
         <div className="parallax-divider" />
         <AdmissionsSection />

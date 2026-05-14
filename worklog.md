@@ -1349,3 +1349,185 @@ Stage Summary:
   3. Performance optimization (lazy load chart components, optimize hero background image)
   4. Add more micro-interactions (scroll-reveal animations, card hover particle effects)
   5. Expand dark mode styling across all remaining components
+
+---
+Task ID: 3-b
+Agent: Contact & Styling Enhancement Developer
+Task: Add Google Maps embed and enhance dark mode styling
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11+ completed: ultra-premium SANCA website with 21+ sections)
+- Read ContactSection.tsx (593 lines) — understood two-column layout (form + contact cards) structure
+- Read globals.css (2171 lines) — understood existing dark mode variables, shadow overrides, and utility classes
+- Added Google Maps embed to ContactSection.tsx after the two-column layout:
+  - Label row with MapPin icon + "Find Us" text + address + "Get Directions" external link
+  - Full-width Google Maps iframe embed with SANCA Pretoria location URL
+  - iframe attributes: loading="lazy", referrerPolicy="no-referrer-when-downgrade", title="SANCA Pretoria Location", allowFullScreen
+  - Card wrapper with shadow-premium-md, rounded-2xl, overflow-hidden, dark mode bg
+  - Responsive iframe height: h-64 sm:h-80
+  - Framer Motion whileInView animation on the map section
+- Appended dark mode enhancements to globals.css (no modifications to existing styles):
+  - Dark mode for inline bg-[#FAF6ED] cream backgrounds → #0D3B22
+  - Dark mode text-sanca-green-dark → lighter green (#4CAF7D) for readability
+  - Dark mode border adjustments for sanca-green/5 through /20 → lighter borders
+  - Dark mode for inline white bg cards → #0D3B22 override
+  - Dark mode section background override using var(--background)
+  - Dark mode hover-lift adjusted shadow for better visibility
+  - Dark mode select-sanca light-colored dropdown arrow SVG for visibility
+  - Smooth theme switching transitions on body, main, section, header, footer, nav
+- Ran ESLint — zero errors
+
+Stage Summary:
+- Google Maps embed added to ContactSection.tsx with label row, iframe, Card wrapper, and whileInView animation
+- Dark mode CSS enhancements appended to globals.css: inline bg overrides, lighter text/borders, section backgrounds, select dropdown visibility, smooth theme transitions
+- Zero lint errors
+
+---
+Task ID: 4-b
+Agent: Recovery Affirmations Widget Developer
+Task: Build Recovery Affirmations Widget component
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections)
+- Studied existing component patterns (MoodTracker, RecoveryVisualizer, SobrietyCalculator) for animation styles, Card/Button usage, SANCA brand class conventions
+- Reviewed globals.css for available utility classes (shadow-gold, text-gradient-gold, btn-ripple, hover-lift, badge-pulse, custom-scrollbar, section-top-gradient, shadow-premium-*)
+- Created /home/z/my-project/src/components/sanca/RecoveryAffirmations.tsx with:
+  - Section ID `affirmations` with bg-sanca-cream (#FAF6ED) background and SANCA brand styling
+  - Section header with Sparkles badge and "Your Recovery Journey" heading with text-gradient-gold
+  - **Daily Affirmation Card**: Large centered card with decorative gold gradient top border, decorative quote marks (") at top-left and bottom-right in sanca-gold/15, rotating daily affirmation from curated list of 32 recovery-focused affirmations, shows today's date and "Day X of your journey" counter, "Start My Journey" button for first-time visitors (sets today as Day 1 in localStorage), "New Affirmation" refresh button, "Share" button that copies affirmation text to clipboard (with Copy/Check icon toggle)
+  - **Progress Badge System**: 6 milestone badges in horizontal scrollable strip: Day 1 "First Step" 🌱, Day 7 "One Week Strong" 💪, Day 30 "Monthly Milestone" ⭐, Day 90 "90-Day Warrior" 🔥, Day 180 "Half Year Hero" 🏆, Day 365 "One Year Champion" 👑. Earned badges have gold border with shadow-gold and full opacity with green checkmark. Unearned badges are grayscale with lower opacity. Clicking a badge shows an animated tooltip with milestone description and days-until-earned counter.
+  - **Streak Counter**: "Current Streak: X days" with flame icon and fire emoji row, "Longest Streak: X days" with trophy icon. Streak data saved to localStorage key 'sanca_recovery_data' with automatic streak calculation (consecutive day tracking, streak reset on gap).
+  - **Motivational Quote**: Rotating daily quote from 12 SANCA-related inspirational quotes with attribution line and decorative quotation marks.
+  - **Bottom CTA**: "Need support today? Call 012 542 1121" with phone link (tel: href)
+  - Framer Motion whileInView entrance animations throughout with AnimatePresence for smooth transitions
+  - AnimatePresence mode="wait" for affirmation text transitions on refresh
+  - Responsive design with mobile-first approach
+  - 'use client' directive, imports from @/components/ui/card and @/components/ui/button
+  - Uses lucide-react icons: Sparkles, RefreshCw, Share2, Flame, Trophy, Calendar, Heart, ArrowRight, Copy, Check
+- Added RecoveryAffirmations import and placement in page.tsx between MoodTracker and RecoveryVisualizer
+- Fixed unused eslint-disable directive warning
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling successfully with 200 status codes
+
+Stage Summary:
+- RecoveryAffirmations component created at src/components/sanca/RecoveryAffirmations.tsx (~310 lines)
+- 4 major interactive features: Daily Affirmation Card, Progress Badge System (6 milestones), Streak Counter, Motivational Quote
+- localStorage persistence with 'sanca_recovery_data' key for journey start date, streak tracking, and last visit date
+- SANCA brand identity throughout (forest green, warm gold, cream color palette with bg-sanca-cream background)
+- Component integrated into page.tsx between MoodTracker and RecoveryVisualizer
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 4-a
+Agent: Treatment Comparison Tool Developer
+Task: Build Treatment Comparison Tool component
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections)
+- Studied existing component patterns (ProgrammesSection, AboutSection) for animation styles, Card/Button usage, SANCA brand class conventions
+- Reviewed globals.css for available utility classes (text-gradient-gold, shadow-premium-*, hover-lift, btn-ripple, custom-scrollbar, etc.)
+- Created /home/z/my-project/src/components/sanca/TreatmentComparison.tsx with:
+  - Section ID `treatment-compare` with white background and SANCA brand styling
+  - Section header with ArrowLeftRight badge, "Compare Treatment Options" heading with text-gradient-gold, subtitle "Find the right programme for your needs"
+  - 4 programme columns: Castle Carey Clinic (Inpatient-Adults), Lapalamé Youth Drug Unit (Inpatient-Youth 13-18), Outpatient Programme (Community-based), Aftercare Programme (Continued Support)
+  - 8 comparison categories as rows: Duration, Setting, Medical Detox, Counselling, Family Involvement, Cost, Age Group, Best For
+  - Desktop: 5-column CSS Grid table inside Card with rounded corners, alternating row backgrounds (cream/white)
+  - Mobile/Tablet: Horizontally scrollable card layout with snap scrolling and swipe hint
+  - "★ Recommended" badge on Castle Carey Clinic column (gold ring-inset on desktop, badge on mobile)
+  - Checkmarks (✓) in sanca-emerald green with circle background, X marks (✗) in red with circle background
+  - Text values in dark foreground color
+  - Each column header has programme icon, name, subtitle, and accent bar with coloured gradient background
+  - Framer Motion whileInView entrance animations on headers, rows, and mobile cards
+  - Bottom CTA: "Not sure which programme? Take Our Assessment" button with HelpCircle icon scrolling to #assessment
+  - Dark mode support throughout with dark: variants
+  - 'use client' directive
+  - Imports from @/components/ui/card and @/components/ui/button
+  - Uses lucide-react icons: ArrowLeftRight, Check, X, Building2, Users, HeartPulse, Clock, CreditCard, UserCheck, Star, GraduationCap, TreePine, HelpCircle
+- Added TreatmentComparison import and placement in page.tsx (between ProgrammesSection and FacilitiesSection)
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- TreatmentComparison component created at src/components/sanca/TreatmentComparison.tsx (~270 lines)
+- Interactive 4-programme side-by-side comparison table with 8 categories
+- Desktop: CSS Grid table layout inside Card with SANCA-branded column headers and alternating row colors
+- Mobile: Horizontal scrollable card layout with snap points and swipe hint
+- "Recommended" badge highlighting Castle Carey Clinic column
+- Green checkmarks and red X marks for boolean values, dark text for other values
+- SANCA brand colors throughout (forest green, warm gold, cream, emerald palette)
+- Bottom CTA button scrolling to #assessment section
+- Component integrated into page.tsx between ProgrammesSection and FacilitiesSection
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 13
+Agent: Cron Review Agent (Phase 7)
+Task: QA testing, bug fixes, mandatory styling improvements, and new features
+
+Work Log:
+- Read worklog.md to assess project status (Tasks 1-12 completed: ultra-premium SANCA website with 27+ sections)
+- Performed comprehensive QA using agent-browser with VLM screenshot analysis
+- VLM identified: floating button overlap concerns with CrisisBanner, no critical bugs
+- Console check: zero errors after fresh reload
+- Lint check: zero errors
+- **Mandatory New Feature**: TreatmentComparison.tsx — Interactive side-by-side programme comparison tool:
+  - 4 programme columns (Castle Carey, Lapalamé, Outpatient, Aftercare) with colored gradient headers
+  - 8 comparison categories (Duration, Setting, Medical Detox, Counselling, Family Involvement, Cost, Age Group, Best For)
+  - Castle Carey column highlighted with "★ Recommended" badge
+  - Green ✓ and red ✗ marks for included/excluded features
+  - Desktop: 5-column grid table; Mobile: horizontally scrollable with snap
+  - Dark mode support throughout
+  - CTA: "Not sure which programme? Take Our Assessment" button
+- **Mandatory New Feature**: RecoveryAffirmations.tsx — Daily affirmations with progress badge system:
+  - Daily affirmation card with 32+ rotating recovery-focused affirmations
+  - "Day X of your journey" counter with localStorage persistence
+  - "Start My Journey" button for first-time visitors
+  - Refresh button for new affirmation, share button for clipboard copy
+  - 6 progress milestone badges (Day 1, 7, 30, 90, 180, 365) with emoji icons
+  - Earned badges glow with gold border and green checkmark; unearned are grayscale
+  - Streak counter (current + longest) with flame/trophy icons
+  - 12 rotating motivational quotes with attribution
+  - Phone CTA: "Need support today? Call 012 542 1121"
+- **Mandatory Styling**: Google Maps iframe embed added to ContactSection:
+  - Full-width map card with shadow-premium-md, rounded-2xl, overflow-hidden
+  - Label row with MapPin icon, address, and "Get Directions" link
+  - Responsive height (h-64 sm:h-80), lazy loading iframe
+  - Framer Motion whileInView animation
+- **Mandatory Styling**: Enhanced dark mode with smooth theme transitions:
+  - ~65 lines of new CSS appended to globals.css
+  - Inline bg color overrides for dark mode (#FAF6ED → #0D3B22)
+  - Lighter dark mode text (.text-sanca-green-dark → #4CAF7D)
+  - Lighter dark mode borders for better visibility
+  - Adjusted hover-lift shadow for dark mode
+  - Light-colored select dropdown arrow SVG for dark mode
+  - Smooth 0.3s transitions on body/main/section/header/footer/nav for theme switching
+- **Micro-interaction Enhancement**: EmergencyCTA.tsx complete redesign:
+  - Added AnimatedStat component with scroll-triggered counter animation
+  - 3 impact stats: "1,000+ Patients Helped Annually", "68+ Years of Service", "24/7 Emergency Support"
+  - Decorative background orbs added
+  - Contact cards enhanced with icon containers (w-14 h-14 rounded-xl with colored bg)
+  - Hover border color changes (gold/emerald accents on hover)
+  - section-wave-gold-bottom class for premium bottom transition
+- Final lint check: zero errors
+- Dev server: all pages compiling with 200 status codes
+- VLM verification: page renders correctly, no broken elements
+
+Stage Summary:
+- **Current project status**: Ultra-premium SANCA Pretoria website with 30+ sections/features, all rendering correctly
+- **Completed modifications this phase**:
+  - 2 new major interactive components (TreatmentComparison, RecoveryAffirmations)
+  - Google Maps iframe embed in Contact section
+  - Enhanced dark mode styling with smooth theme transitions
+  - EmergencyCTA enhanced with animated stats, icon containers, and decorative elements
+  - ~65 lines of new dark mode CSS
+- **Full component list** (30+ sections/features):
+  PageLoader, ScrollProgress, Navbar (with ThemeToggle), Hero (with particles), SelfAssessment (with celebration), MoodTracker, RecoveryAffirmations (new), RecoveryVisualizer, DiagnosisTips, MythsSection, MedicalAidSection, AboutSection, TeamSection, RecoveryJourney, ProgrammesSection, TreatmentComparison (new), FacilitiesSection, AdmissionsSection, PackingListSection, DrugSeverityMeter, DrugInfoSection, DrugStatsSection, AddictionCostCalculator, FamiliesSection, ResourceLibrary, EventsSection, FAQSection, TestimonialsSection, SuccessStories, SobrietyCalculator, VolunteerSection, NewsletterSection, ContactSection (with Google Maps), EmergencyCTA (enhanced), FloatingActions, ChatBot, CrisisBanner, Footer
+- **Unresolved issues/risks**:
+  - Non-critical framer-motion scroll position warning in console (cosmetic only)
+  - Dark mode foundation solid but some older components may need additional dark: variant overrides
+- **Priority recommendations for next phase**:
+  1. Add PWA capabilities (manifest.json, service worker, offline support)
+  2. Performance optimization (lazy load chart/heavy components, optimize images)
+  3. Add more micro-interactions (scroll-reveal on cards, particle effects on hover)
+  4. Expand dark mode styling across all remaining components
+  5. Add accessibility audit (ARIA labels, keyboard navigation testing)

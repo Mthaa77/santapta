@@ -586,6 +586,48 @@ export default function ContactSection() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* ============ Google Maps ============ */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-14"
+        >
+          {/* Label row above map */}
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <div className="flex items-center gap-2 text-sanca-green">
+              <MapPin className="h-5 w-5" />
+              <span className="font-semibold text-sm uppercase tracking-wider">Find Us</span>
+            </div>
+            <span className="text-gray-500 text-sm hidden sm:inline">•</span>
+            <span className="text-gray-600 dark:text-gray-400 text-sm">
+              Corner Rachel De Beer &amp; Waterbok St, Ninapark, Pretoria
+            </span>
+            <a
+              href="https://maps.google.com/?q=SANCA+Pretoria+Corner+Rachel+De+Beer+Waterbok+St+Ninapark"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-auto inline-flex items-center gap-1.5 text-sanca-green text-sm font-semibold hover:text-sanca-green-light transition-colors"
+            >
+              Get Directions
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
+            </a>
+          </div>
+
+          {/* Map card */}
+          <Card className="shadow-premium-md rounded-2xl overflow-hidden border-sanca-green/5 dark:bg-[#0D3B22]">
+            <iframe
+              src="https://maps.google.com/maps?q=SANCA+Pretoria+Corner+Rachel+De+Beer+Waterbok+St+Ninapark&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-64 sm:h-80 border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SANCA Pretoria Location"
+              allowFullScreen
+            />
+          </Card>
+        </motion.div>
       </div>
     </section>
   );
