@@ -52,3 +52,21 @@ prompt
 server.log
 # Skills directory
 /skills/
+
+# QA screenshots and downloads
+/download/
+
+# Agent context files
+/agent-ctx/
+
+# Upload folder (source images)
+/upload/
+
+# Worklog (development artifact)
+worklog.md
+
+# Database
+/db/
+
+# Examples
+/examples/
