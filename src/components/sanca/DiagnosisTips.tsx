@@ -34,8 +34,8 @@ const tips: DiagnosisTip[] = [
       'Tremors or shaking',
       'Needle marks or track lines',
     ],
-    advice: 'Physical changes are often the first visible signs. If you notice these in yourself or someone you care about, it may be time to seek guidance.',
-    action: 'Speak to a medical professional',
+    advice: 'Physical changes are often the first visible signs that something may be amiss. If you notice these in yourself or someone you care about, please don\'t dismiss them — your body may be telling you something important. A simple conversation with a medical professional can bring clarity and relief.',
+    action: 'Speak to a medical professional today',
   },
   {
     id: 'behavioural',
@@ -52,7 +52,7 @@ const tips: DiagnosisTip[] = [
       'Financial problems or borrowing money',
       'Legal troubles',
     ],
-    advice: 'Behavioural shifts can be subtle at first. Trust your instincts — if something feels wrong, it probably deserves attention.',
+    advice: 'Behavioural shifts can be subtle at first, which is exactly why they\'re so easy to overlook. Trust your instincts — if something feels different or wrong, it probably deserves a closer look. Reaching out for a confidential conversation doesn\'t commit you to anything; it simply opens a door to understanding.',
     action: 'Contact SANCA for a confidential chat',
   },
   {
@@ -70,7 +70,7 @@ const tips: DiagnosisTip[] = [
       'Conflict at home or work',
       'Neglecting children or dependants',
     ],
-    advice: 'Addiction doesn\'t just affect one person — it ripples through families and communities. Seeking help is not just for you, but for everyone who cares about you.',
+    advice: 'Addiction doesn\'t only affect one person — its impact ripples outward through families, friendships, and entire communities. Seeking help is not just for you; it\'s an act of care for everyone who loves you. You deserve to have those relationships whole and healthy again.',
     action: 'Join a family support session',
   },
   {
@@ -88,8 +88,8 @@ const tips: DiagnosisTip[] = [
       'Conflicts with colleagues',
       'Financial requests at work',
     ],
-    advice: 'If you\'re an employer or colleague concerned about someone, EAP referrals and SANCA\'s workplace programmes can help — discreetly and professionally.',
-    action: 'Learn about EAP referrals',
+    advice: 'If you\'re an employer or colleague who\'s concerned about someone, you don\'t have to navigate that difficult conversation alone. SANCA\'s Employee Assistance Programme (EAP) referrals and workplace programmes offer professional, discreet support — helping you help them without overstepping.',
+    action: 'Learn about EAP workplace referrals',
   },
   {
     id: 'youth',
@@ -106,8 +106,8 @@ const tips: DiagnosisTip[] = [
       'Extreme rebellion or defiance',
       'Sleeping at odd hours',
     ],
-    advice: 'Do teenagers always grow out of using substances? The answer is FALSE. Early intervention through Lapalamé Youth Drug Unit gives the best chance for lasting change.',
-    action: 'Explore the Youth Programme',
+    advice: 'It\'s a common hope that teenagers will simply "grow out of it," but the evidence tells a different story. Early intervention gives young people the very best chance for lasting change. SANCA\'s Lapalamé Youth Drug Unit is specially designed for adolescents — offering age-appropriate care in a setting where they feel safe and understood.',
+    action: 'Explore the Lapalamé Youth Programme',
   },
   {
     id: 'family',
@@ -124,8 +124,8 @@ const tips: DiagnosisTip[] = [
       'Financial strain from the addiction',
       'Impact on other family members',
     ],
-    advice: 'You are not alone. SANCA\'s family support sessions teach families how to support recovery while protecting their own wellbeing.',
-    action: 'Attend a Family Support Session',
+    advice: 'You are not alone in this, even though it may feel that way. SANCA\'s family support sessions provide a compassionate space where you can learn how to support your loved one\'s recovery while also protecting your own emotional and mental wellbeing. Caring for yourself isn\'t selfish — it\'s essential.',
+    action: 'Attend a family support session',
   },
 ];
 
@@ -150,10 +150,13 @@ export default function DiagnosisTips() {
             Know the Signs
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
-            Recognising the <span className="text-gradient-gold">Signs That Matter</span>
+            Recognising the <span className="text-gradient-gold">Signs That Matter Most</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            Whether you&apos;re worried about yourself, someone you love, a colleague, or your child — knowing what to look for is the first brave step.
+            Whether you&apos;re worried about yourself, someone you love, a colleague, or your child —
+            knowing what to look for is the first brave step. Trust yourself: if something feels
+            wrong, it&apos;s always worth exploring further. You don&apos;t need to be certain — you just
+            need to be willing to ask the question.
           </p>
         </motion.div>
 
@@ -209,7 +212,7 @@ export default function DiagnosisTips() {
                         <h3 className={`font-serif text-xl font-bold tracking-tight ${tip.color}`}>
                           {tip.category}
                         </h3>
-                        <p className="text-xs text-muted-foreground">Warning signs to watch for</p>
+                        <p className="text-xs text-muted-foreground">Important signs to be aware of</p>
                       </div>
                     </div>
                   </div>

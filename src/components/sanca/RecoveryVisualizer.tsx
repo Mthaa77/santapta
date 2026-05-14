@@ -28,57 +28,57 @@ const milestoneData: MilestoneRange[] = [
     minDay: 0,
     maxDay: 1,
     label: 'Day 0–1',
-    physical: { milestone: 'Detox begins', progress: 2 },
-    mental: { milestone: 'Cravings peak', progress: 1 },
-    social: { milestone: 'Isolation common', progress: 1 },
+    physical: { milestone: 'Your detox journey begins — the first brave step toward healing', progress: 2 },
+    mental: { milestone: 'Cravings are at their strongest — but they will pass', progress: 1 },
+    social: { milestone: 'You may feel alone, but reaching out for help is already a victory', progress: 1 },
   },
   {
     minDay: 2,
     maxDay: 7,
     label: 'Day 2–7',
-    physical: { milestone: 'Withdrawal symptoms peak', progress: 8 },
-    mental: { milestone: 'Sleep begins to improve', progress: 5 },
-    social: { milestone: 'Family visits begin', progress: 4 },
+    physical: { milestone: 'Withdrawal symptoms reach their peak — this is the hardest part, and it means healing has started', progress: 8 },
+    mental: { milestone: 'Sleep patterns begin to gently improve — rest is returning', progress: 5 },
+    social: { milestone: 'Family visits begin — reconnecting with loved ones starts here', progress: 4 },
   },
   {
     minDay: 8,
     maxDay: 14,
     label: 'Day 8–14',
-    physical: { milestone: 'Physical cravings decrease', progress: 15 },
-    mental: { milestone: 'Mental clarity improving', progress: 12 },
-    social: { milestone: 'Group therapy starts', progress: 10 },
+    physical: { milestone: 'Physical cravings begin to ease — your body is finding its balance', progress: 15 },
+    mental: { milestone: 'The fog is lifting — mental clarity is steadily returning', progress: 12 },
+    social: { milestone: 'Group therapy begins — discovering you\'re not alone in this journey', progress: 10 },
   },
   {
     minDay: 15,
     maxDay: 30,
     label: 'Day 15–30',
-    physical: { milestone: 'Energy levels rising', progress: 25 },
-    mental: { milestone: 'Emotional regulation improves', progress: 22 },
-    social: { milestone: 'Building support network', progress: 18 },
+    physical: { milestone: 'Energy levels are noticeably rising — you\'re growing stronger each day', progress: 25 },
+    mental: { milestone: 'Emotional balance is returning — you\'re learning to navigate feelings with confidence', progress: 22 },
+    social: { milestone: 'Building a trusted support network — meaningful connections are forming', progress: 18 },
   },
   {
     minDay: 31,
     maxDay: 90,
     label: 'Day 31–90',
-    physical: { milestone: 'Organ function improving', progress: 45 },
-    mental: { milestone: 'Cognitive function normalising', progress: 40 },
-    social: { milestone: 'Rebuilding relationships', progress: 35 },
+    physical: { milestone: 'Your organs are actively healing — your body is remarkable at recovering', progress: 45 },
+    mental: { milestone: 'Cognitive function is normalising — thinking becomes sharper and clearer', progress: 40 },
+    social: { milestone: 'Rebuilding trust and repairing relationships — one honest conversation at a time', progress: 35 },
   },
   {
     minDay: 91,
     maxDay: 180,
     label: 'Day 91–180',
-    physical: { milestone: 'Immune system strengthening', progress: 68 },
-    mental: { milestone: 'Stress management skills', progress: 62 },
-    social: { milestone: 'Community reintegration', progress: 58 },
+    physical: { milestone: 'Your immune system is growing stronger — your whole body is thanking you', progress: 68 },
+    mental: { milestone: 'Healthy stress management skills are becoming second nature', progress: 62 },
+    social: { milestone: 'Confidently stepping back into community life — you belong here', progress: 58 },
   },
   {
     minDay: 181,
     maxDay: 365,
     label: 'Day 181–365',
-    physical: { milestone: 'Major health recovery', progress: 90 },
-    mental: { milestone: 'New coping strategies', progress: 85 },
-    social: { milestone: 'Independent living skills', progress: 82 },
+    physical: { milestone: 'Major health recovery achieved — your body has made an extraordinary comeback', progress: 90 },
+    mental: { milestone: 'A full toolkit of coping strategies — you\'re equipped for whatever comes your way', progress: 85 },
+    social: { milestone: 'Independent living with confidence — you\'re building a life you\'re proud of', progress: 82 },
   },
 ];
 
@@ -255,12 +255,13 @@ export default function RecoveryVisualizer() {
             Recovery Science
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
-            Your Body&apos;s{' '}
-            <span className="text-gradient-gold">Recovery Timeline</span>
+            Your Journey of{' '}
+            <span className="text-gradient-gold">Healing</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Explore the science of healing. Day by day, your body and mind rebuild
-            — discover what happens at each stage of recovery from substance abuse.
+            Recovery isn\'t just possible — it\'s happening, one day at a time. Explore how your
+            body, mind, and relationships heal at every stage of the journey. Every single day
+            brings you closer to the life you deserve.
           </p>
         </motion.div>
 
@@ -386,8 +387,8 @@ export default function RecoveryVisualizer() {
               </h3>
               <ProgressRing percentage={overallProgress} day={currentDay} />
               <p className="text-sm text-muted-foreground mt-4 text-center leading-relaxed">
-                Every day in recovery brings measurable healing to your body, mind,
-                and relationships.
+                Every day you choose recovery, your body, mind, and relationships grow
+                a little stronger — and that progress is something to be proud of.
               </p>
             </Card>
           </div>
@@ -524,14 +525,14 @@ export default function RecoveryVisualizer() {
           className="text-center mt-14"
         >
           <p className="text-muted-foreground mb-4 text-base sm:text-lg">
-            Recovery is possible — and it starts with a single step.
+            Your recovery journey starts with a single, courageous step — and we\'ll walk beside you every step of the way.
           </p>
           <Button
             onClick={scrollToContact}
             size="lg"
             className="bg-sanca-green hover:bg-sanca-green-dark text-white btn-ripple shadow-premium-md hover:shadow-premium-lg transition-all duration-300 px-8 py-3 text-base font-semibold rounded-xl"
           >
-            Begin Your Recovery
+            Take That First Step
             <ChevronRight className="h-5 w-5 ml-2" />
           </Button>
         </motion.div>

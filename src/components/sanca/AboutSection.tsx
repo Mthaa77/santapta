@@ -6,19 +6,19 @@ import { Card } from '@/components/ui/card';
 import { useScrollReveal } from '@/hooks/use-scroll-reveal';
 
 const values = [
-  { letter: 'C', word: 'Caring', desc: 'Compassionate support for every individual', icon: Heart, color: 'bg-rose-50 text-rose-600 border-rose-200' },
-  { letter: 'A', word: 'Accountability', desc: 'Transparent and responsible in all actions', icon: Shield, color: 'bg-blue-50 text-blue-600 border-blue-200' },
-  { letter: 'I', word: 'Integrity', desc: 'Honest and ethical in everything we do', icon: Award, color: 'bg-amber-50 text-amber-600 border-amber-200' },
-  { letter: 'R', word: 'Responsibility', desc: 'Dedicated to the communities we serve', icon: Users, color: 'bg-purple-50 text-purple-600 border-purple-200' },
-  { letter: 'U', word: 'Ubuntu', desc: '"I am because we are" — community spirit', icon: Leaf, color: 'bg-green-50 text-green-600 border-green-200' },
-  { letter: 'P', word: 'Professionalism', desc: 'Highest standards of clinical excellence', icon: Sparkles, color: 'bg-teal-50 text-teal-600 border-teal-200' },
+  { letter: 'C', word: 'Caring', desc: 'Offering heartfelt, compassionate support that honours the dignity and worth of every individual who entrusts us with their journey', icon: Heart, color: 'bg-rose-50 text-rose-600 border-rose-200' },
+  { letter: 'A', word: 'Accountability', desc: 'Holding ourselves to the highest standards of transparency and responsibility in every action, every decision, every day', icon: Shield, color: 'bg-blue-50 text-blue-600 border-blue-200' },
+  { letter: 'I', word: 'Integrity', desc: 'Guided by unwavering honesty and strong ethical principles in everything we do, because trust is the foundation of healing', icon: Award, color: 'bg-amber-50 text-amber-600 border-amber-200' },
+  { letter: 'R', word: 'Responsibility', desc: 'Deeply dedicated to the communities we serve, recognising that our work carries the hopes and futures of real people and families', icon: Users, color: 'bg-purple-50 text-purple-600 border-purple-200' },
+  { letter: 'U', word: 'Ubuntu', desc: '"I am because we are" — the deeply South African belief that our shared humanity binds us, and that healing happens in community', icon: Leaf, color: 'bg-green-50 text-green-600 border-green-200' },
+  { letter: 'P', word: 'Professionalism', desc: 'Delivering clinical excellence with skill and dedication, because every person who seeks our help deserves the very best care we can give', icon: Sparkles, color: 'bg-teal-50 text-teal-600 border-teal-200' },
 ];
 
 const timeline = [
-  { year: '1956', title: 'SANCA National Founded', desc: 'First conference opened by the Mayor of Johannesburg. Registered as a Welfare Organisation.' },
-  { year: '1957', title: 'Pretoria Society Established', desc: 'One of eight founding affiliated societies of SANCA National.' },
-  { year: '1970', title: 'Expanded Mandate', desc: 'SANCA expanded from alcoholism to include all drugs and substances.' },
-  { year: 'Present', title: '32 Societies Nationwide', desc: 'SANCA Pretoria operates 3 clinics across Pretoria, Soshanguve & Hammanskraal.' },
+  { year: '1956', title: 'SANCA National Founded', desc: 'A bold vision took root when the first national conference was opened by the Mayor of Johannesburg. SANCA was officially registered as a Welfare Organisation, igniting a movement of hope across South Africa.' },
+  { year: '1957', title: 'Pretoria Society Established', desc: 'Our story began as one of just eight founding affiliated societies of SANCA National — a small team with an enormous heart, determined to bring healing to the people of Pretoria and beyond.' },
+  { year: '1970', title: 'Expanded Mandate', desc: 'Recognising the growing challenges facing our communities, SANCA courageously expanded its mission beyond alcoholism to address all forms of substance misuse — meeting people where they were, with no judgement.' },
+  { year: 'Present', title: '32 Societies Nationwide', desc: 'Today, SANCA Pretoria operates three welcoming clinics across Pretoria, Soshanguve, and Hammanskraal — each one a beacon of hope, serving the greater Tshwane area with the same compassion that sparked our founding.' },
 ];
 
 function MissionCard() {
@@ -36,16 +36,18 @@ function MissionCard() {
             <h3 className="font-serif text-2xl font-bold tracking-tight">Our Mission</h3>
           </div>
           <p className="text-white/90 leading-relaxed">
-            To prevent and treat substance misuse, empowering individuals with the knowledge
-            and tools they need to make positive choices. Our team of compassionate
-            professionals works tirelessly to provide comprehensive and effective treatment
-            programmes that address the physical, emotional, and spiritual aspects of
-            substance abuse.
+            To prevent and treat substance misuse by empowering individuals with the knowledge,
+            tools, and unwavering support they need to reclaim their lives and make choices
+            that lead to lasting wellbeing. Our team of dedicated professionals works with
+            genuine compassion to deliver comprehensive, evidence-based treatment programmes
+            that nurture the whole person — body, mind, and spirit — because we believe that
+            true healing happens when every part of a person is cared for.
           </p>
           <div className="mt-6 p-4 rounded-xl bg-white/10 border border-white/10">
             <p className="text-sm italic text-sanca-gold-light">
-              &ldquo;Everyone deserves a chance at a healthy and fulfilling life, free from
-              the chains of addiction.&rdquo;
+              &ldquo;Every person in our land deserves the chance to live a life of dignity and
+              purpose — free from the grip of addiction, surrounded by the warmth of community
+              that says: you are not alone, and your story is not over.&rdquo;
             </p>
           </div>
         </div>
@@ -69,16 +71,19 @@ function VisionCard() {
             <h3 className="font-serif text-2xl font-bold tracking-tight">Our Vision</h3>
           </div>
           <p className="text-white/90 leading-relaxed">
-            To guide SANCA member organisations in providing high-quality, compassionate
-            services for individuals with Substance Use Disorders, their families, and
-            communities. We strive to build resilient, innovative organisations, foster
-            lasting partnerships, and promote evidence-based treatment and prevention
-            through professional expertise and research-driven service delivery.
+            To lead and guide SANCA member organisations in providing exceptional, compassionate
+            care for individuals and families affected by Substance Use Disorders. We envision
+            a future where resilient, innovative organisations work hand in hand with
+            communities, where lasting partnerships are built on trust, and where every person
+            — regardless of circumstance — has access to evidence-based treatment and
+            prevention delivered with professional excellence and genuine human kindness.
           </p>
           <div className="mt-6 p-4 rounded-xl bg-white/10 border border-white/10">
             <p className="text-sm italic text-white/90">
-              Like the vibrant threads of a tapestry, they intertwine, creating a beautiful
-              mosaic of hope and healing.
+              Like the ancient baobab whose branches shelter all beneath them, our vision grows
+              from deep roots — each community a living branch, each healed life a leaf
+              catching the light, together forming a canopy of hope under which all may
+              find rest and renewal.
             </p>
           </div>
         </div>
@@ -96,7 +101,7 @@ function ValuesGrid() {
           Our Values: <span className="text-shimmer">C.A.I.R.U.P.</span>
         </h3>
         <p className="text-muted-foreground dark:text-white/70 leading-relaxed">
-          The principles that guide every decision we make
+          The living principles that guide every decision, every interaction, and every life we are privileged to touch
         </p>
       </div>
 
@@ -135,7 +140,7 @@ function HeritageTimeline() {
           Our <span className="text-gradient-gold">Heritage</span>
         </h3>
         <p className="text-muted-foreground dark:text-white/70 leading-relaxed">
-          Seven decades of unwavering service to South African communities
+          Seven decades of standing shoulder to shoulder with South African communities — a story of courage, compassion, and unyielding hope
         </p>
       </div>
 
@@ -196,13 +201,13 @@ export default function AboutSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Heart className="h-4 w-4" />
-            Who We Are
+            Who We Are — A Family of Care
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
-            A Legacy of <span className="text-gradient-gold">Healing</span> and Hope
+            A Legacy of <span className="text-gradient-gold">Healing</span>, Hope, and Humanity
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
-            Proudly one of the original eight founding affiliates of SANCA National — serving our communities with heart and clinical excellence since 1957.
+            Proudly one of the original eight founding affiliates of SANCA National, we have stood alongside our communities through every season of need since 1957. With deep roots in the greater Tshwane area, we bring together heartfelt compassion and clinical excellence to walk the road of recovery with every person who walks through our doors.
           </p>
         </motion.div>
 

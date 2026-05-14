@@ -17,58 +17,58 @@ const myths: MythData[] = [
   {
     id: 1,
     myth: 'Addiction is a choice — you just need willpower.',
-    fact: 'Addiction is a chronic brain disease.',
+    fact: 'Addiction is a recognised chronic brain disease, not a failure of character.',
     detail:
-      'Addiction physically alters brain chemistry, particularly the reward, motivation, and memory pathways. The DSM-5 classifies it as Substance Use Disorder — a medical condition, not a moral failing. Willpower alone cannot reverse structural brain changes any more than it can cure diabetes.',
+      'Addiction physically alters brain chemistry, particularly the reward, motivation, and memory pathways. The DSM-5 classifies it as Substance Use Disorder — a medical condition, not a moral failing. Expecting willpower alone to reverse structural brain changes is like expecting it to cure diabetes. Compassionate, evidence-based treatment is what truly makes the difference.',
   },
   {
     id: 2,
     myth: 'Only hard drugs like heroin are addictive.',
-    fact: 'Alcohol, prescription medication, and even dagga can be addictive.',
+    fact: 'Alcohol, prescription medication, and even dagga can be deeply addictive.',
     detail:
-      'In South Africa, alcohol remains the primary substance of abuse, responsible for more treatment admissions than all other drugs combined. Prescription opioids, sedatives, and cannabis (dagga) all carry significant addiction potential. Over-the-counter codeine-based painkillers are an escalating concern.',
+      'In South Africa, alcohol remains the primary substance of abuse, responsible for more treatment admissions than all other drugs combined. Prescription opioids, sedatives, and cannabis (dagga) all carry significant addiction potential. Over-the-counter codeine-based painkillers are an escalating concern across our communities. No substance is automatically "safe" — what matters is how it affects you.',
   },
   {
     id: 3,
     myth: 'You can\'t be addicted if you have a job.',
-    fact: 'High-functioning addiction is real and dangerous.',
+    fact: 'High-functioning addiction is real, common, and deeply dangerous.',
     detail:
-      'Many people maintain employment and appearances while struggling with substance use disorder. High-functioning addiction often goes untreated for longer, increasing the risk of sudden health crises, workplace accidents, and delayed intervention. Success does not provide immunity from addiction.',
+      'Many people maintain employment and outward appearances while struggling with substance use disorder. High-functioning addiction often goes untreated for longer because it hides behind success, increasing the risk of sudden health crises, workplace accidents, and delayed intervention. Professional achievement does not provide immunity from addiction — and seeking help is a sign of strength, not weakness.',
   },
   {
     id: 4,
     myth: 'Rehab is only for wealthy people.',
-    fact: 'SANCA is a non-profit, DSD-registered organisation that serves everyone.',
+    fact: 'SANCA serves everyone — regardless of financial means.',
     detail:
-      'SANCA Pretoria operates on a non-profit basis and is registered with the Department of Social Development. Medical aid covers inpatient treatment as a Prescribed Minimum Benefit (PMB), and for those without medical aid, subsidised options are available. No one is turned away based on financial status.',
+      'SANCA Pretoria operates on a non-profit basis and is registered with the Department of Social Development. Medical aid covers inpatient treatment as a Prescribed Minimum Benefit (PMB), and for those without medical aid, subsidised options are available to ensure cost is never a barrier. No one is ever turned away based on their financial status — that is our promise to the community.',
   },
   {
     id: 5,
     myth: 'Once an addict, always an addict.',
-    fact: 'Recovery is possible and sustainable with proper support.',
+    fact: 'Recovery is entirely possible — and sustainable with the right support.',
     detail:
-      'Research consistently shows that people can and do recover. With evidence-based treatment, ongoing aftercare, and family support, long-term remission is achievable. SANCA\'s aftercare programme and support groups help maintain recovery for years after treatment. Recovery is a journey, not a life sentence.',
+      'Research consistently shows that people can and do recover, going on to lead full, meaningful lives. With evidence-based treatment, ongoing aftercare, and family support, long-term remission is achievable. SANCA\'s aftercare programme and support groups help maintain recovery for years after treatment. Recovery is a journey of hope — not a life sentence.',
   },
   {
     id: 6,
     myth: 'Dagga is harmless — it\'s just a plant.',
-    fact: 'Modern dagga potency is 3–5× stronger than decades ago.',
+    fact: 'Modern dagga is far more potent and harmful than many realise.',
     detail:
-      'Today\'s cannabis strains contain significantly higher THC concentrations than in previous generations. The South African Community Epidemiology Network on Drug Use (SACENDU) reports dagga as the second most common substance driving treatment admissions. Chronic use is linked to psychosis, anxiety, and motivational syndrome, particularly in adolescents.',
+      'Today\'s cannabis strains contain significantly higher THC concentrations than in previous generations — often 3 to 5 times stronger. The South African Community Epidemiology Network on Drug Use (SACENDU) reports dagga as the second most common substance driving treatment admissions nationally. Chronic use is linked to psychosis, anxiety, and motivational syndrome, particularly in adolescents whose brains are still developing.',
   },
   {
     id: 7,
     myth: 'Sending someone to rehab against their will doesn\'t work.',
-    fact: 'Research shows involuntary treatment can be effective.',
+    fact: 'Research shows that treatment can be effective even when initially involuntary.',
     detail:
-      'Studies demonstrate that outcomes for involuntary and voluntary treatment are comparable. The act of entering treatment — regardless of initial motivation — can catalyse genuine change. Under South African law, the Prevention and Treatment of Drug Dependency Act allows for compulsory treatment when a person is a danger to themselves or others.',
+      'Studies demonstrate that outcomes for involuntary and voluntary treatment are broadly comparable. The act of entering treatment — regardless of initial motivation — can catalyse genuine, lasting change. Under South African law, the Prevention and Treatment of Drug Dependency Act allows for compulsory treatment when a person is a danger to themselves or others. Sometimes, starting the journey is the hardest part — and that\'s okay.',
   },
   {
     id: 8,
     myth: 'You have to hit rock bottom before getting help.',
-    fact: 'Early intervention leads to better outcomes.',
+    fact: 'Early intervention leads to far better outcomes — and can save your life.',
     detail:
-      'Waiting for "rock bottom" can be fatal. Research clearly shows that earlier intervention produces better treatment outcomes and reduces long-term harm. You do not need to lose everything before seeking help — in fact, addressing substance use early prevents devastating consequences to health, relationships, and livelihood.',
+      'Waiting for "rock bottom" can be truly dangerous, even fatal. Research clearly shows that earlier intervention produces better treatment outcomes and reduces long-term harm. You do not need to lose everything before seeking help — in fact, addressing substance use early prevents devastating consequences to your health, relationships, and livelihood. The best time to reach out is now, whatever your situation looks like.',
   },
 ];
 
@@ -108,11 +108,12 @@ export default function MythsSection() {
             Myth Busters
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
-            The Truth About <span className="text-gradient-gold">Addiction</span>
+            The Truth About <span className="text-gradient-gold">Addiction & Recovery</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Harmful misconceptions prevent people from seeking help. Let&apos;s dispel the myths
-            and replace them with facts — because the truth can save lives.
+            Harmful misconceptions keep far too many people from reaching out for the help
+            they deserve. Let&apos;s gently set aside the myths and replace them with honest,
+            evidence-based facts — because the truth, spoken with compassion, can truly save lives.
           </p>
         </motion.div>
 
@@ -209,7 +210,8 @@ export default function MythsSection() {
               Know the facts. Save a life.
             </h3>
             <p className="text-sm text-muted-foreground mb-5">
-              If you or someone you know is struggling, reaching out is the bravest thing you can do.
+              If you or someone you know is struggling, reaching out for help is one of the bravest
+              and most caring things you can do. We&apos;re here to walk that path alongside you.
             </p>
             <Button
               onClick={() =>

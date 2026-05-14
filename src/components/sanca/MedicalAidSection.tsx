@@ -8,29 +8,29 @@ import { Button } from '@/components/ui/button';
 const medicalAidPoints = [
   {
     icon: CheckCircle2,
-    title: 'Medical Aid Accepted',
-    description: 'We accept medical aid authorisation from most major South African medical schemes.',
+    title: 'Your Medical Aid Is Welcome Here',
+    description: 'We work with most major South African medical schemes so you can focus on what matters most — getting better.',
     color: 'text-sanca-emerald',
     bg: 'bg-sanca-emerald/10',
   },
   {
     icon: Shield,
-    title: 'PMB Coverage Applies',
-    description: 'Under the Medical Schemes Act, substance use disorders qualify as Prescribed Minimum Benefits — medical aids are legally required to fund treatment.',
+    title: 'You\'re Legally Protected',
+    description: 'Substance use disorders qualify as Prescribed Minimum Benefits under the Medical Schemes Act — your medical aid is legally required to fund your treatment.',
     color: 'text-sanca-green',
     bg: 'bg-sanca-green/10',
   },
   {
     icon: Banknote,
-    title: 'No Co-Payment for Extra Days',
-    description: 'Medical Aid funds 21 or 24 days. If you need the full 4–6 week programme, there is NO co-payment for additional days beyond medical aid funding.',
+    title: 'No Extra Cost for Extended Care',
+    description: 'Medical aid typically covers 21–24 days, but our full programme runs 4–6 weeks. The good news? There is absolutely NO co-payment for those additional days — we cover them for you.',
     color: 'text-sanca-gold',
     bg: 'bg-sanca-gold/10',
   },
   {
     icon: Heart,
-    title: 'Affordable Cash Options',
-    description: 'As a non-profit, DSD-registered organisation, our cash rates are the most affordable in the region — significantly lower than private rehabs.',
+    title: 'Affordable Care for Everyone',
+    description: 'As a non-profit, DSD-registered organisation, our cash rates are the most affordable in the region — significantly lower than private rehabs, because we believe cost should never stand between you and recovery.',
     color: 'text-sanca-green-light',
     bg: 'bg-sanca-green-light/10',
   },
@@ -39,23 +39,23 @@ const medicalAidPoints = [
 const pmbSteps = [
   {
     step: 1,
-    title: 'Contact SANCA',
-    desc: 'Call us or WhatsApp — we\'ll start the process immediately.',
+    title: 'Reach Out to Us',
+    desc: 'Give us a call or send a WhatsApp — we\'ll get things moving right away.'
   },
   {
     step: 2,
-    title: 'We Verify Your Cover',
-    desc: 'Our team contacts your medical aid directly to confirm benefits.',
+    title: 'We Check Your Cover',
+    desc: 'Our team contacts your medical aid directly to confirm your benefits — no hassle for you.'
   },
   {
     step: 3,
-    title: 'Authorisation Secured',
-    desc: 'We handle the paperwork and secure your treatment authorisation.',
+    title: 'Authorisation Sorted',
+    desc: 'We handle all the paperwork and secure your treatment authorisation — it&apos;s what we do best.'
   },
   {
     step: 4,
-    title: 'Treatment Begins',
-    desc: 'Focus on your recovery — we manage the admin throughout.',
+    title: 'Your Healing Begins',
+    desc: 'Now you can focus entirely on getting better — we&apos;ll keep managing the admin from start to finish.'
   },
 ];
 
@@ -78,12 +78,13 @@ export default function MedicalAidSection() {
             Costs & Medical Aid
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
-            Affordable <span className="text-gradient-gold">Care</span> for All
+            Healing You Can <span className="text-gradient-gold">Afford</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
-            Don&apos;t let medical aid confusion hold you back. The real cost is not rehab — it&apos;s the
-            missed workdays, broken trust at home, and emergency medical bills that come from
-            waiting too long. We&apos;re here to help you navigate the process.
+            Don&apos;t let worries about cost keep you from getting the help you deserve. The true price
+            of waiting is far greater — lost workdays, strained relationships, and mounting medical
+            emergencies. We&apos;re here to make the financial side simple, so you can focus entirely on
+            healing.
           </p>
         </motion.div>
 
@@ -131,7 +132,7 @@ export default function MedicalAidSection() {
                   </div>
                   <div>
                     <h3 className="font-serif text-xl font-bold tracking-tight">Your Legal Right to Treatment</h3>
-                    <p className="text-sm text-white/60">Prescribed Minimum Benefits (PMB)</p>
+                    <p className="text-sm text-white/60">Prescribed Minimum Benefits — protecting your access to care</p>
                   </div>
                 </div>
 
@@ -139,27 +140,27 @@ export default function MedicalAidSection() {
                   <p className="text-sm text-white/90 leading-relaxed">
                     Under South Africa&apos;s <strong>Medical Schemes Act</strong>, substance use disorders
                     qualify as a <strong>Prescribed Minimum Benefit (PMB)</strong> condition. This means
-                    medical aids are <strong>legally required</strong> to fund treatment — regardless of your
-                    plan type.
+                    your medical aid is <strong>legally required</strong> to fund your treatment — no matter
+                    what plan you&apos;re on. You have the right to care, and we&apos;ll help you exercise it.
                   </p>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-sanca-gold-light flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-white/80">All medical schemes must cover PMB conditions in full</p>
+                    <p className="text-sm text-white/80">All medical schemes must cover PMB conditions in full — no exceptions</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-sanca-gold-light flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-white/80">Applies to all plan types, including hospital plans</p>
+                    <p className="text-sm text-white/80">Covers every plan type — even hospital-only plans</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-sanca-gold-light flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-white/80">No pre-authorization can be denied for PMB conditions</p>
+                    <p className="text-sm text-white/80">Pre-authorization cannot be denied for PMB conditions — it&apos;s your right</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-sanca-gold-light flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-white/80">Co-payments for PMB conditions are not permitted by law</p>
+                    <p className="text-sm text-white/80">Co-payments for PMB conditions are not permitted by law — you won&apos;t pay extra</p>
                   </div>
                 </div>
               </div>
@@ -180,8 +181,8 @@ export default function MedicalAidSection() {
                   <Info className="h-6 w-6 text-sanca-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-sanca-green-dark tracking-tight">How We Handle Medical Aid</h3>
-                  <p className="text-sm text-muted-foreground">We manage the entire process for you</p>
+                  <h3 className="font-serif text-xl font-bold text-sanca-green-dark tracking-tight">How We Handle Your Medical Aid</h3>
+                  <p className="text-sm text-muted-foreground">We take care of everything — so you don&apos;t have to worry</p>
                 </div>
               </div>
 
@@ -203,7 +204,7 @@ export default function MedicalAidSection() {
               <div className="p-4 rounded-xl bg-sanca-gold/5 border border-sanca-gold/20 mb-4">
                 <p className="text-sm text-sanca-gold-dark flex items-start gap-2 leading-relaxed">
                   <AlertCircle className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                  Don&apos;t let medical aid confusion delay your recovery. We handle all the paperwork — you focus on healing.
+                  Don&apos;t let medical aid worries hold you back from getting help. We handle every detail of the paperwork — all you need to do is focus on your healing.
                 </p>
               </div>
 
@@ -211,7 +212,7 @@ export default function MedicalAidSection() {
                 onClick={() => document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' })}
                 className="w-full bg-sanca-green hover:bg-sanca-green-dark text-white font-semibold"
               >
-                Start the Admission Process
+                Let&apos;s Get You Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Card>

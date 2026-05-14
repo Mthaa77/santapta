@@ -65,12 +65,14 @@ export default function EmergencyCTA() {
           </motion.div>
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight">
-            You Don&apos;t Have to<br />
-            <span className="text-gradient-gold">Face This Alone</span>
+            We&apos;re Right Here<br />
+            <span className="text-gradient-gold">Whenever You&apos;re Ready</span>
           </h2>
           <p className="text-white/80 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            Whether you&apos;re reaching out for yourself, a loved one, or seeking guidance —
-            we&apos;re here. 24 hours a day, 7 days a week. Together, we can find a way forward.
+            Whether you&apos;re reaching out for yourself, worried about someone you love, or simply
+            looking for honest guidance — we&apos;re here with open arms, ready to listen. Day or night,
+            weekday or weekend, you&apos;ll always find a caring voice on the other end. Together,
+            we&apos;ll find the path that&apos;s right for you.
           </p>
 
           {/* Impact Stats */}
@@ -81,9 +83,9 @@ export default function EmergencyCTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap justify-center gap-8 sm:gap-16 mb-12"
           >
-            <AnimatedStat value={1000} suffix="+" label="Patients Helped Annually" />
-            <AnimatedStat value={68} suffix="+" label="Years of Service" />
-            <AnimatedStat value={24} suffix="/7" label="Emergency Support" />
+            <AnimatedStat value={1000} suffix="+" label="Lives Touched Every Year" />
+            <AnimatedStat value={68} suffix="+" label="Years of Dedicated Service" />
+            <AnimatedStat value={24} suffix="/7" label="Always Here When You Need Us" />
           </motion.div>
 
           {/* Contact Cards */}
@@ -100,7 +102,7 @@ export default function EmergencyCTA() {
               </div>
               <p className="font-serif font-bold text-lg tracking-tight">Call Us</p>
               <p className="text-white/70 text-sm mt-1">012 542 1121</p>
-              <p className="text-white/50 text-xs mt-1">24/7 Emergency Line</p>
+              <p className="text-white/50 text-xs mt-1">A caring voice, any time of day</p>
             </motion.a>
 
             <motion.a
@@ -117,7 +119,7 @@ export default function EmergencyCTA() {
               </div>
               <p className="font-serif font-bold text-lg tracking-tight">WhatsApp</p>
               <p className="text-white/70 text-sm mt-1">081 318 1511</p>
-              <p className="text-white/50 text-xs mt-1">Quick Text Response</p>
+              <p className="text-white/50 text-xs mt-1">Send a message, we&apos;ll reply soon</p>
             </motion.a>
 
             <motion.a
@@ -132,7 +134,7 @@ export default function EmergencyCTA() {
               </div>
               <p className="font-serif font-bold text-lg tracking-tight">Email Us</p>
               <p className="text-white/70 text-sm mt-1">info@sancapta.co.za</p>
-              <p className="text-white/50 text-xs mt-1">Response within 1 day</p>
+              <p className="text-white/50 text-xs mt-1">We&apos;ll respond within one business day</p>
             </motion.a>
           </div>
 
@@ -140,15 +142,15 @@ export default function EmergencyCTA() {
           <div className="flex flex-wrap justify-center gap-6 text-white/60 text-sm">
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Admissions 7 days/week
+              Admissions open 7 days a week
             </div>
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4" />
-              DSD Registered
+              DSD Registered & Trusted
             </div>
             <div className="flex items-center gap-2">
               <Heart className="h-4 w-4" />
-              Medical Aid Accepted
+              Medical Aid Welcomed
             </div>
           </div>
         </motion.div>

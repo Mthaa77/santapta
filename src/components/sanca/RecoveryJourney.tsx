@@ -40,13 +40,13 @@ const phases: Phase[] = [
     day: 'Day 0',
     title: 'The Courage to Call',
     description:
-      "You've already taken the hardest step — asking for help. Our team answers 24/7 with compassion, not judgement.",
+      "By simply being here, you have already taken the hardest step — reaching out for help. Our caring team is available 24 hours a day, 7 days a week, and every call is answered with warmth and compassion, never judgement.",
     details:
-      'Call 012 542 1121 or WhatsApp 081 318 1511. No referral needed. We\'ll ask a few questions and guide you through the next steps.',
+      'Call us on 012 542 1121 or WhatsApp 081 318 1511 — whichever feels more comfortable for you. No doctor\'s referral is needed. We will gently ask a few questions to understand your situation and then guide you through every next step, at your own pace.',
     color: 'text-sanca-green-light',
     bgColor: 'bg-sanca-green-light',
     borderColor: 'border-sanca-green-light',
-    quote: '"The journey of a thousand miles begins with a single step." — Lao Tzu',
+    quote: '"Even the longest journey begins with a single, courageous step." — Inspired by an African proverb',
     emoji: '🤝',
   },
   {
@@ -54,15 +54,15 @@ const phases: Phase[] = [
     phase: 'Assessment',
     icon: ClipboardCheck,
     day: 'Day 1',
-    title: 'Understanding Your Needs',
+    title: 'Understanding What You Need',
     description:
-      'A professional assessment determines the right level of care for your unique situation.',
+      'A thorough, professional assessment helps us understand your unique circumstances so we can recommend the level of care that is right for you.',
     details:
-      'Our social workers conduct a comprehensive assessment covering substance use history, medical needs, family situation, and personal goals. This takes about 60-90 minutes.',
+      'Our experienced social workers conduct a comprehensive assessment that covers your substance use history, medical needs, family situation, and personal goals for recovery. The assessment takes about 60 to 90 minutes, and you are welcome to have a loved one present for support.',
     color: 'text-sanca-emerald',
     bgColor: 'bg-sanca-emerald',
     borderColor: 'border-sanca-emerald',
-    quote: '"Understanding is the first step to acceptance." — J.K. Rowling',
+    quote: '"When you understand your own story, you begin to rewrite it." — South African saying',
     emoji: '📋',
   },
   {
@@ -70,15 +70,15 @@ const phases: Phase[] = [
     phase: 'Medical Detox',
     icon: HeartPulse,
     day: 'Days 1-7',
-    title: 'Safe Medical Supervision',
+    title: 'Safe, Supported Detoxification',
     description:
-      '24-hour medical care ensures your detox is as comfortable and safe as possible.',
+      'Around-the-clock medical care ensures that your detoxification is as safe and comfortable as possible, so you can focus on resting and healing.',
     details:
-      "At Castle Carey Clinic, our medical team monitors withdrawal symptoms around the clock. Medication is available to ease discomfort. You're never alone during this critical phase.",
+      "At Castle Carey Clinic, our dedicated medical team monitors withdrawal symptoms around the clock. Where appropriate, medication is available to ease discomfort and help you rest. You will always have someone nearby — you are never alone during this important phase.",
     color: 'text-sanca-gold',
     bgColor: 'bg-sanca-gold',
     borderColor: 'border-sanca-gold',
-    quote: '"Healing takes courage, and we all have courage." — Keshavananda Bharati',
+    quote: '"Courage is not the absence of fear, but the triumph over it." — Nelson Mandela',
     emoji: '💪',
   },
   {
@@ -86,15 +86,15 @@ const phases: Phase[] = [
     phase: 'Treatment',
     icon: Brain,
     day: 'Weeks 1-4',
-    title: 'Building Your Foundation',
+    title: 'Building a Stronger You',
     description:
-      'Individual therapy, group sessions, and structured activities help you understand addiction and develop coping skills.',
+      'Through individual therapy, group sessions, and purposeful daily activities, you will gain a deeper understanding of addiction and develop the practical coping skills that form the foundation of lasting recovery.',
     details:
-      'Your Individual Treatment Plan includes one-on-one counselling, group therapy, family sessions, occupational therapy, stress management, and spiritual groups. Every day is structured and purposeful.',
+      'Your personalised Individual Treatment Plan includes one-on-one counselling, group therapy, family sessions, occupational therapy, stress management techniques, and spiritual support groups. Each day is thoughtfully structured to give you the best possible foundation for the life ahead.',
     color: 'text-sanca-green',
     bgColor: 'bg-sanca-green',
     borderColor: 'border-sanca-green',
-    quote: '"Every day is a new opportunity to grow and become a better version of yourself." — Unknown',
+    quote: '"Each new day brings a chance to rebuild, to grow, and to become the person you were meant to be." — Inspired by Desmond Tutu',
     emoji: '🧠',
   },
   {
@@ -104,13 +104,13 @@ const phases: Phase[] = [
     day: 'Ongoing',
     title: 'Healing Together',
     description:
-      "Addiction affects the whole family. Our family programme helps rebuild trust and communication.",
+      "Addiction touches the lives of everyone who cares about you. Our family programme is designed to help rebuild trust, restore open communication, and strengthen the bonds that support lasting recovery.",
     details:
-      'Family therapy sessions, visiting hours (Sundays 14:00-16:00), and family support groups help loved ones understand addiction and learn how to support recovery.',
+      'Through family therapy sessions, visiting hours every Sunday from 14:00 to 16:00, and dedicated family support groups, your loved ones will gain a deeper understanding of addiction and learn how to walk alongside you in recovery.',
     color: 'text-sanca-gold-dark',
     bgColor: 'bg-sanca-gold-dark',
     borderColor: 'border-sanca-gold-dark',
-    quote: '"Family is not an important thing. It\'s everything." — Michael J. Fox',
+    quote: '"Ubuntu — I am because we are." — African philosophy',
     emoji: '👨‍👩‍👧‍👦',
   },
   {
@@ -120,13 +120,13 @@ const phases: Phase[] = [
     day: 'Ongoing',
     title: 'Your Lifeline Continues',
     description:
-      "Recovery doesn't end at discharge. Our aftercare programme keeps you connected and supported.",
+      "Recovery does not end when you leave our care — in many ways, it has only just begun. Our aftercare programme ensures you remain connected, supported, and equipped for the road ahead.",
     details:
-      'Relapse prevention training, AA/NA group facilitation, outpatient check-ins, and community reintegration support. We start planning your aftercare from week 3 of treatment.',
+      'You will receive relapse prevention training, AA/NA group facilitation, regular outpatient check-ins, and guided community reintegration support. We begin planning your aftercare from week 3 of your treatment, so that when the day comes, you step forward with confidence and a clear plan.',
     color: 'text-sanca-green-dark',
     bgColor: 'bg-sanca-green-dark',
     borderColor: 'border-sanca-green-dark',
-    quote: '"Recovery is not a race. You don\'t have to feel guilty if it takes you longer than you thought." — Unknown',
+    quote: '"A journey of recovery is walked one day at a time — and every day you keep going is a victory." — South African wisdom',
     emoji: '🛡️',
   },
 ];
@@ -172,9 +172,7 @@ export default function RecoveryJourney() {
             Your Recovery <span className="text-gradient-gold">Journey</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
-            From that first courageous call to lifelong aftercare, SANCA walks
-            with you every step of the way. Here&apos;s what the path looks
-            like — you&apos;re never alone on this journey.
+            From that first courageous call to lifelong aftercare, SANCA Pretoria walks beside you every step of the way. We know that reaching out takes immense bravery, and we want you to know — there is no judgement here, only understanding. Here is what the path looks like, and remember: you are never alone on this journey.
           </p>
         </motion.div>
 
@@ -469,12 +467,11 @@ export default function RecoveryJourney() {
           className="text-center mt-16"
         >
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-4 tracking-tight">
-            Start Your <span className="text-gradient-gold">Journey</span>{' '}
+            Your Journey Can <span className="text-gradient-gold">Begin</span>{' '}
             Today
           </h3>
           <p className="text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
-            Every recovery journey begins with a single step. Take yours now
-            — we&apos;re here when you&apos;re ready. You don&apos;t have to do this alone.
+            Every recovery journey begins with a single step, and that step can be as simple as picking up the phone. We are here whenever you are ready — with open arms, without judgement, and with genuine care. You do not have to walk this path alone.
           </p>
           <Button
             onClick={scrollToContact}

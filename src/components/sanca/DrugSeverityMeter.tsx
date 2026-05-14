@@ -27,8 +27,8 @@ const substances: Substance[] = [
     color: 'from-amber-500 to-red-500',
     shortTerm: ['Impaired judgement', 'Loss of coordination', 'Nausea & vomiting', 'Blackouts'],
     longTerm: ['Liver disease (cirrhosis)', 'Heart damage', 'Brain shrinkage', 'Cancer risk increase'],
-    withdrawal: 'Delirium tremens, seizures, extreme anxiety — medically supervised detox is essential',
-    treatment: 'Medical detox at Castle Carey Clinic, followed by 4-6 week inpatient programme',
+    withdrawal: 'Delirium tremens, seizures, and extreme anxiety may occur — but you don\'t have to face this alone. Medically supervised detox keeps you safe and comfortable.',
+    treatment: 'We\'ll guide you through a safe, medically supervised detox at Castle Carey Clinic, followed by our supportive 4–6 week inpatient programme designed to help you build a solid foundation for lasting recovery.',
   },
   {
     id: 'dagga',
@@ -38,8 +38,8 @@ const substances: Substance[] = [
     color: 'from-green-500 to-emerald-600',
     shortTerm: ['Impaired memory', 'Anxiety & paranoia', 'Slow reaction time', 'Bloodshot eyes'],
     longTerm: ['Motivational syndrome', 'Respiratory issues', 'Mental health risk (psychosis)', 'Dependency'],
-    withdrawal: 'Irritability, sleep difficulties, cravings, mood swings — typically manageable',
-    treatment: 'Outpatient programme at Soshanguve or Hammanskraal with counselling and group therapy',
+    withdrawal: 'Irritability, sleep difficulties, cravings, and mood swings can occur — the good news is these are typically quite manageable with the right support.',
+    treatment: 'Our caring outpatient team at Soshanguve or Hammanskraal will support you with personal counselling and group therapy — a flexible programme that fits your life while you heal.',
   },
   {
     id: 'tik',
@@ -49,8 +49,8 @@ const substances: Substance[] = [
     color: 'from-cyan-400 to-blue-600',
     shortTerm: ['Extreme euphoria', 'Rapid heart rate', 'Paranoia & aggression', 'Insomnia'],
     longTerm: ['Severe tooth decay ("meth mouth")', 'Brain damage', 'Psychosis', 'Organ failure'],
-    withdrawal: 'Severe depression, extreme fatigue, intense cravings — requires medical supervision',
-    treatment: 'Medical detox at Castle Carey Clinic with intensive inpatient programme and aftercare',
+    withdrawal: 'Severe depression, extreme fatigue, and intense cravings are common — but with medical supervision, you can get through this safely. You don\'t have to do it alone.',
+    treatment: 'At Castle Carey Clinic, our medical team will support you through detox with compassion, followed by an intensive inpatient programme and dedicated aftercare to help you stay on track long-term.',
   },
   {
     id: 'heroin',
@@ -60,8 +60,8 @@ const substances: Substance[] = [
     color: 'from-purple-500 to-indigo-700',
     shortTerm: ['Intense euphoria', 'Respiratory depression', 'Nodding off', 'Nausea'],
     longTerm: ['Physical dependence', 'Collapsed veins', 'Heart infections', 'Overdose risk (fatal)'],
-    withdrawal: 'Severe flu-like symptoms, intense cravings, muscle pain — medical detox critical',
-    treatment: 'Medical detox at Castle Carey Clinic with structured inpatient programme and long-term aftercare',
+    withdrawal: 'Severe flu-like symptoms, intense cravings, and muscle pain can feel overwhelming — that\'s why medical detox is so important. In a supervised setting, we keep you as comfortable as possible.',
+    treatment: 'Our experienced team at Castle Carey Clinic will walk beside you through detox and our structured inpatient programme, then provide the long-term aftercare support you need to rebuild your life with confidence.',
   },
   {
     id: 'cocaine',
@@ -71,8 +71,8 @@ const substances: Substance[] = [
     color: 'from-white to-gray-400',
     shortTerm: ['Intense euphoria', 'Increased energy', 'Elevated heart rate', 'Anxiety'],
     longTerm: ['Heart attack risk', 'Nasal damage', 'Mental health deterioration', 'Financial ruin'],
-    withdrawal: 'Crash with depression, fatigue, increased appetite, vivid nightmares',
-    treatment: 'Inpatient or outpatient programme depending on severity, with relapse prevention focus',
+    withdrawal: 'A crash period with depression, fatigue, increased appetite, and vivid nightmares is common — these feelings are temporary, and with support, you will get through them.',
+    treatment: 'We\'ll tailor a programme to your needs — inpatient or outpatient — with a strong focus on relapse prevention, so you can build the skills and confidence to stay on your recovery path.',
   },
   {
     id: 'mandrax',
@@ -82,8 +82,8 @@ const substances: Substance[] = [
     color: 'from-pink-500 to-rose-700',
     shortTerm: ['Sedation & euphoria', 'Slurred speech', 'Impaired coordination', 'Memory loss'],
     longTerm: ['Severe dependency', 'Respiratory depression', 'Organ damage', 'Overdose risk'],
-    withdrawal: 'Seizures, severe anxiety, insomnia, tremors — medically supervised detox essential',
-    treatment: 'Medical detox at Castle Carey Clinic with comprehensive inpatient treatment',
+    withdrawal: 'Seizures, severe anxiety, insomnia, and tremors can occur — medically supervised detox is essential to keep you safe. Our team will be with you every step of the way.',
+    treatment: 'At Castle Carey Clinic, we provide a safe, medically supervised detox followed by our comprehensive inpatient treatment programme — giving you the time, care, and tools you need to reclaim your life.',
   },
 ];
 
@@ -120,11 +120,12 @@ export default function DrugSeverityMeter() {
             Severity Guide
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
-            Understanding <span className="text-gradient-gold">Severity</span> & Risks
+            Understanding <span className="text-gradient-gold">Severity</span> & Your Risks
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-            Understand the relative severity and risks of common substances in South Africa.
-            Select a substance to learn more. You&apos;re not alone — help is available for every level.
+            Knowledge is the first step toward change. Explore the relative severity and risks of
+            common substances in South Africa. Tap on any substance to learn more — and remember,
+            no matter how serious things may seem, compassionate help is always within reach.
           </p>
         </motion.div>
 
@@ -306,7 +307,7 @@ export default function DrugSeverityMeter() {
                     <div className="p-4 rounded-xl bg-sanca-gold/5 border border-sanca-gold/20 mb-6">
                       <p className="text-xs text-sanca-gold-dark flex items-start gap-2 leading-relaxed">
                         <Info className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                        SANCA Pretoria provides medical detox and professional treatment regardless of substance type or severity. We&apos;re here for you.
+                        No matter the substance or how severe things may seem, SANCA Pretoria is here for you with medical detox and professional treatment. You deserve compassionate care — and we\'re ready to provide it.
                       </p>
                     </div>
                     <Button
@@ -333,7 +334,8 @@ export default function DrugSeverityMeter() {
         >
           <p className="text-xs text-muted-foreground italic leading-relaxed">
             Severity ratings are based on dependency potential, withdrawal severity, and health impact.
-            All substances can be dangerous. If you or someone you know is struggling, reach out to SANCA — you don&apos;t have to face this alone.
+            Every substance carries real risks — but no matter where you find yourself, recovery is absolutely possible.
+            If you or someone you love is struggling, please reach out to SANCA. You don&apos;t have to face this alone — we&apos;re here, and we care.
           </p>
         </motion.div>
       </div>
