@@ -10,16 +10,21 @@ import ProgrammesSection from '@/components/sanca/ProgrammesSection';
 import FacilitiesSection from '@/components/sanca/FacilitiesSection';
 import AdmissionsSection from '@/components/sanca/AdmissionsSection';
 import PackingListSection from '@/components/sanca/PackingListSection';
+import DrugSeverityMeter from '@/components/sanca/DrugSeverityMeter';
 import DrugInfoSection from '@/components/sanca/DrugInfoSection';
+import DrugStatsSection from '@/components/sanca/DrugStatsSection';
+import FamiliesSection from '@/components/sanca/FamiliesSection';
 import FAQSection from '@/components/sanca/FAQSection';
 import TestimonialsSection from '@/components/sanca/TestimonialsSection';
 import EmergencyCTA from '@/components/sanca/EmergencyCTA';
 import FloatingActions from '@/components/sanca/FloatingActions';
+import ScrollProgress from '@/components/sanca/ScrollProgress';
 import Footer from '@/components/sanca/Footer';
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollProgress />
       <Navbar />
       <main className="flex-1">
         <HeroSection />
@@ -31,7 +36,10 @@ export default function Home() {
         <FacilitiesSection />
         <AdmissionsSection />
         <PackingListSection />
+        <DrugSeverityMeter />
         <DrugInfoSection />
+        <DrugStatsSection />
+        <FamiliesSection />
         <FAQSection />
         <TestimonialsSection />
         <EmergencyCTA />

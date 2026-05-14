@@ -11,7 +11,8 @@ const navLinks = [
   { label: 'Assessment', href: '#assessment' },
   { label: 'Programmes', href: '#programmes' },
   { label: 'Admissions', href: '#admissions' },
-  { label: 'Drug Info', href: '#drug-info' },
+  { label: 'Severity', href: '#drug-severity' },
+  { label: 'Families', href: '#families' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
