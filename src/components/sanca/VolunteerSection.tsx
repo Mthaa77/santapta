@@ -50,7 +50,7 @@ export default function VolunteerSection() {
             <HeartHandshake className="h-4 w-4" />
             Join Our Mission
           </motion.span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight heading-gradient">
             Make a <span className="text-gradient-gold">Difference</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
@@ -68,7 +68,7 @@ export default function VolunteerSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="hover-lift h-full p-0 shadow-premium-lg border-0 overflow-hidden relative group">
+            <Card className="hover-lift h-full p-0 shadow-premium-xl border-0 overflow-hidden relative group">
               {/* Green gradient top border */}
               <div className="h-1.5 bg-gradient-to-r from-sanca-green-light via-sanca-green to-sanca-emerald" />
 
@@ -133,7 +133,7 @@ export default function VolunteerSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Card className="hover-lift h-full p-0 shadow-premium-lg border-0 overflow-hidden relative group">
+            <Card className="hover-lift h-full p-0 shadow-premium-xl border-0 overflow-hidden relative group">
               {/* Gold gradient top border */}
               <div className="h-1.5 bg-gradient-to-r from-sanca-gold-dark via-sanca-gold to-sanca-gold-light" />
 

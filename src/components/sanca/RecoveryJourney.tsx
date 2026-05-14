@@ -168,7 +168,7 @@ export default function RecoveryJourney() {
             <Compass className="h-4 w-4" />
             Your Path Forward
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight heading-gradient">
             Your Recovery <span className="text-gradient-gold">Journey</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
@@ -349,7 +349,7 @@ export default function RecoveryJourney() {
             transition={{ duration: 0.4, ease: 'easeOut' }}
           >
             <Card
-              className={`shadow-premium-lg border-0 overflow-hidden`}
+              className={`shadow-premium-xl border-0 overflow-hidden`}
             >
               <div className="flex flex-col md:flex-row">
                 {/* Left accent border */}

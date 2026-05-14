@@ -173,7 +173,7 @@ export default function TreatmentComparison() {
             <ArrowLeftRight className="h-4 w-4" />
             Compare Programmes
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Compare <span className="text-gradient-gold">Treatment Options</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
@@ -183,7 +183,7 @@ export default function TreatmentComparison() {
 
         {/* Desktop: 4-column card layout */}
         <div className="hidden lg:block">
-          <Card className="shadow-premium-xl border-0 dark:bg-[#0D3B22] overflow-hidden p-0">
+          <Card className="shadow-premium-2xl border-0 dark:bg-[#0D3B22] overflow-hidden p-0">
             {/* Column headers */}
             <div className="grid grid-cols-[200px_1fr_1fr_1fr_1fr]">
               {/* Empty corner */}

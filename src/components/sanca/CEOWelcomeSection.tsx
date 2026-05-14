@@ -30,7 +30,7 @@ export default function CEOWelcomeSection() {
                 </span>
               </div>
 
-              <Card className="shadow-premium-xl border-0 overflow-hidden relative">
+              <Card className="shadow-premium-2xl border-0 overflow-hidden relative">
                 {/* Top accent line */}
                 <div className="h-1.5 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
@@ -111,7 +111,7 @@ export default function CEOWelcomeSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-premium-xl border-4 border-white dark:border-[#0D3B22] hover-lift group">
+              <div className="relative rounded-2xl overflow-hidden shadow-premium-2xl border-4 border-white dark:border-[#0D3B22] hover-lift group">
                 {/* Gold accent corner decorations */}
                 <div className="absolute top-0 left-0 w-10 h-10 z-10 pointer-events-none">
                   <div className="absolute top-2 left-2 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />

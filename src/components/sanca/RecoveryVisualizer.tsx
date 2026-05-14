@@ -254,7 +254,7 @@ export default function RecoveryVisualizer() {
             <Activity className="h-4 w-4" />
             Recovery Science
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Your Journey of{' '}
             <span className="text-gradient-gold">Healing</span>
           </h2>
@@ -273,7 +273,7 @@ export default function RecoveryVisualizer() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="max-w-3xl mx-auto mb-12"
         >
-          <Card className="p-5 sm:p-8 shadow-premium-lg border-0 bg-white relative overflow-hidden">
+          <Card className="p-5 sm:p-8 shadow-premium-xl border-0 bg-white relative overflow-hidden">
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-sanca-green/15 rounded-tl-2xl" />
             <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-sanca-green/15 rounded-br-2xl" />

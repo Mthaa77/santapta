@@ -81,7 +81,7 @@ export default function SuccessStories() {
             <Heart className="h-4 w-4" />
             Recovery Stories
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Stories of <span className="text-gradient-gold">Hope</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">

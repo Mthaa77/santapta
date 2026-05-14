@@ -150,7 +150,7 @@ export default function ProgrammesSection() {
             <Stethoscope className="h-4 w-4" />
             Our Programmes
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Care That Meets You <span className="text-gradient-gold">Where You Are</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -192,7 +192,7 @@ export default function ProgrammesSection() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
           >
-            <Card className="shadow-premium-xl border-0 dark:bg-[#0D3B22] overflow-hidden">
+            <Card className="shadow-premium-2xl border-0 dark:bg-[#0D3B22] overflow-hidden">
               <div className="grid lg:grid-cols-2">
                 {/* Left: Image & Quick Info */}
                 <div className="relative bg-gradient-to-br from-sanca-green-dark to-sanca-green p-8 sm:p-10 text-white overflow-hidden">

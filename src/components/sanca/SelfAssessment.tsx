@@ -186,7 +186,7 @@ export default function SelfAssessment() {
             <HelpCircle className="h-4 w-4" />
             Interactive Self-Assessment
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Wondering if It's Time to <span className="text-gradient-gold">Talk</span>?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
@@ -202,7 +202,7 @@ export default function SelfAssessment() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-2xl mx-auto"
         >
-          <Card className="shadow-premium-xl border-0 overflow-hidden">
+          <Card className="shadow-premium-2xl border-0 overflow-hidden">
             {/* Progress Bar */}
             <div className="h-1.5 bg-gray-100">
               <motion.div

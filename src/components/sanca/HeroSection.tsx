@@ -182,7 +182,7 @@ export default function HeroSection() {
       >
         <a
           href="tel:0125421121"
-          className="group relative flex items-center gap-2 bg-sanca-green text-white px-4 py-3 rounded-xl shadow-premium-lg hover:shadow-premium-xl transition-all duration-300 hover:scale-105 premium-focus"
+          className="group relative flex items-center gap-2 bg-sanca-green text-white px-4 py-3 rounded-xl shadow-premium-xl hover:shadow-premium-2xl transition-all duration-300 hover:scale-105 premium-focus"
         >
           <Phone className="h-4 w-4 group-hover:animate-bounce-gentle" />
           <span className="text-sm font-medium">Call Now</span>
@@ -192,7 +192,7 @@ export default function HeroSection() {
           href="https://wa.me/27813181511"
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex items-center gap-2 bg-sanca-emerald text-white px-4 py-3 rounded-xl shadow-premium-lg hover:shadow-premium-xl transition-all duration-300 hover:scale-105 premium-focus"
+          className="group relative flex items-center gap-2 bg-sanca-emerald text-white px-4 py-3 rounded-xl shadow-premium-xl hover:shadow-premium-2xl transition-all duration-300 hover:scale-105 premium-focus"
         >
           <MessageCircle className="h-4 w-4 group-hover:animate-bounce-gentle" />
           <span className="text-sm font-medium">WhatsApp</span>

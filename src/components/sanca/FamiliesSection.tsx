@@ -262,7 +262,7 @@ export default function FamiliesSection() {
             <Heart className="h-4 w-4" />
             For Families & Loved Ones
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight heading-gradient">
             For Families &amp; <span className="text-gradient-gold">Loved Ones</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
@@ -511,7 +511,7 @@ export default function FamiliesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Card className="shadow-premium-xl border-0 overflow-hidden">
+          <Card className="shadow-premium-2xl border-0 overflow-hidden">
             <div className="bg-gradient-to-br from-sanca-green-dark via-sanca-green to-sanca-emerald p-8 sm:p-12 text-center relative">
               {/* Decorative circles */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" />

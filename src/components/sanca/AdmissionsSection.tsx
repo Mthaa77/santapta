@@ -147,7 +147,7 @@ export default function AdmissionsSection() {
             <CalendarCheck className="h-4 w-4" />
             Getting Started
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Your Pathway to <span className="text-gradient-gold">Recovery</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -208,7 +208,7 @@ export default function AdmissionsSection() {
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="shadow-premium-lg border-0 overflow-hidden">
+                <Card className="shadow-premium-xl border-0 overflow-hidden">
                   <div className={`p-6 sm:p-8 bg-gradient-to-r ${steps[activeStep].color} text-white`}>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/30 bg-gradient-to-br from-white/15 to-white/5 flex items-center justify-center hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow duration-300">

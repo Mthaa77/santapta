@@ -64,7 +64,7 @@ export default function EmergencyCTA() {
             <Heart className="h-10 w-10 text-sanca-gold-light" />
           </motion.div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight heading-gradient">
             We&apos;re Right Here<br />
             <span className="text-gradient-gold">Whenever You&apos;re Ready</span>
           </h2>

@@ -77,7 +77,7 @@ export default function MedicalAidSection() {
             <CreditCard className="h-4 w-4" />
             Costs & Medical Aid
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight heading-gradient">
             Healing You Can <span className="text-gradient-gold">Afford</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-3xl mx-auto">
@@ -122,7 +122,7 @@ export default function MedicalAidSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-6 sm:p-8 shadow-premium-lg border-0 h-full bg-gradient-to-br from-sanca-green-dark to-sanca-green text-white relative overflow-hidden">
+            <Card className="p-6 sm:p-8 shadow-premium-xl border-0 h-full bg-gradient-to-br from-sanca-green-dark to-sanca-green text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-6">

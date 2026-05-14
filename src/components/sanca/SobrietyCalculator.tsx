@@ -239,7 +239,7 @@ export default function SobrietyCalculator() {
             <Calculator className="h-4 w-4" />
             Sobriety Tracker
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Sobriety Milestone{' '}
             <span className="text-gradient-gold">Calculator</span>
           </h2>
@@ -257,7 +257,7 @@ export default function SobrietyCalculator() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-lg mx-auto mb-12"
         >
-          <Card className="p-6 sm:p-8 shadow-premium-lg border-0 bg-white relative overflow-hidden">
+          <Card className="p-6 sm:p-8 shadow-premium-xl border-0 bg-white relative overflow-hidden">
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-sanca-gold/20 rounded-tl-2xl" />
             <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-sanca-gold/20 rounded-br-2xl" />

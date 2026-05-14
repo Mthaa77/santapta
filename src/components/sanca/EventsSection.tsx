@@ -231,7 +231,7 @@ export default function EventsSection() {
             <Sparkles className="h-4 w-4" />
             Community
           </span>
-          <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-sanca-green-dark sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-sanca-green-dark dark:text-white sm:text-4xl lg:text-6xl heading-gradient">
             Events &amp;{' '}
             <span className="text-gradient-gold">Community</span>
           </h2>
@@ -309,7 +309,7 @@ export default function EventsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <div className="shadow-premium-lg rounded-2xl border border-sanca-green/10 bg-white p-6 sm:p-8">
+            <div className="shadow-premium-xl rounded-2xl border border-sanca-green/10 bg-white p-6 sm:p-8">
               <h3 className="mb-8 text-center font-serif text-xl font-bold text-sanca-green-dark">
                 Our Community Impact
               </h3>

@@ -282,7 +282,7 @@ export default function AddictionCostCalculator() {
             <Calculator className="h-4 w-4" />
             Cost Calculator
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             The True <span className="text-gradient-gold">Cost of Addiction</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
@@ -299,7 +299,7 @@ export default function AddictionCostCalculator() {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="max-w-4xl mx-auto mb-12"
         >
-          <Card className="p-6 sm:p-8 shadow-premium-lg border-0 bg-white relative overflow-hidden">
+          <Card className="p-6 sm:p-8 shadow-premium-xl border-0 bg-white relative overflow-hidden">
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-sanca-gold/20 rounded-tl-2xl" />
             <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-sanca-gold/20 rounded-br-2xl" />
@@ -423,7 +423,7 @@ export default function AddictionCostCalculator() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
               >
-                <Card className="p-6 sm:p-8 shadow-premium-xl border-0 bg-gradient-to-br from-sanca-green-dark via-sanca-green to-sanca-emerald text-white relative overflow-hidden">
+                <Card className="p-6 sm:p-8 shadow-premium-2xl border-0 bg-gradient-to-br from-sanca-green-dark via-sanca-green to-sanca-emerald text-white relative overflow-hidden">
                   {/* Decorative elements */}
                   <div className="absolute top-0 right-0 w-48 h-48 bg-sanca-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
                   <div className="absolute bottom-0 left-0 w-32 h-32 bg-sanca-gold/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-xl" />

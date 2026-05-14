@@ -264,7 +264,7 @@ export default function RecoveryAffirmations() {
             <Sparkles className="h-4 w-4" />
             Daily Inspiration
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Your Recovery{' '}
             <span className="text-gradient-gold">Journey</span>
           </h2>
@@ -280,7 +280,7 @@ export default function RecoveryAffirmations() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <Card className="shadow-premium-lg border-0 overflow-hidden hover-lift relative">
+          <Card className="shadow-premium-xl border-0 overflow-hidden hover-lift relative">
             {/* Top decorative border */}
             <div className="h-1.5 bg-gradient-to-r from-sanca-gold-dark via-sanca-gold to-sanca-gold-light" />
 

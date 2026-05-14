@@ -190,7 +190,7 @@ export default function MoodTracker() {
             <Heart className="h-4 w-4" />
             Emotional Wellness
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Daily Mood{' '}
             <span className="text-gradient-gold">Check-In</span>
           </h2>

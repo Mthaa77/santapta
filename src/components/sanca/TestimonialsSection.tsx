@@ -89,7 +89,7 @@ export default function TestimonialsSection() {
             <Users className="h-4 w-4" />
             Stories of Hope
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight heading-gradient">
             Voices of <span className="text-gradient-gold">Recovery</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
 
         {/* Testimonial Carousel */}
         <div className="max-w-4xl mx-auto">
-          <Card className="shadow-premium-xl border-0 overflow-hidden">
+          <Card className="shadow-premium-2xl border-0 overflow-hidden">
             <div className="p-8 sm:p-12 relative">
               {/* Quote decoration */}
               <div className="absolute top-4 left-6 opacity-10">

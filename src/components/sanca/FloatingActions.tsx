@@ -36,7 +36,7 @@ export default function FloatingActions() {
               transition={{ delay: 2, type: 'spring', stiffness: 200, damping: 15 }}
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.9 }}
-              className="w-14 h-14 rounded-full bg-sanca-emerald text-white shadow-premium-lg flex items-center justify-center hover:bg-sanca-emerald/90 transition-all duration-300 animate-pulse-glow premium-focus"
+              className="w-14 h-14 rounded-full bg-sanca-emerald text-white shadow-premium-xl flex items-center justify-center hover:bg-sanca-emerald/90 transition-all duration-300 animate-pulse-glow premium-focus"
               aria-label="Chat on WhatsApp"
             >
               <MessageCircle className="h-6 w-6" />
@@ -57,7 +57,7 @@ export default function FloatingActions() {
               transition={{ delay: 2.2, type: 'spring', stiffness: 200, damping: 15 }}
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.9 }}
-              className="w-14 h-14 rounded-full bg-sanca-green text-white shadow-premium-lg flex items-center justify-center hover:bg-sanca-green-dark transition-all duration-300 premium-focus"
+              className="w-14 h-14 rounded-full bg-sanca-green text-white shadow-premium-xl flex items-center justify-center hover:bg-sanca-green-dark transition-all duration-300 premium-focus"
               aria-label="Emergency call"
             >
               <Phone className="h-6 w-6" />
@@ -80,7 +80,7 @@ export default function FloatingActions() {
                   whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={scrollToTop}
-                  className="w-12 h-12 rounded-full bg-white border-2 border-sanca-green/20 shadow-premium-lg flex items-center justify-center text-sanca-green hover:bg-sanca-green hover:text-white hover:border-sanca-green transition-all duration-300 premium-focus"
+                  className="w-12 h-12 rounded-full bg-white border-2 border-sanca-green/20 shadow-premium-xl flex items-center justify-center text-sanca-green hover:bg-sanca-green hover:text-white hover:border-sanca-green transition-all duration-300 premium-focus"
                   aria-label="Scroll to top"
                 >
                   <ArrowUp className="h-5 w-5" />

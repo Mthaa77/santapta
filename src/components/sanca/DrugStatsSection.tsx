@@ -139,7 +139,7 @@ export default function DrugStatsSection() {
             <AlertTriangle className="h-4 w-4" />
             National Statistics
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight heading-gradient">
             South Africa&apos;s Substance <span className="text-gradient-gold">Crisis</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
@@ -217,7 +217,7 @@ export default function DrugStatsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <Card className="shadow-premium-xl border-0 bg-white overflow-hidden">
+          <Card className="shadow-premium-2xl border-0 bg-white overflow-hidden">
             <div className="p-4 sm:p-8">
               {/* Chart title */}
               <div className="mb-6">

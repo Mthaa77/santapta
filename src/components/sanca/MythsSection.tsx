@@ -107,7 +107,7 @@ export default function MythsSection() {
             <Lightbulb className="h-4 w-4" />
             Myth Busters
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             The Truth About <span className="text-gradient-gold">Addiction & Recovery</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -217,7 +217,7 @@ export default function MythsSection() {
               onClick={() =>
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }
-              className="bg-sanca-green hover:bg-sanca-green-dark text-white btn-ripple"
+              className="bg-sanca-green hover:bg-sanca-green-dark text-white btn-ripple shadow-gold-enhanced"
               size="lg"
             >
               Get Help Now

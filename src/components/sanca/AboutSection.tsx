@@ -214,7 +214,7 @@ function PosterShowcase() {
     >
       {/* Poster image */}
       <div className="md:col-span-2">
-        <div className="relative rounded-2xl overflow-hidden shadow-premium-xl border-4 border-sanca-gold/20 hover-lift group">
+        <div className="relative rounded-2xl overflow-hidden shadow-premium-2xl border-4 border-sanca-gold/20 hover-lift group">
           {/* Gold accent corners */}
           <div className="absolute top-0 left-0 w-8 h-8 z-10 pointer-events-none">
             <div className="absolute top-2 left-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
@@ -304,7 +304,7 @@ export default function AboutSection() {
             <Heart className="h-4 w-4" />
             Who We Are — A Family of Care
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             A Legacy of <span className="text-gradient-gold">Healing</span>, Hope, and Humanity
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">

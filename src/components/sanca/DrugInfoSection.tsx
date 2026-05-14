@@ -131,7 +131,7 @@ export default function DrugInfoSection() {
             <AlertTriangle className="h-4 w-4" />
             Understanding Substances
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight heading-gradient">
             Know the <span className="text-gradient-gold">Facts</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
@@ -185,7 +185,7 @@ export default function DrugInfoSection() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <Card className={`shadow-premium-xl border-2 ${drug.borderColor} overflow-hidden`}>
+                <Card className={`shadow-premium-2xl border-2 ${drug.borderColor} overflow-hidden`}>
                   {/* Header */}
                   <div className={`${drug.bgColor} p-6 sm:p-8 border-b ${drug.borderColor}`}>
                     <div className="flex items-center gap-4 mb-4">

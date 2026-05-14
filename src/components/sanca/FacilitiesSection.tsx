@@ -172,7 +172,7 @@ export default function FacilitiesSection() {
             <MapPin className="h-4 w-4" />
             Our Clinics
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
             Four Facilities, <span className="text-gradient-gold">One Purpose</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -287,7 +287,7 @@ export default function FacilitiesSection() {
                             initial={{ opacity: 0, scale: 0.97 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="relative rounded-2xl overflow-hidden shadow-premium-xl border-4 border-white dark:border-[#0D3B22] group mb-6"
+                            className="relative rounded-2xl overflow-hidden shadow-premium-2xl border-4 border-white dark:border-[#0D3B22] group mb-6"
                           >
                             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sanca-gold to-sanca-gold-light z-10" />
                             <img

@@ -2201,3 +2201,120 @@ Stage Summary:
 - **Cron task created** for automated 15-minute QA reviews (webDevReview)
 - Zero lint errors, dev server rendering successfully
 
+
+---
+Task ID: 1
+Agent: Navbar Developer
+Task: Upgrade mobile sidebar (Sheet) menu to premium, modern, government-worthy design
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections)
+- Read current Navbar.tsx (235 lines) — identified basic Sheet mobile sidebar with flat nav items needing upgrade
+- Read globals.css utility classes — confirmed shadow-premium-*, shadow-gold, card-animated-border, glass, text-gradient-gold, btn-ripple, hover-lift, custom-scrollbar, badge-pulse, hover-glow available
+- Updated Navbar.tsx with comprehensive premium mobile sidebar rewrite:
+  - Added new lucide-react icon imports: Home, ClipboardCheck, Stethoscope, DoorOpen, BookOpen, HelpCircle, MapPin, ExternalLink
+  - Added LucideIcon type import and NavLink interface (label, href, icon)
+  - Updated navLinks array to include icon references for each navigation item
+  - **Premium Header**: Larger 14×14 logo with gradient background (from-sanca-green to-sanca-green-dark), rounded-2xl with shadow-premium-md and card-animated-border; SANCA branding with C.A.I.R.U.P. Programme subtitle; gradient header overlay (from-sanca-green/5 to-sanca-gold/5); decorative gold gradient line separator
+  - **Gold accent line**: Full-width h-1 gradient bar (from-sanca-green via-sanca-gold to-sanca-emerald) at top of sidebar
+  - **Decorative background elements**: Floating gold orb (top-right, blur-3xl), floating emerald orb (bottom-left, blur-3xl), subtle dot grid pattern overlay
+  - **Nav items with premium design**:
+    - Gradient left border accent (from-sanca-green via-sanca-gold to-sanca-emerald) on active items using layoutId "sidebarActive" for smooth transitions
+    - Icon next to each nav item in rounded-lg container with active/hover state transitions
+    - Active items get bg-sanca-green/[0.08], shadow-premium-sm, and underline accent with layoutId "sidebarUnderline"
+    - Staggered entrance animations (delay: 0.1 + i * 0.06, spring physics)
+    - Premium hover states with color transitions and icon container bg changes
+  - **Footer section**:
+    - Premium "Get Help Now" CTA with gold gradient (from-sanca-gold via-sanca-gold-light to-sanca-gold), shadow-gold, btn-ripple effect, scale hover animation, and ExternalLink icon with hover transform
+    - Emergency Line contact card with Phone icon in green circle, label + number
+    - WhatsApp contact card with MessageCircle icon in gold circle, label + number
+    - Operating Hours info card with Clock icon in emerald circle
+    - Location badge with MapPin icon ("Pretoria, Gauteng, South Africa")
+    - Gradient separator line between footer and nav
+  - **Dark mode support**: Full dark: prefix classes throughout (bg-sanca-green-dark base, white text, adjusted opacity/glow values)
+  - **Sheet sizing**: w-[320px] sm:w-[360px] with gradient background (sanca-cream → white → sanca-cream)
+  - Desktop navigation and top emergency bar kept unchanged
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling successfully with 200 status codes
+
+Stage Summary:
+- Navbar mobile sidebar completely rewritten with premium design in /home/z/my-project/src/components/sanca/Navbar.tsx
+- All design requirements implemented: premium header, icon nav items with gradient accents, staggered animations, CTA button, emergency contact cards, operating hours, location, decorative orbs/patterns, gold accent line, dark mode support
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 2
+Agent: Heading & Shadow Upgrader
+Task: Upgrade all section headings with gradient colors, bigger sizes, and subtle shadow effects + enhance shadow effects on main components
+
+Work Log:
+- Read worklog.md to understand project context (Tasks 1-11 completed: ultra-premium SANCA website with 28+ sections)
+- Read current globals.css (2503 lines) and identified all component h2 headings via grep
+- **Task A**: Appended 96 lines of new CSS to globals.css:
+  - `.heading-gradient` — Section heading text shadow (light + dark mode)
+  - `.shadow-premium-2xl` — Premium card enhanced shadow (light + dark mode)
+  - `.shadow-gold-enhanced` — Enhanced gold shadow for premium elements (light + dark mode)
+  - `.shadow-emerald` — Emerald accent shadow (light + dark mode)
+  - `.section-card-premium` — Premium section card wrapper with hover states (light + dark mode)
+  - `.heading-underline` — Heading underline decoration with gradient bar
+- **Task B**: Updated h2 headings in 28 section components:
+  - Added `heading-gradient` class to all h2 headings for subtle text shadow
+  - Increased heading size: `lg:text-5xl` → `lg:text-6xl` on all section headings
+  - Added `dark:text-white` where missing for dark mode compatibility
+  - Components updated: SelfAssessment, AboutSection, ProgrammesSection, FacilitiesSection, AdmissionsSection, DrugInfoSection, FAQSection, TestimonialsSection, DiagnosisTips, MythsSection, MedicalAidSection, FamiliesSection, RecoveryJourney, ResourceLibrary, EventsSection, VolunteerSection, DrugSeverityMeter, DrugStatsSection, AddictionCostCalculator, TreatmentComparison, SobrietyCalculator, RecoveryVisualizer, MoodTracker, RecoveryAffirmations, SuccessStories, TeamSection, PackingListSection, EmergencyCTA
+  - Note: ContactSection only has h3 (skipped)
+- **Task C**: Enhanced shadow classes across components:
+  - `shadow-premium-xl` → `shadow-premium-2xl` on 14 primary cards (SelfAssessment, Programmes, TreatmentComparison, DrugStats, AddictionCostCalculator, CEOWelcomeSection, FamiliesSection, FacilitiesSection, AboutSection, DrugInfoSection, TestimonialsSection, DrugSeverityMeter, ChatBot panel)
+  - `shadow-premium-lg` → `shadow-premium-xl` on 12 secondary/primary cards (RecoveryJourney, AddictionCostCalculator, SobrietyCalculator, RecoveryVisualizer, RecoveryAffirmations, MedicalAidSection, AdmissionsSection, EventsSection, ChatBot toggle, VolunteerSection, HeroSection CTAs, FloatingActions)
+  - `shadow-gold-enhanced` added to "Get Help Now" CTA buttons (Navbar desktop, Navbar mobile, MythsSection)
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- globals.css enhanced with 6 new premium CSS classes (heading-gradient, shadow-premium-2xl, shadow-gold-enhanced, shadow-emerald, section-card-premium, heading-underline) with full dark mode support
+- 28 section headings upgraded with heading-gradient class, lg:text-6xl size, and dark:text-white
+- Shadow system upgraded: 14 primary cards to shadow-premium-2xl, 12 cards to shadow-premium-xl, 3 CTA buttons to shadow-gold-enhanced
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: Navbar+Headings Upgrade
+Agent: Main Agent (with subagents)
+Task: Upgrade navbar mobile sidebar to modern premium design, add gradient headings with shadows, enhance component shadows
+
+Work Log:
+- Read all section components and globals.css to understand heading patterns and shadow usage
+- Launched 2 parallel subagents for Navbar upgrade and Heading/Shadow upgrades
+- **Navbar Mobile Sidebar Upgrade** (Subagent 1):
+  - Added LucideIcon type and NavLink interface with contextual icons per nav item (Home, ClipboardCheck, Stethoscope, DoorOpen, BookOpen, HelpCircle, Phone)
+  - Premium header with larger 56x56 logo, gradient background, SANCA branding with "C.A.I.R.U.P. Programme" subtitle
+  - Decorative elements: gold accent line at top, floating orbs, dot grid pattern overlay
+  - Nav items with gradient left border accent on active items, icon containers with transitions, staggered entrance animations
+  - Premium footer with "Get Help Now" CTA, Emergency Line card, WhatsApp card, Operating Hours card, Location badge
+  - Full dark mode support
+- **Heading & Shadow Upgrades** (Subagent 2):
+  - Added 6 new CSS classes to globals.css: .heading-gradient, .shadow-premium-2xl, .shadow-gold-enhanced, .shadow-emerald, .section-card-premium, .heading-underline
+  - Updated all 28 section component h2 headings with heading-gradient class and lg:text-6xl size
+  - Upgraded 14 primary cards from shadow-premium-xl to shadow-premium-2xl
+  - Upgraded 12 secondary cards from shadow-premium-lg to shadow-premium-xl
+  - Added shadow-gold-enhanced to 3 CTA buttons
+- Fixed mobile horizontal overflow by adding overflow-x: hidden to body in globals.css
+- Ran ESLint — zero errors
+- Verified dev server — compiling successfully
+- QA with agent-browser: all sections load, gradient effects working, headings prominent (H2=60px), mobile sidebar opens/closes correctly, no JS errors
+
+Stage Summary:
+- **Current project status**: SANCA Pretoria website with 25+ sections, all premium upgraded with gradient headings, enhanced shadows, and modern mobile sidebar
+- **Completed modifications**:
+  - Navbar mobile sidebar completely redesigned with premium government-worthy design
+  - All 28 section headings now have gradient text shadows and larger size (lg:text-6xl)
+  - Primary cards upgraded to shadow-premium-2xl for deeper luxurious shadows
+  - New CSS classes: heading-gradient, shadow-premium-2xl, shadow-gold-enhanced, shadow-emerald, section-card-premium, heading-underline
+  - Mobile overflow fix (overflow-x: hidden on body)
+- **Unresolved issues/risks**:
+  - Non-critical framer-motion scroll position warning persists (cosmetic only)
+  - Some sections still use EmergencyCTA component that user previously wanted removed
+- **Priority recommendations for next phase**:
+  1. Remove EmergencyCTA banner as previously requested
+  2. Add more official images with frames and shadow effects
+  3. Continue copywriting enhancements across sections
+  4. Add CEO Welcome section improvements
