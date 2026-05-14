@@ -6,9 +6,11 @@ const quickLinks = [
   { label: 'Self-Assessment', href: '#assessment' },
   { label: 'Treatment Programmes', href: '#programmes' },
   { label: 'Admissions Process', href: '#admissions' },
-  { label: 'Drug Information', href: '#drug-info' },
-  { label: 'Our Facilities', href: '#facilities' },
-  { label: 'About SANCA', href: '#about' },
+  { label: 'Recovery Journey', href: '#recovery-journey' },
+  { label: 'Resource Library', href: '#resources' },
+  { label: 'For Families', href: '#families' },
+  { label: 'Volunteer With Us', href: '#volunteer' },
+  { label: 'FAQ', href: '#faq' },
 ];
 
 const programmes = [

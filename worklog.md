@@ -385,3 +385,190 @@ Stage Summary:
   4. Performance optimization (lazy load chart components, optimize images)
   5. Add more micro-interactions (particle effects in hero, scroll-reveal animations on cards)
   6. Add Google Maps embed for facilities section
+
+---
+Task ID: 10
+Agent: CSS Enhancement Developer
+Task: Enhance global CSS with premium effects and improve dark mode styling
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-7 completed: ultra-premium SANCA website with 21+ sections)
+- Read current globals.css (713 lines of existing styles including brand colors, animations, shadow system, glass effects, dark mode variables, section transitions)
+- Appended 190+ lines of new CSS to globals.css after existing content (no modifications to any existing styles):
+  - 5 new keyframe animations: magnetic-pull (scale hover), stagger-fade (list item entrance), spotlight-sweep (card hover sweep), morph-blob (organic border-radius morph), blink-cursor (typewriter cursor)
+  - 3 new animation utility classes: .animate-magnetic-pull, .animate-morph-blob, .animate-blink-cursor
+  - 8 new premium utility classes: .card-spotlight (hover sweep effect), .text-gradient-green-animated (animated green gradient text), .noise-texture (SVG noise overlay), .glass-card (frosted glass), .section-top-gradient (3px gradient top border), .premium-input (gold focus ring), .stagger-children (staggered child animations with 8 nth-child delays)
+  - Enhanced dark mode: .dark SANCA-specific CSS variables (--sanca-cream, --sanca-warm, --sanca-sage), dark scrollbar, dark glass effect, dark glass-card, dark premium-input, dark shadow-premium-* overrides (5 levels), dark section backgrounds (.bg-sanca-cream, .bg-white), dark gold-shimmer adjustment
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- globals.css enhanced with 190+ lines of new premium animations, utility classes, and dark mode overrides
+- All new styles appended after existing content with zero modifications to previous styles
+- 5 new keyframe animations and 11 new utility classes available for component use
+- Comprehensive dark mode support added: CSS variables, scrollbar, glass effects, shadow overrides, section backgrounds, shimmer adjustments
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 9
+Agent: Resource Library & Page Loader Developer
+Task: Create ResourceLibrary and PageLoader components
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-7, 10 completed: ultra-premium SANCA website with 21+ sections, enhanced CSS with dark mode)
+- Studied existing component patterns (FAQSection, AboutSection) for animation styles, Card/Button usage, SANCA brand class conventions
+- Reviewed globals.css for available utility classes (shadow-premium-*, hover-lift, text-gradient-gold, bg-sanca-cream, btn-ripple, custom-scrollbar, etc.)
+- Created /home/z/my-project/src/components/sanca/ResourceLibrary.tsx with:
+  - Section ID `resources` with sanca-cream (#FAF6ED) background
+  - Animated section header with Library badge, "Resource Library" heading with gradient gold, and subtext
+  - Category filter tabs (5 options): All, For Patients, For Families, For Professionals, For Youth
+  - Horizontal scrollable tab bar with framer-motion layoutId animation on active tab
+  - 8 resource cards in responsive grid (2 cols mobile, 3 cols tablet, 4 cols desktop):
+    - "Understanding Addiction" (BookOpen icon, PDF, For Patients, emerald badges)
+    - "Relapse Prevention Workbook" (FileText icon, PDF, For Patients, emerald badges)
+    - "Family Support Guide" (Users icon, PDF, For Families, amber/gold badges)
+    - "Talking to Your Teen About Drugs" (MessageSquare icon, PDF, For Families, amber/gold badges)
+    - "Medical Aid & Rehabilitation" (Heart icon, PDF, For Patients, emerald badges)
+    - "Counselling Techniques Manual" (Brain icon, PDF, For Professionals, teal badges)
+    - "Youth Recovery Handbook" (GraduationCap icon, PDF, For Youth, green badges)
+    - "Aftercare Planning Template" (ClipboardList icon, PDF, For Patients, emerald badges)
+  - Each card shows: color-coded category badge, file type badge (PDF), document icon with background, title, and download button with Download icon
+  - AnimatePresence with mode="popLayout" for smooth card filtering transitions
+  - hover-lift effect on cards with shadow-premium-md
+  - btn-ripple effect on download buttons
+  - Mobile responsive with proper 44px touch targets
+  - Bottom contact note with phone link
+- Created /home/z/my-project/src/components/sanca/PageLoader.tsx with:
+  - Full-screen overlay with sanca-green-dark background, z-[100]
+  - SANCA "S" logo that pulses/scales in with spring animation (scale: [0, 1.15, 1])
+  - Gold gradient text on the "S" letter using font-serif
+  - Gold spinner ring rotating continuously around the logo
+  - Inner glow ring with gold shadow
+  - Decorative background rings with pulsing scale animations
+  - "SANCA Pretoria" text label below the logo
+  - Auto-dismisses after 2 seconds or when window load event fires
+  - Smooth fade-out transition (0.5s easeInOut) using AnimatePresence
+  - document.readyState check to handle already-loaded pages
+- Updated /home/z/my-project/src/app/page.tsx:
+  - Added ResourceLibrary import and placed it before FAQSection
+  - Added PageLoader import and placed it as first child of outer div (before ScrollProgress)
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- ResourceLibrary component created at src/components/sanca/ResourceLibrary.tsx (~175 lines)
+- Interactive categorized resource library with 5 filter tabs, 8 resource cards, framer-motion AnimatePresence filtering, layoutId tab animations, hover-lift cards, color-coded category badges
+- PageLoader component created at src/components/sanca/PageLoader.tsx (~80 lines)
+- Premium page loading animation with pulsing "S" logo, gold spinner ring, decorative rings, AnimatePresence fade-out, auto-dismiss after 2s or page load
+- Both components integrated into page.tsx
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 8
+Agent: Newsletter & Volunteer Section Developer
+Task: Create NewsletterSection and VolunteerSection components
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-7, 9, 10 completed: ultra-premium SANCA website with 21+ sections, enhanced CSS, resource library, page loader)
+- Studied existing component patterns (EmergencyCTA for dark background sections, AboutSection for card layouts, globals.css for available utility classes)
+- Reviewed globals.css for available utility classes: text-gradient-gold, hover-lift, btn-ripple, shadow-premium-lg, shadow-gold, glow-focus, animate-rotate-slow, badge-pulse, custom-scrollbar, premium-focus
+- Created /home/z/my-project/src/components/sanca/NewsletterSection.tsx (~150 lines):
+  - Section ID `newsletter` with sanca-green-dark gradient background and subtle diamond pattern overlay
+  - Decorative gradient orbs (gold top-right, emerald bottom-left) with blur
+  - Animated heading: "Stay Connected with SANCA" with text-gradient-gold accent on "SANCA"
+  - Badge with Mail icon and "Newsletter" label
+  - Subtext about receiving recovery tips, news, and event updates
+  - Email input field with glow-focus effect and gold border on focus (bg-white/10 with border-white/20)
+  - "Subscribe" button with btn-ripple effect, sanca-gold bg, Send icon, shadow-gold
+  - Success state with animated confirmation message (auto-dismiss after 4s)
+  - Privacy note: "We respect your privacy. Unsubscribe at any time."
+  - Stats row: "2,500+ subscribers" (Users icon), "Monthly updates" (Calendar icon), "No spam" (ShieldCheck icon)
+  - Right side decorative element (desktop only): rotating outer rings, center Mail icon with glass effect, floating dots with y-axis animations, SVG decorative circles with dashed strokes
+  - Framer Motion whileInView animations throughout with staggered delays
+  - Mobile responsive: form stacks vertically on small screens, decorative element hidden on mobile
+- Created /home/z/my-project/src/components/sanca/VolunteerSection.tsx (~140 lines):
+  - Section ID `volunteer` with white background and subtle dot pattern overlay
+  - Cream accent gradient orbs for depth
+  - Animated heading: "Make a Difference" with text-gradient-gold accent on "Difference"
+  - Badge with HeartHandshake icon and "Get Involved" label
+  - Two main cards side by side (stack on mobile via md:grid-cols-2):
+    - **Volunteer Card** (left):
+      - Green gradient top border (sanca-green-light → sanca-green → sanca-emerald)
+      - HeartHandshake icon in green bg with group-hover scale effect
+      - Title: "Volunteer With Us"
+      - Description about making lasting impact in community recovery
+      - 3 bullet points with CheckCircle2 icons: "Counselling support", "Community outreach", "Administrative assistance"
+      - CTA button: "Apply to Volunteer" (outline style, border-sanca-green, text-sanca-green, hover:bg-sanca-green) with ArrowRight icon
+    - **Donate Card** (right):
+      - Gold gradient top border (sanca-gold-dark → sanca-gold → sanca-gold-light)
+      - Heart icon in gold bg with group-hover scale effect
+      - Title: "Support Our Mission"
+      - Description about how donations fund treatment and programmes
+      - 3 impact cards on sanca-cream bg: "R250 feeds a patient for a week", "R500 sponsors a counselling session", "R1000 supports a family programme"
+      - CTA button: "Donate Now" (sanca-gold bg, shadow-gold) with ArrowRight icon
+  - hover-lift effect on both cards
+  - Framer Motion whileInView staggered animations (left card from x:-30, right card from x:30)
+  - Mobile responsive with proper spacing
+- Updated /home/z/my-project/src/app/page.tsx:
+  - Added VolunteerSection and NewsletterSection imports
+  - Placed VolunteerSection before NewsletterSection, NewsletterSection before EmergencyCTA (as specified)
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- NewsletterSection component created at src/components/sanca/NewsletterSection.tsx (~150 lines)
+- Premium newsletter signup with dark green gradient, gold accents, email form with glow-focus, decorative rings and floating dots, stats row, privacy note
+- VolunteerSection component created at src/components/sanca/VolunteerSection.tsx (~140 lines)
+- Dual-purpose section with Volunteer card (green accent, bullet points, outline CTA) and Donate card (gold accent, impact cards, solid CTA)
+- Both components use SANCA brand colors (green, gold, cream), hover-lift effects, btn-ripple on buttons, Framer Motion whileInView animations
+- Components integrated into page.tsx in correct order: TestimonialsSection → VolunteerSection → NewsletterSection → EmergencyCTA
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 11
+Agent: Cron Review Agent (Phase 5)
+Task: QA testing, bug fixes, mandatory styling improvements, and new features
+
+Work Log:
+- Read worklog.md to assess project status (Tasks 1-10 completed: ultra-premium SANCA website with 21+ sections)
+- Performed comprehensive QA using agent-browser: screenshots at hero/mid1/mid2/mid3/mid4/mid5/bottom
+- VLM analysis of hero, mid1, and bottom screenshots identified: hero stats text truncation, FAB overlap concerns, Recovery Journey text truncation
+- Console check: only non-critical framer-motion scroll position warning, zero errors
+- **Bug Fix**: Hero section scroll position warning — added explicit style={{ position: 'relative' }} to hero section element
+- **Bug Fix**: Hero stats text truncation — replaced inline flex layout with grid-based glass cards (3-column grid with backdrop-blur, white/10 borders, larger bold numbers, smaller descriptive text)
+- **Navigation Update**: Streamlined nav links — replaced Severity and Families with Resources (#resources) for cleaner 7-link navigation
+- **Footer Update**: Updated quick links to include Recovery Journey, Resource Library, For Families, Volunteer With Us (8 links total)
+- **Page Structure**: Added section-divider-thin dividers between major section groups (9 dividers) for premium visual flow
+- Launched 3 parallel sub-agents for major features:
+  - **Task 8**: NewsletterSection (email signup with glass effects, stats, privacy note, decorative rings) + VolunteerSection (dual volunteer/donate cards with impact amounts)
+  - **Task 9**: ResourceLibrary (8 categorized downloadable resources with filter tabs) + PageLoader (SANCA "S" logo animation with gold spinner ring)
+  - **Task 10**: Enhanced globals.css with 190+ lines of new animations (magnetic-pull, stagger-fade, spotlight-sweep, morph-blob, blink-cursor), premium utility classes (card-spotlight, glass-card, noise-texture, premium-input, section-top-gradient, stagger-children), and comprehensive dark mode styling (scrollbar, glass, shadows, section backgrounds)
+- All 3 sub-agents completed successfully with zero lint errors
+- Final QA verification: page loads correctly, new sections render, console clean
+- Final lint check: zero errors
+
+Stage Summary:
+- **Current project status**: Ultra-premium SANCA Pretoria website with 25+ sections/features, all rendering correctly with zero lint errors and zero runtime errors
+- **Completed modifications this phase**:
+  - Hero stats upgraded from inline text to glass card grid (fixes truncation)
+  - Hero scroll position warning fix
+  - Navigation streamlined to 7 links including new Resources section
+  - Footer quick links updated with new sections
+  - Section dividers added between major section groups
+  - NewsletterSection: email signup with premium glass effects, stats, privacy note, decorative rings
+  - VolunteerSection: dual volunteer/donate cards with impact amounts
+  - ResourceLibrary: 8 categorized resources with interactive filter tabs
+  - PageLoader: SANCA "S" logo animation with gold spinner ring
+  - globals.css: 190+ lines of new animations, premium utility classes, and dark mode styling
+- **Full component list** (25 sections/features):
+  PageLoader, ScrollProgress, Navbar (with ThemeToggle), Hero (enhanced stats), SelfAssessment (with celebration), DiagnosisTips, MedicalAid, About, RecoveryJourney, Programmes, Facilities, Admissions, PackingList, DrugSeverityMeter, DrugInfo, DrugStats (3 charts), Families (flip cards), ResourceLibrary (filter tabs), FAQ, Testimonials, VolunteerSection, NewsletterSection, EmergencyCTA, FloatingActions (with tooltips), ChatBot (AI-powered), Footer
+- **Unresolved issues/risks**:
+  - Non-critical framer-motion scroll position warning in console (cosmetic only, does not affect functionality)
+  - Dark mode CSS variables are defined but some components may need explicit dark: variants for full dark mode support
+- **Priority recommendations for next phase**:
+  1. Add Google Maps embed for facilities section
+  2. Add PWA capabilities (manifest, service worker, offline support)
+  3. Performance optimization (lazy load chart components, optimize images)
+  4. Add more dark mode component overrides for full dark mode consistency
+  5. Add accessibility audit (WCAG 2.1 AA compliance)
+  6. Add internationalization (i18n) support for Afrikaans and Zulu

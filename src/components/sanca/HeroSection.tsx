@@ -22,6 +22,7 @@ export default function HeroSection() {
       ref={ref}
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
+      style={{ position: 'relative' }}
     >
       {/* Background Image with Parallax */}
       <motion.div className="absolute inset-0" style={{ y: backgroundY }}>
@@ -134,24 +135,27 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Compact Stats Row */}
+          {/* Stats Row — Premium Glass Cards */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.3 }}
-            className="mt-10 flex flex-wrap gap-6"
+            className="mt-12 grid grid-cols-3 gap-3 sm:gap-4 max-w-lg"
           >
-            <div className="flex items-center gap-2 text-white/50 text-xs">
-              <Award className="h-3.5 w-3.5 text-sanca-gold/60" />
-              <span>68+ Years of Service</span>
+            <div className="flex flex-col items-center gap-1 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-sm border border-white/10 text-center">
+              <Award className="h-4 w-4 text-sanca-gold/80" />
+              <span className="text-white font-bold text-sm sm:text-base">68+</span>
+              <span className="text-white/50 text-[10px] sm:text-xs leading-tight">Years of Service</span>
             </div>
-            <div className="flex items-center gap-2 text-white/50 text-xs">
-              <Users className="h-3.5 w-3.5 text-sanca-gold/60" />
-              <span>32 Societies Nationwide</span>
+            <div className="flex flex-col items-center gap-1 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-sm border border-white/10 text-center">
+              <Users className="h-4 w-4 text-sanca-gold/80" />
+              <span className="text-white font-bold text-sm sm:text-base">32</span>
+              <span className="text-white/50 text-[10px] sm:text-xs leading-tight">Societies Nationwide</span>
             </div>
-            <div className="flex items-center gap-2 text-white/50 text-xs">
-              <Star className="h-3.5 w-3.5 text-sanca-gold/60" />
-              <span>1000+ Patients Annually</span>
+            <div className="flex flex-col items-center gap-1 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-sm border border-white/10 text-center">
+              <Star className="h-4 w-4 text-sanca-gold/80" />
+              <span className="text-white font-bold text-sm sm:text-base">1000+</span>
+              <span className="text-white/50 text-[10px] sm:text-xs leading-tight">Patients Annually</span>
             </div>
           </motion.div>
         </div>
