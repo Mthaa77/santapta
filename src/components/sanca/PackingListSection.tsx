@@ -78,16 +78,16 @@ export default function PackingListSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Luggage className="h-4 w-4" />
             What to Bring
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             Packing for <span className="text-gradient-gold">Your Stay</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
             Preparing for admission? Here&apos;s a helpful guide on what to pack — and what
-            to leave at home.
+            to leave at home. We want you to feel as comfortable as possible.
           </p>
         </motion.div>
 
@@ -104,10 +104,11 @@ export default function PackingListSection() {
                 transition={{ duration: 0.4, delay: i * 0.1 }}
               >
                 <Card className="p-5 shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-0 h-full">
-                  <div className="w-10 h-10 rounded-xl bg-sanca-green/10 flex items-center justify-center mb-4">
+                  <div className="relative w-10 h-10 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mb-4 transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]">
+                    <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                     <Icon className="h-5 w-5 text-sanca-green" />
                   </div>
-                  <h4 className="font-serif font-bold text-sanca-green-dark mb-3 text-sm">
+                  <h4 className="font-serif font-bold text-sanca-green-dark mb-3 text-sm tracking-tight">
                     {category.category}
                   </h4>
                   <ul className="space-y-1.5">
@@ -133,10 +134,11 @@ export default function PackingListSection() {
         >
           <Card className="p-6 sm:p-8 shadow-premium-lg border-2 border-red-200 bg-red-50/50">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
+              <div className="relative w-10 h-10 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center">
+                <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                 <AlertTriangle className="h-5 w-5 text-red-600" />
               </div>
-              <h4 className="font-serif font-bold text-red-700 text-lg">
+              <h4 className="font-serif font-bold text-red-700 text-lg tracking-tight">
                 Do NOT Bring
               </h4>
             </div>
@@ -148,7 +150,7 @@ export default function PackingListSection() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-red-600/60 mt-4 italic">
+            <p className="text-xs text-red-600/60 mt-4 italic leading-relaxed">
               All belongings are checked upon admission. Prohibited items will be securely stored and returned upon discharge.
             </p>
           </Card>

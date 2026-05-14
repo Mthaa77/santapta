@@ -58,18 +58,19 @@ export default function EmergencyCTA() {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.2 }}
-            className="w-20 h-20 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center mx-auto mb-8 animate-pulse-glow"
+            className="relative w-20 h-20 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-8 animate-pulse-glow"
           >
+            <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
             <Heart className="h-10 w-10 text-sanca-gold-light" />
           </motion.div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight tracking-tight">
             You Don&apos;t Have to<br />
             <span className="text-gradient-gold">Face This Alone</span>
           </h2>
-          <p className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-white/80 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
             Whether you&apos;re reaching out for yourself, a loved one, or seeking guidance —
-            we&apos;re here. 24 hours a day, 7 days a week.
+            we&apos;re here. 24 hours a day, 7 days a week. Together, we can find a way forward.
           </p>
 
           {/* Impact Stats */}
@@ -93,10 +94,11 @@ export default function EmergencyCTA() {
               whileTap={{ scale: 0.98 }}
               className="group p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-sanca-gold/40 transition-all duration-300 block"
             >
-              <div className="w-14 h-14 rounded-xl bg-sanca-gold/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]">
+                <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                 <Phone className="h-7 w-7 text-sanca-gold-light" />
               </div>
-              <p className="font-serif font-bold text-lg">Call Us</p>
+              <p className="font-serif font-bold text-lg tracking-tight">Call Us</p>
               <p className="text-white/70 text-sm mt-1">012 542 1121</p>
               <p className="text-white/50 text-xs mt-1">24/7 Emergency Line</p>
             </motion.a>
@@ -109,10 +111,11 @@ export default function EmergencyCTA() {
               whileTap={{ scale: 0.98 }}
               className="group p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-sanca-emerald/40 transition-all duration-300 block"
             >
-              <div className="w-14 h-14 rounded-xl bg-sanca-emerald/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]">
+                <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                 <MessageCircle className="h-7 w-7 text-sanca-emerald" />
               </div>
-              <p className="font-serif font-bold text-lg">WhatsApp</p>
+              <p className="font-serif font-bold text-lg tracking-tight">WhatsApp</p>
               <p className="text-white/70 text-sm mt-1">081 318 1511</p>
               <p className="text-white/50 text-xs mt-1">Quick Text Response</p>
             </motion.a>
@@ -123,10 +126,11 @@ export default function EmergencyCTA() {
               whileTap={{ scale: 0.98 }}
               className="group p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-sanca-gold/40 transition-all duration-300 block"
             >
-              <div className="w-14 h-14 rounded-xl bg-sanca-gold/20 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]">
+                <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                 <Shield className="h-7 w-7 text-sanca-gold" />
               </div>
-              <p className="font-serif font-bold text-lg">Email Us</p>
+              <p className="font-serif font-bold text-lg tracking-tight">Email Us</p>
               <p className="text-white/70 text-sm mt-1">info@sancapta.co.za</p>
               <p className="text-white/50 text-xs mt-1">Response within 1 day</p>
             </motion.a>

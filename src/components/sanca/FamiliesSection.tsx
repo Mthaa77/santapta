@@ -197,11 +197,12 @@ function FlipCard({ card }: { card: FlipCardData }) {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div
-            className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl ${card.accentBg} border-2 ${card.accentBorder} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+            className={`relative w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]`}
           >
+            <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
             <Icon className={`h-7 w-7 sm:h-8 sm:w-8 ${card.accentColor}`} />
           </div>
-          <h4 className={`font-serif text-lg sm:text-xl font-bold ${card.accentColor} mb-3`}>
+          <h4 className={`font-serif text-lg sm:text-xl font-bold ${card.accentColor} mb-3 tracking-tight`}>
             {card.frontTitle}
           </h4>
           <p className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1.5">
@@ -257,17 +258,17 @@ export default function FamiliesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Heart className="h-4 w-4" />
-            Support for Families
+            For Families & Loved Ones
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             For Families &amp; <span className="text-gradient-gold">Loved Ones</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
             Addiction doesn&apos;t just affect the individual — it impacts the entire family.
             When someone you love struggles with substance use, you deserve support,
-            understanding, and guidance too.
+            understanding, and guidance too. We&apos;re here for you.
           </p>
         </motion.div>
 
@@ -288,11 +289,12 @@ export default function FamiliesSection() {
                   className={`p-6 sm:p-8 shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-2 ${stat.border} ${stat.bg} text-center`}
                 >
                   <div
-                    className={`w-12 h-12 rounded-xl ${stat.bg} border ${stat.border} flex items-center justify-center mx-auto mb-4`}
+                    className={`relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-4 transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]`}
                   >
+                    <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                     <Icon className={`h-6 w-6 ${stat.accent}`} />
                   </div>
-                  <p className={`font-serif text-3xl sm:text-4xl font-bold ${stat.accent} mb-1`}>
+                  <p className={`font-serif text-3xl sm:text-4xl font-bold ${stat.accent} mb-1 tracking-tight`}>
                     {stat.value}
                   </p>
                   <p className="text-sm font-semibold text-foreground mb-1">{stat.label}</p>
@@ -314,10 +316,10 @@ export default function FamiliesSection() {
           className="mb-16"
         >
           <div className="text-center mb-8">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2 tracking-tight">
               Essential <span className="text-gradient-gold">Knowledge</span>
             </h3>
-            <p className="text-muted-foreground text-sm sm:text-base">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               Tap each card to discover vital information for families
             </p>
           </div>
@@ -346,10 +348,10 @@ export default function FamiliesSection() {
           className="mb-16"
         >
           <div className="text-center mb-8">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2 tracking-tight">
               Guiding <span className="text-gradient-gold">Principles</span>
             </h3>
-            <p className="text-muted-foreground text-sm sm:text-base">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               Practical do&apos;s and don&apos;ts for families navigating a loved one&apos;s addiction
             </p>
           </div>
@@ -364,10 +366,11 @@ export default function FamiliesSection() {
             >
               <Card className="p-6 sm:p-8 shadow-premium-lg border-2 border-sanca-green/20 h-full">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-sanca-green flex items-center justify-center">
-                    <CheckCircle2 className="h-5 w-5 text-white" />
+                  <div className="relative w-10 h-10 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center">
+                    <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                    <CheckCircle2 className="h-5 w-5 text-sanca-green" />
                   </div>
-                  <h4 className="font-serif text-xl font-bold text-sanca-green">
+                  <h4 className="font-serif text-xl font-bold text-sanca-green tracking-tight">
                     Do&apos;s
                   </h4>
                 </div>
@@ -402,10 +405,11 @@ export default function FamiliesSection() {
             >
               <Card className="p-6 sm:p-8 shadow-premium-lg border-2 border-amber-200 h-full">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center">
-                    <XCircle className="h-5 w-5 text-white" />
+                  <div className="relative w-10 h-10 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center">
+                    <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                    <XCircle className="h-5 w-5 text-amber-600" />
                   </div>
-                  <h4 className="font-serif text-xl font-bold text-amber-700">
+                  <h4 className="font-serif text-xl font-bold text-amber-700 tracking-tight">
                     Don&apos;ts
                   </h4>
                 </div>
@@ -442,10 +446,10 @@ export default function FamiliesSection() {
           className="mb-16"
         >
           <div className="text-center mb-8">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-2 tracking-tight">
               SANCA Family <span className="text-gradient-gold">Support Programmes</span>
             </h3>
-            <p className="text-muted-foreground text-sm sm:text-base">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               Professional support designed specifically for families and loved ones
             </p>
           </div>
@@ -470,11 +474,12 @@ export default function FamiliesSection() {
                     <div className="pl-3">
                       <div className="flex items-center gap-3 mb-4">
                         <div
-                          className={`w-12 h-12 rounded-xl ${programme.accentLight} flex items-center justify-center`}
+                          className={`relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center`}
                         >
+                          <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                           <Icon className={`h-6 w-6 ${i === 0 ? 'text-sanca-green' : 'text-sanca-gold-dark'}`} />
                         </div>
-                        <h4 className="font-serif text-xl font-bold text-sanca-green-dark">
+                        <h4 className="font-serif text-xl font-bold text-sanca-green-dark tracking-tight">
                           {programme.title}
                         </h4>
                       </div>
@@ -513,16 +518,17 @@ export default function FamiliesSection() {
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3 pointer-events-none" />
 
               <div className="relative">
-                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
-                  <Heart className="h-8 w-8 text-sanca-gold-light" />
+                <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-6">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                  <Heart className="h-7 w-7 text-sanca-gold-light" />
                 </div>
-                <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
+                <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight">
                   Your family deserves healing too
                 </h3>
                 <p className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
                   You don&apos;t have to carry this burden alone. SANCA Pretoria offers dedicated
                   family support to help you navigate this journey with compassion and professional
-                  guidance.
+                  guidance. Together, we can find a way forward.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button

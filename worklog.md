@@ -1531,3 +1531,247 @@ Stage Summary:
   3. Add more micro-interactions (scroll-reveal on cards, particle effects on hover)
   4. Expand dark mode styling across all remaining components
   5. Add accessibility audit (ARIA labels, keyboard navigation testing)
+
+---
+Task ID: 3-a
+Agent: Icon & Copywriting Upgrade Developer
+Task: Upgrade icons, typography, and copywriting for government-worthy design
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections)
+- Read all 3 target component files before making changes
+- **HeroSection.tsx Upgrades**:
+  - Badge: Changed "Established 1957 — 68 Years of Healing" → "Est. 1957 — Nearly Seven Decades of Healing and Hope"
+  - Badge: Added inner glow shadow `shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),inset_0_1px_2px_rgba(197,150,58,0.1)]` (replaced shadow-lg shadow-black/10)
+  - Heading: Changed "Your Journey to Healing Starts Here" → "Your Path to Healing Begins Here"
+  - Subtitle: Changed to warmer tone — "Where compassion meets clinical excellence — accessible, affordable recovery for Pretoria, Soshanguve, and Hammanskraal. Because every person deserves a second chance."
+  - CTA button: Changed "Take the Self-Assessment" → "Check Your Wellbeing"
+  - Secondary CTA: Changed "Admissions Process" → "How Admissions Work"
+- **SelfAssessment.tsx Upgrades**:
+  - Badge: Added `border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]` for government-worthy badge styling
+  - Heading: Changed "Is It Time to Reach Out?" → "Wondering if It's Time to Talk?"
+  - Heading: Added `tracking-tight` to h2
+  - Subtitle: Changed to warmer tone — "A gentle, confidential way to reflect on your relationship with substances. Your answers stay completely private — this is just for you."
+  - Subtitle: Added `leading-relaxed`
+  - Question icon containers: Upgraded from `w-10 h-10 rounded-xl bg-sanca-green/10` to circular ornamental containers with:
+    - `w-10 h-10 rounded-full` (circular shape)
+    - Double ring: outer `border border-sanca-gold/30` + inner gradient `bg-gradient-to-b from-sanca-green/8 to-sanca-cream/5`
+    - Gold accent dot: `absolute -top-0.5 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold`
+    - Hover shadow: `hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow`
+  - Card headings (h3): Added `tracking-tight` to question heading and result heading
+- **DiagnosisTips.tsx Upgrades**:
+  - Badge: Changed "Recognition & Guidance" → "Know the Signs"
+  - Badge: Added `border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]`
+  - Heading: Changed "Spot the Warning Signs" → "Recognising the Signs That Matter"
+  - Heading: Added `tracking-tight` to h2
+  - Subtitle: Changed to warmer tone — "Whether you're worried about yourself, someone you love, a colleague, or your child — knowing what to look for is the first brave step."
+  - Subtitle: Added `leading-relaxed`
+  - Card icon containers: Upgraded from `w-10 h-10 rounded-xl` to `w-12 h-12` circular ornamental containers with:
+    - Circular shape with double ring border and gradient background
+    - Gold accent dot at top
+    - Category color preserved via `<span className={tip.color}>` wrapper around icon
+    - Hover shadow effect
+  - Expanded detail icon: Same ornamental upgrade (w-12 h-12)
+  - Card headings (h4): Added `tracking-tight`
+  - Expanded detail heading (h3): Added `tracking-tight`
+- Ran ESLint — zero errors
+- Verified dev server log — pages compiling and rendering with 200 status codes
+
+Stage Summary:
+- All 3 component files upgraded with South African government-worthy icon styling and premium typography
+- Circular ornamental icon containers implemented with double ring borders, gradient backgrounds, gold accent dots, and hover shadows
+- Section badges enhanced with gold borders and inner glow shadows
+- Typography improved with `tracking-tight` on all section/card headings and `leading-relaxed` on subtitles
+- Copywriting upgraded with warmer, friendlier South African tone across hero, assessment, and diagnosis sections
+- All existing functionality preserved — only visual styling and text content modified
+- Zero lint errors, dev server rendering successfully
+---
+Task ID: 3-b
+Agent: Icon & Typography Upgrade Developer
+Task: Upgrade icons, typography, and copywriting in 4 SANCA component files
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11+ completed: ultra-premium SANCA website with 21+ sections)
+- Read all 4 target component files to understand current structure before making changes
+- Upgraded AboutSection.tsx:
+  - Badge: "About SANCA Pretoria" → "Who We Are" with gold border + inner glow
+  - Heading: "68 Years of Healing" → "A Legacy of Healing and Hope" + added tracking-tight
+  - Subtitle: Updated to warm South African tone with heart and clinical excellence
+  - Mission/Vision card icons: Replaced rounded-xl containers with circular ornamental containers (w-14 h-14, rounded-full, border-sanca-gold/30, gradient from-white/10, gold accent dot, hover shadow)
+  - Mission/Vision h3 headings: Added tracking-tight
+  - Values grid letter containers: Replaced rounded-2xl colored containers with circular ornamental containers (rounded-full, border-sanca-gold/25, gradient from-sanca-green/8 to-sanca-cream/5, gold dot, hover shadow, transition-all)
+  - Values subtitle: "guide everything we do" → "guide every decision we make" + added leading-relaxed
+  - Values h4 word headings: Added tracking-tight
+  - Heritage subtitle: Updated to "Seven decades of unwavering service to South African communities" + added leading-relaxed
+  - Heritage h3 and timeline h4 headings: Added tracking-tight
+- Upgraded ProgrammesSection.tsx:
+  - Badge: "Treatment Programmes" → "Our Programmes" with gold border + inner glow
+  - Heading: "A Path for Every Journey" → "A Programme for Every Need" + added tracking-tight
+  - Subtitle: Updated to warm conversational tone about unique journeys + added leading-relaxed
+  - Programme detail icon: Replaced w-16 h-16 rounded-2xl with circular ornamental container (w-14 h-14, rounded-full, border-sanca-gold/30, gradient from-white/10, gold dot, hover shadow)
+  - Programme title h3 and Components h4: Added tracking-tight
+- Upgraded FacilitiesSection.tsx:
+  - Badge: "Our Facilities" → "Our Clinics" with gold border + inner glow
+  - Heading: "Three Locations, One Mission" → "Three Clinics, One Purpose" + added tracking-tight
+  - Subtitle: Updated to warm community-focused tone + added leading-relaxed
+  - Facility header icons: Replaced rounded-2xl gradient containers with circular ornamental containers (rounded-full, border-sanca-gold/25, gradient from-sanca-green/8 to-sanca-cream/5, gold dot, hover shadow)
+  - Facility name h3, Contact/Services h4 headings: Added tracking-tight
+- Upgraded AdmissionsSection.tsx:
+  - Badge: "Admissions Process" → "Getting Started" with gold border + inner glow
+  - Heading: "Your Path to Recovery" → "Your Pathway to Recovery" + added tracking-tight
+  - Subtitle: Updated to warm encouraging tone about brave decisions + added leading-relaxed
+  - Step 1 title: "First Contact" → "Reach Out to Us"
+  - Step 8 title: "Discharge & Aftercare" → "Graduation & Aftercare"
+  - Step list icons (w-10 h-10 inline): Replaced rounded-xl containers with circular ornamental containers (rounded-full, conditional border/bg for active/inactive, gold dot, transition-shadow)
+  - Step detail icon: Replaced w-16 h-16 rounded-2xl with circular ornamental container (w-14 h-14, rounded-full, border-sanca-gold/30, gradient from-white/15 to-white/5, gold dot, hover shadow, text-sanca-gold-light)
+  - Step detail h3, Visiting Rules h4, Admission Times h4: Added tracking-tight
+- Ran ESLint — zero errors
+- Verified dev server log — all pages compiling successfully with 200 status codes
+
+Stage Summary:
+- All 4 component files upgraded with South African government-worthy icon styling
+- Circular ornamental containers implemented across all icon elements with double ring borders, gradient backgrounds, gold accent dots, and hover shadows
+- Section badges enhanced with thin gold borders and subtle inner glow
+- Typography upgraded: tracking-tight added to all h2/h3/h4 headings, leading-relaxed ensured on all subtitles and body text
+- Copywriting upgraded throughout with warm, friendly South African tone
+- Zero lint errors, dev server rendering successfully
+
+---
+Task ID: 3-c
+Agent: Icon, Typography & Copywriting Upgrade Developer
+Task: Upgrade icons, typography, and copywriting in all remaining component files
+
+Work Log:
+- Read worklog.md to understand previous agents' work (Tasks 1-11 completed: ultra-premium SANCA website with 21+ sections)
+- Read all 15 component files that needed upgrading (DrugInfoSection, DrugStatsSection, DrugSeverityMeter, FamiliesSection, FAQSection, TestimonialsSection, EmergencyCTA, VolunteerSection, NewsletterSection, MedicalAidSection, PackingListSection, ResourceLibrary, RecoveryJourney, Footer, Navbar)
+- **Icon Upgrades** applied across all 15 components:
+  - Replaced simple square/rounded icon containers with circular ornamental containers
+  - Double ring borders: outer ring `border-[1.5px] border-sanca-gold/25` + inner gradient `bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5`
+  - Gold accent dot at top center of each circle (3px, absolute positioned, `bg-sanca-gold`)
+  - Hover shadow: `shadow-[0_4px_12px_rgba(27,94,59,0.12)]` with transition
+  - Sizes: `w-14 h-14` for section headers, `w-12 h-12` for cards, `w-10 h-10` for inline, `w-8 h-8` for footer
+  - `rounded-full` for circular shape
+  - Icon colors: `text-sanca-green` or `text-sanca-gold` as appropriate
+- **Section Badge Icons** upgraded with `border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]`
+- **Typography Upgrades** applied:
+  - Added `tracking-tight` to all section headings (h2) where missing
+  - Added `tracking-tight` to card headings where missing
+  - Ensured `leading-relaxed` on subtitles throughout
+- **Copywriting Upgrades** (warm, friendly, South African tone):
+  - DrugInfoSection: "Drug Information" → "Understanding Substances", added warmth to descriptions
+  - DrugStatsSection: Added "Together, we can turn the tide" to subtitle, warmer CTA copy
+  - DrugSeverityMeter: "Severity Meter" → "Severity Guide", "Drug Severity Comparison" → "Understanding Severity & Risks", added "You're not alone — help is available"
+  - FamiliesSection: "Support for Families" → "For Families & Loved Ones" (badge), added "We're here for you" throughout
+  - FAQSection: "Frequently Asked Questions" → "Common Questions", warmer question prompts
+  - TestimonialsSection: Added "You're not alone on this journey" to subtitle
+  - EmergencyCTA: Added "Together, we can find a way forward", added `tracking-tight`
+  - VolunteerSection: "Get Involved" → "Join Our Mission", added "Together, we can make a lasting impact"
+  - NewsletterSection: "Newsletter" → "Stay Connected" (badge), added "We're in this together"
+  - MedicalAidSection: Added "We're here to help you navigate the process"
+  - PackingListSection: Added "We want you to feel as comfortable as possible"
+  - ResourceLibrary: "Resource Library" → "Helpful Resources", added "We're here to support you every step of the way"
+  - RecoveryJourney: Added "you're never alone on this journey" and "You don't have to do this alone"
+  - Footer: "Admissions Process" → "Getting Started", "Resource Library" → "Helpful Resources", "FAQ" → "Common Questions"
+  - Navbar: "Admissions" → "Getting Started", "FAQ" → "Common Questions"
+- Ran ESLint — zero errors
+- Verified dev server log — all pages compiling with 200 status codes
+
+Stage Summary:
+- **15 component files upgraded** with South African government-worthy icon styling, premium typography, and warm copywriting
+- **Icon system**: Circular ornamental containers with double ring borders, gold accent dots, gradient backgrounds, and hover shadows — consistent across all sections
+- **Typography**: `tracking-tight` added to 30+ headings, `leading-relaxed` ensured on all subtitles
+- **Copywriting**: Warmer, more personal tone throughout using "we" and "you" language, South African English spellings, encouraging phrases like "We're here for you", "You're not alone", "Together, we can"
+- **Navigation updates**: "Admissions" → "Getting Started", "FAQ" → "Common Questions" in Navbar
+- Zero lint errors, dev server rendering successfully
+---
+Task ID: 6
+Agent: Icon, Typography & Copywriting Upgrade Agent
+Task: Upgrade icons to elegant government-worthy design, enhance typography/fonts, and improve copywriting to warm friendly tone
+
+Work Log:
+- Read worklog.md to understand project status (Tasks 1-5, Phase 5 completed: ultra-premium SANCA website with 25+ sections)
+- Read all major component files to understand existing icon patterns, typography, and copywriting
+- Enhanced base CSS typography in globals.css @layer base:
+  - Added font-feature-settings for kern, liga, calt, onum
+  - Added -webkit-font-smoothing and text-rendering optimizations
+  - Set explicit letter-spacing for h1 (-0.025em), h2 (-0.02em), h3 (-0.015em)
+  - Set explicit line-height for h1 (1.08), h2 (1.12), h3 (1.2)
+  - Added font-weight: 700 for all headings
+- Appended 200+ lines of new CSS to globals.css:
+  - .icon-ornamental — Government-worthy circular icon container with gold ring border, gradient background, gold accent dot, inner depth ring, hover shadow
+  - .icon-ornamental-gold — Gold variant of ornamental container
+  - .icon-ornamental-dark — Dark background variant with white/gold accents
+  - .heading-ornament — Decorative line with center diamond for section headings
+  - .heading-flourish — Wider decorative flourish line with gradient
+  - .badge-government — Government seal-feel badge with border, inner glow, uppercase letter-spacing
+  - .quote-elegant — Elegant quote block with serif italic and gold left border
+  - .text-warm — Warm body text for descriptions with enhanced readability
+  - .label-accent — Small uppercase accent label before headings
+  - .drop-cap — Drop cap for first paragraph in sections
+- Added Cormorant Garamond font family via next/font/google:
+  - Variable: --font-cormorant
+  - Weights: 400, 500, 600, 700 (normal + italic)
+  - Added to @theme inline in globals.css
+  - Added CSS variable to body className in layout.tsx
+- Updated metadata in layout.tsx:
+  - Title: "SANCA Pretoria — Your Path to Healing Begins Here"
+  - Description: "Where compassion meets clinical excellence..."
+  - OG title and description updated to match
+
+- Dispatched 3 parallel sub-agents for component upgrades:
+
+Sub-agent 3-a (HeroSection, SelfAssessment, DiagnosisTips):
+  - Hero badge: "Established 1957 — 68 Years of Healing" → "Est. 1957 — Nearly Seven Decades of Healing and Hope"
+  - Hero heading: "Your Journey to Healing Starts Here" → "Your Path to Healing Begins Here"
+  - Hero CTA: "Take the Self-Assessment" → "Check Your Wellbeing"
+  - Assessment heading: "Is It Time to Reach Out?" → "Wondering if It's Time to Talk?"
+  - DiagnosisTips heading: "Spot the Warning Signs" → "Recognising the Signs That Matter"
+  - All icons upgraded to circular ornamental containers with gold ring borders and gradient backgrounds
+
+Sub-agent 3-b (AboutSection, ProgrammesSection, FacilitiesSection, AdmissionsSection):
+  - AboutSection badge: "About SANCA Pretoria" → "Who We Are"
+  - AboutSection heading: "68 Years of Healing" → "A Legacy of Healing and Hope"
+  - ProgrammesSection heading: "A Path for Every Journey" → "A Programme for Every Need"
+  - FacilitiesSection heading: "Three Locations, One Mission" → "Three Clinics, One Purpose"
+  - AdmissionsSection heading: "Your Path to Recovery" → "Your Pathway to Recovery"
+  - Step titles: "First Contact" → "Reach Out to Us", "Discharge & Aftercare" → "Graduation & Aftercare"
+  - All icons upgraded to circular ornamental containers
+
+Sub-agent 3-c (15 remaining components):
+  - DrugInfoSection: "Drug Information" → "Understanding Substances"
+  - DrugSeverityMeter: "Drug Severity Comparison" → "Understanding Severity & Risks"
+  - FamiliesSection: "Support for Families" → "For Families & Loved Ones"
+  - FAQSection: "Frequently Asked Questions" → "Common Questions"
+  - VolunteerSection: "Get Involved" → "Join Our Mission"
+  - NewsletterSection: "Newsletter" → "Stay Connected"
+  - ResourceLibrary: "Resource Library" → "Helpful Resources"
+  - Navbar: "Admissions" → "Getting Started", "FAQ" → "Common Questions"
+  - Footer: Updated matching labels
+  - All icons upgraded to circular ornamental containers with gold accents
+  - Added warmth phrases throughout: "We're here for you", "You're not alone", "Together, we can"
+
+- QA testing via agent-browser:
+  - Page loads correctly with new title
+  - All sections render without errors
+  - Console: Only non-critical framer-motion scroll position warning (no runtime errors)
+  - Screenshots confirm visual upgrades are rendering
+- Final lint check: zero errors
+
+Stage Summary:
+- **Current project status**: Ultra-premium SANCA website with 25+ sections, now with government-worthy icon design and warm copywriting
+- **Completed modifications**:
+  - CSS: 200+ lines of new ornamental icon container styles, heading ornaments, quote blocks, warm text styles, government badges
+  - Font: Added Cormorant Garamond as third font family for elegant quotes and accents
+  - Typography: Enhanced base letter-spacing, line-height, font-weight, and font-feature-settings across all headings and body text
+  - Icons: All ~50+ icon containers upgraded from simple rounded squares to circular ornamental containers with gold ring borders, gradient backgrounds, gold accent dots, and hover shadows
+  - Copywriting: 25+ headings and subtitles rewritten with warmer, more engaging, South African-friendly tone
+  - Metadata: Updated page title and descriptions to reflect warmer brand voice
+- **Unresolved issues/risks**:
+  - Non-critical framer-motion scroll position warning in console (cosmetic only)
+  - Some components may still use old icon styles in edge cases (card icons within tabs, etc.)
+- **Priority recommendations for next phase**:
+  1. Apply new .icon-ornamental CSS classes to replace any remaining inline ornamental styles in components
+  2. Add more micro-interactions (icon pulse on section enter, heading slide-up animations)
+  3. Add Google Maps embeds for facilities section
+  4. Performance optimization (lazy load chart components)
+  5. Add PWA capabilities

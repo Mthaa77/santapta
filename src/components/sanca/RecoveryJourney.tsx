@@ -164,17 +164,17 @@ export default function RecoveryJourney() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Compass className="h-4 w-4" />
             Your Path Forward
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             Your Recovery <span className="text-gradient-gold">Journey</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
             From that first courageous call to lifelong aftercare, SANCA walks
             with you every step of the way. Here&apos;s what the path looks
-            like.
+            like — you&apos;re never alone on this journey.
           </p>
         </motion.div>
 
@@ -375,7 +375,7 @@ export default function RecoveryJourney() {
                         </span>
                       </div>
 
-                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-3">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-3 tracking-tight">
                         {currentPhase.title}
                       </h3>
 
@@ -468,13 +468,13 @@ export default function RecoveryJourney() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mt-16"
         >
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-4">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             Start Your <span className="text-gradient-gold">Journey</span>{' '}
             Today
           </h3>
-          <p className="text-muted-foreground max-w-xl mx-auto mb-6">
+          <p className="text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
             Every recovery journey begins with a single step. Take yours now
-            — we&apos;re here when you&apos;re ready.
+            — we&apos;re here when you&apos;re ready. You don&apos;t have to do this alone.
           </p>
           <Button
             onClick={scrollToContact}

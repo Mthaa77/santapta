@@ -146,16 +146,15 @@ export default function ProgrammesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Stethoscope className="h-4 w-4" />
-            Treatment Programmes
+            Our Programmes
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
-            A Path for <span className="text-gradient-gold">Every Journey</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
+            A Programme for <span className="text-gradient-gold">Every Need</span>
           </h2>
-          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
-            SANCA recognises the need for a basket of services — considering each person&apos;s
-            unique needs, circumstances, and stage of dependency.
+          <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
+            We understand that each person&apos;s journey is unique — that&apos;s why we offer a range of programmes tailored to different needs, circumstances, and stages of recovery.
           </p>
         </motion.div>
 
@@ -207,13 +206,14 @@ export default function ProgrammesSection() {
                   <div className="absolute inset-0 bg-gradient-to-br from-sanca-green-dark/90 to-sanca-green/90" />
 
                   <div className="relative">
-                    <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
+                    <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/30 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center mb-6 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow duration-300">
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                       {(() => {
                         const Icon = activeProgramme.icon;
-                        return <Icon className="h-8 w-8 text-sanca-gold-light" />;
+                        return <Icon className="h-7 w-7 text-sanca-gold-light" />;
                       })()}
                     </div>
-                    <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-2">
+                    <h3 className="font-serif text-2xl sm:text-3xl font-bold tracking-tight mb-2">
                       {activeProgramme.title}
                     </h3>
                     <p className="text-sanca-gold-light font-medium mb-4">
@@ -246,7 +246,7 @@ export default function ProgrammesSection() {
 
                 {/* Right: Features & Highlights */}
                 <div className="p-8 sm:p-10">
-                  <h4 className="font-serif text-lg font-bold text-sanca-green-dark mb-4 flex items-center gap-2">
+                  <h4 className="font-serif text-lg font-bold tracking-tight text-sanca-green-dark mb-4 flex items-center gap-2">
                     <ShieldCheck className="h-5 w-5 text-sanca-gold" />
                     Programme Components
                   </h4>

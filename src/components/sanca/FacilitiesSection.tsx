@@ -149,16 +149,15 @@ export default function FacilitiesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <MapPin className="h-4 w-4" />
-            Our Facilities
+            Our Clinics
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
-            Three Locations, <span className="text-gradient-gold">One Mission</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
+            Three Clinics, <span className="text-gradient-gold">One Purpose</span>
           </h2>
-          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
-            Covering a geographic spread from Pretoria North to Soshanguve and Hammanskraal —
-            accessible care where you need it.
+          <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
+            From Pretoria North to Soshanguve and Hammanskraal — bringing quality care closer to the communities that need it most.
           </p>
         </motion.div>
 
@@ -184,11 +183,12 @@ export default function FacilitiesSection() {
                   >
                     <div className="p-5 sm:p-6 flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${facility.color} flex items-center justify-center shadow-premium-sm flex-shrink-0`}>
-                          <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
+                        <div className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center flex-shrink-0 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow duration-300`}>
+                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                          <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-sanca-green" />
                         </div>
                         <div>
-                          <h3 className="font-serif text-lg sm:text-xl font-bold text-sanca-green-dark">
+                          <h3 className="font-serif text-lg sm:text-xl font-bold tracking-tight text-sanca-green-dark">
                             {facility.name}
                           </h3>
                           <p className="text-sm text-sanca-gold-dark font-medium">
@@ -224,7 +224,7 @@ export default function FacilitiesSection() {
                           <div className="grid md:grid-cols-2 gap-6 mt-4">
                             {/* Contact Info */}
                             <div className="space-y-4">
-                              <h4 className="font-semibold text-sm text-sanca-green-dark flex items-center gap-2">
+                              <h4 className="font-semibold text-sm tracking-tight text-sanca-green-dark flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
                                 Contact & Hours
                               </h4>
@@ -270,7 +270,7 @@ export default function FacilitiesSection() {
 
                             {/* Features & Map */}
                             <div>
-                              <h4 className="font-semibold text-sm text-sanca-green-dark mb-4">
+                              <h4 className="font-semibold text-sm tracking-tight text-sanca-green-dark mb-4">
                                 Services & Features
                               </h4>
                               <div className="grid gap-2">

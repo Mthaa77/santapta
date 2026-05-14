@@ -6,12 +6,12 @@ import { Phone, Mail, MapPin, Clock, Heart, Shield, ExternalLink, ArrowUp, Messa
 const quickLinks = [
   { label: 'Self-Assessment', href: '#assessment' },
   { label: 'Treatment Programmes', href: '#programmes' },
-  { label: 'Admissions Process', href: '#admissions' },
+  { label: 'Getting Started', href: '#admissions' },
   { label: 'Recovery Journey', href: '#recovery-journey' },
-  { label: 'Resource Library', href: '#resources' },
+  { label: 'Helpful Resources', href: '#resources' },
   { label: 'For Families', href: '#families' },
   { label: 'Cost Calculator', href: '#cost-calculator' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Common Questions', href: '#faq' },
 ];
 
 const programmes = [
@@ -61,11 +61,12 @@ export default function Footer() {
             className="sm:col-span-2 lg:col-span-2"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-sanca-gold rounded-xl flex items-center justify-center shadow-gold">
-                <span className="text-white font-serif font-bold text-xl">S</span>
+              <div className="relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center shadow-gold">
+                <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                <span className="text-sanca-gold font-serif font-bold text-xl">S</span>
               </div>
               <div>
-                <p className="font-serif font-bold text-xl">SANCA Pretoria</p>
+                <p className="font-serif font-bold text-xl tracking-tight">SANCA Pretoria</p>
                 <p className="text-xs text-white/50 tracking-wider">Est. 1957 — 68 Years of Service</p>
               </div>
             </div>
@@ -89,9 +90,10 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-white/10 hover:bg-sanca-gold/20 flex items-center justify-center transition-all duration-200 hover:scale-110 border border-white/5 hover:border-sanca-gold/30"
+                  className="relative w-10 h-10 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center transition-all duration-200 hover:scale-110 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]"
                   aria-label={link.label}
                 >
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                   {link.icon === 'facebook' ? (
                     <svg className="h-4 w-4 text-white/70" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -111,7 +113,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="font-serif font-bold text-sm mb-4 text-sanca-gold-light uppercase tracking-wider">
+            <h4 className="font-serif font-bold text-sm mb-4 text-sanca-gold-light uppercase tracking-wider tracking-tight">
               Quick Links
             </h4>
             <ul className="space-y-2.5">
@@ -135,7 +137,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="font-serif font-bold text-sm mb-4 text-sanca-gold-light uppercase tracking-wider">
+            <h4 className="font-serif font-bold text-sm mb-4 text-sanca-gold-light uppercase tracking-wider tracking-tight">
               Programmes
             </h4>
             <ul className="space-y-2.5">
@@ -159,7 +161,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h4 className="font-serif font-bold text-sm mb-4 text-sanca-gold-light uppercase tracking-wider">
+            <h4 className="font-serif font-bold text-sm mb-4 text-sanca-gold-light uppercase tracking-wider tracking-tight">
               Contact Us
             </h4>
             <div className="space-y-3">
@@ -167,7 +169,8 @@ export default function Footer() {
                 href="tel:0125421121"
                 className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors group"
               >
-                <div className="w-7 h-7 rounded-lg bg-sanca-gold/10 flex items-center justify-center group-hover:bg-sanca-gold/20 transition-colors">
+                <div className="relative w-8 h-8 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center group-hover:bg-sanca-gold/20 transition-colors">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[2px] h-[2px] rounded-full bg-sanca-gold" />
                   <Phone className="h-3.5 w-3.5 text-sanca-gold" />
                 </div>
                 012 542 1121
@@ -178,7 +181,8 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors group"
               >
-                <div className="w-7 h-7 rounded-lg bg-sanca-emerald/10 flex items-center justify-center group-hover:bg-sanca-emerald/20 transition-colors">
+                <div className="relative w-8 h-8 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center group-hover:bg-sanca-emerald/20 transition-colors">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[2px] h-[2px] rounded-full bg-sanca-gold" />
                   <MessageCircle className="h-3.5 w-3.5 text-sanca-emerald" />
                 </div>
                 WhatsApp: 081 318 1511
@@ -187,19 +191,22 @@ export default function Footer() {
                 href="mailto:info@sancapta.co.za"
                 className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors group"
               >
-                <div className="w-7 h-7 rounded-lg bg-sanca-gold/10 flex items-center justify-center group-hover:bg-sanca-gold/20 transition-colors">
+                <div className="relative w-8 h-8 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center group-hover:bg-sanca-gold/20 transition-colors">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[2px] h-[2px] rounded-full bg-sanca-gold" />
                   <Mail className="h-3.5 w-3.5 text-sanca-gold" />
                 </div>
                 info@sancapta.co.za
               </a>
               <div className="flex items-start gap-2.5 text-sm text-white/60">
-                <div className="w-7 h-7 rounded-lg bg-sanca-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="relative w-8 h-8 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[2px] h-[2px] rounded-full bg-sanca-gold" />
                   <MapPin className="h-3.5 w-3.5 text-sanca-gold" />
                 </div>
                 <span>Corner Rachel De Beer &amp; Waterbok St, Ninapark, Pretoria North, 0182</span>
               </div>
               <div className="flex items-center gap-2.5 text-sm text-white/60">
-                <div className="w-7 h-7 rounded-lg bg-sanca-gold/10 flex items-center justify-center">
+                <div className="relative w-8 h-8 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[2px] h-[2px] rounded-full bg-sanca-gold" />
                   <Clock className="h-3.5 w-3.5 text-sanca-gold" />
                 </div>
                 Mon–Fri: 08:00–17:00

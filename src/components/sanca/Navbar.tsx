@@ -11,9 +11,9 @@ const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'Assessment', href: '#assessment' },
   { label: 'Programmes', href: '#programmes' },
-  { label: 'Admissions', href: '#admissions' },
+  { label: 'Getting Started', href: '#admissions' },
   { label: 'Resources', href: '#resources' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Common Questions', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ];
 

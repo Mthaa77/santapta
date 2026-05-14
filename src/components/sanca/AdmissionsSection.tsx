@@ -9,7 +9,7 @@ import { Card } from '@/components/ui/card';
 const steps = [
   {
     step: 1,
-    title: 'First Contact',
+    title: 'Reach Out to Us',
     icon: Phone,
     color: 'bg-sanca-green',
     description: 'Reach out to us via phone, WhatsApp, or our website chatbot.',
@@ -107,7 +107,7 @@ const steps = [
   },
   {
     step: 8,
-    title: 'Discharge & Aftercare',
+    title: 'Graduation & Aftercare',
     icon: CalendarCheck,
     color: 'bg-sanca-emerald',
     description: 'Discharge planning from week 3 — aftercare programme set up for ongoing support.',
@@ -143,16 +143,15 @@ export default function AdmissionsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <CalendarCheck className="h-4 w-4" />
-            Admissions Process
+            Getting Started
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
-            Your Path to <span className="text-gradient-gold">Recovery</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark mb-4">
+            Your Pathway to <span className="text-gradient-gold">Recovery</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A clear, step-by-step admissions journey — because getting help should be
-            straightforward, not stressful.
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+            We&apos;ve made getting help as straightforward as possible — because the decision to reach out is brave enough without unnecessary barriers.
           </p>
         </motion.div>
 
@@ -176,11 +175,14 @@ export default function AdmissionsSection() {
                 >
                   <div className="flex items-center gap-3">
                     <div
-                      className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                        isActive ? 'bg-white/20' : step.color
+                      className={`relative w-10 h-10 rounded-full border-[1.5px] flex items-center justify-center flex-shrink-0 transition-shadow duration-300 ${
+                        isActive
+                          ? 'border-sanca-gold/40 bg-white/20 shadow-[0_4px_12px_rgba(27,94,59,0.12)]'
+                          : 'border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5'
                       }`}
                     >
-                      <Icon className={`h-5 w-5 ${isActive ? 'text-white' : 'text-white'}`} />
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                      <Icon className={`h-4 w-4 ${isActive ? 'text-white' : 'text-sanca-green'}`} />
                     </div>
                     <div>
                       <p className={`text-xs font-semibold ${isActive ? 'text-sanca-gold-light' : 'text-sanca-gold-dark'}`}>
@@ -209,15 +211,16 @@ export default function AdmissionsSection() {
                 <Card className="shadow-premium-lg border-0 overflow-hidden">
                   <div className={`p-6 sm:p-8 bg-gradient-to-r ${steps[activeStep].color} text-white`}>
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center">
+                      <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/30 bg-gradient-to-br from-white/15 to-white/5 flex items-center justify-center hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow duration-300">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                         {(() => {
                           const Icon = steps[activeStep].icon;
-                          return <Icon className="h-8 w-8" />;
+                          return <Icon className="h-7 w-7 text-sanca-gold-light" />;
                         })()}
                       </div>
                       <div>
                         <p className="text-sm font-medium text-white/70">Step {steps[activeStep].step} of {steps.length}</p>
-                        <h3 className="font-serif text-2xl font-bold">{steps[activeStep].title}</h3>
+                        <h3 className="font-serif text-2xl font-bold tracking-tight">{steps[activeStep].title}</h3>
                       </div>
                     </div>
                     <p className="text-white/90 leading-relaxed">
@@ -284,7 +287,7 @@ export default function AdmissionsSection() {
             transition={{ duration: 0.5 }}
           >
             <Card className="p-6 shadow-premium-md border-0 h-full">
-              <h4 className="font-serif text-xl font-bold text-sanca-green-dark mb-4 flex items-center gap-2">
+              <h4 className="font-serif text-xl font-bold tracking-tight text-sanca-green-dark mb-4 flex items-center gap-2">
                 <Shield className="h-5 w-5 text-sanca-gold" />
                 Visiting Rules
               </h4>
@@ -313,7 +316,7 @@ export default function AdmissionsSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Card className="p-6 shadow-premium-md border-0 h-full bg-gradient-to-br from-sanca-green-dark to-sanca-green text-white">
-              <h4 className="font-serif text-xl font-bold mb-4 flex items-center gap-2">
+              <h4 className="font-serif text-xl font-bold tracking-tight mb-4 flex items-center gap-2">
                 <Clock className="h-5 w-5 text-sanca-gold-light" />
                 Admission Times
               </h4>

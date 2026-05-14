@@ -9,6 +9,7 @@
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
   --font-mono: var(--font-geist-mono);
+  --font-cormorant: var(--font-cormorant);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -131,9 +132,31 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  h1 {
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+  }
+  h2 {
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+  h3 {
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  p {
+    font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+    hyphens: auto;
   }
 }
 
@@ -2232,3 +2255,249 @@ footer,
 nav {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
+/* ==========================================
+   GOVERNMENT-WORTHY ICON CONTAINERS — Phase 6
+   ========================================== */
+
+/* Ornamental circular icon container - Green variant */
+.icon-ornamental {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(197, 150, 58, 0.25);
+  background: linear-gradient(135deg, rgba(27, 94, 59, 0.08), rgba(250, 246, 237, 0.5));
+  transition: box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.icon-ornamental:hover {
+  box-shadow: 0 4px 12px rgba(27, 94, 59, 0.12);
+}
+
+/* Gold accent dot at top of ornamental container */
+.icon-ornamental::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #C5963A, #E8C877);
+  z-index: 2;
+}
+
+/* Subtle inner ring for depth */
+.icon-ornamental::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 9999px;
+  border: 0.5px solid rgba(27, 94, 59, 0.08);
+  pointer-events: none;
+}
+
+/* Ornamental icon container - Gold variant */
+.icon-ornamental-gold {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(197, 150, 58, 0.35);
+  background: linear-gradient(135deg, rgba(197, 150, 58, 0.08), rgba(250, 246, 237, 0.5));
+  transition: box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.icon-ornamental-gold:hover {
+  box-shadow: 0 4px 12px rgba(197, 150, 58, 0.12);
+}
+
+.icon-ornamental-gold::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #1B5E3B, #059669);
+  z-index: 2;
+}
+
+.icon-ornamental-gold::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 9999px;
+  border: 0.5px solid rgba(197, 150, 58, 0.1);
+  pointer-events: none;
+}
+
+/* Ornamental icon container - Dark (for dark backgrounds) */
+.icon-ornamental-dark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(232, 200, 119, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  overflow: visible;
+}
+
+.icon-ornamental-dark:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(232, 200, 119, 0.15);
+}
+
+.icon-ornamental-dark::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #E8C877, #C5963A);
+  z-index: 2;
+}
+
+/* ==========================================
+   PREMIUM SECTION HEADING ORNAMENTS — Phase 6
+   ========================================== */
+
+/* Decorative line with center diamond for section headings */
+.heading-ornament {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-ornament::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, transparent, #C5963A, transparent);
+  border-radius: 1px;
+}
+
+/* Decorative flourish line - wider */
+.heading-flourish {
+  position: relative;
+}
+
+.heading-flourish::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 16px auto 0;
+  background: linear-gradient(90deg, transparent, #1B5E3B 30%, #C5963A 50%, #1B5E3B 70%, transparent);
+  border-radius: 1px;
+}
+
+/* Section badge with government seal feel */
+.badge-government {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(197, 150, 58, 0.2);
+  box-shadow: inset 0 1px 2px rgba(197, 150, 58, 0.1);
+  background: rgba(27, 94, 59, 0.08);
+  color: #1B5E3B;
+  transition: all 0.3s ease;
+}
+
+.badge-government:hover {
+  border-color: rgba(197, 150, 58, 0.35);
+  box-shadow: inset 0 1px 3px rgba(197, 150, 58, 0.15), 0 2px 8px rgba(27, 94, 59, 0.06);
+}
+
+.dark .badge-government {
+  background: rgba(197, 150, 58, 0.12);
+  color: #E8C877;
+  border-color: rgba(197, 150, 58, 0.25);
+}
+
+/* ==========================================
+   PREMIUM QUOTE/CALLOUT STYLES — Phase 6
+   ========================================== */
+
+/* Elegant quote block with serif italic */
+.quote-elegant {
+  position: relative;
+  padding: 16px 20px 16px 24px;
+  border-left: 3px solid #C5963A;
+  background: linear-gradient(135deg, rgba(27, 94, 59, 0.03), rgba(197, 150, 58, 0.03));
+  border-radius: 0 12px 12px 0;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+  color: #0D3B22;
+}
+
+.quote-elegant::before {
+  content: "\201C";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 28px;
+  color: #C5963A;
+  opacity: 0.3;
+  font-style: normal;
+  line-height: 1;
+}
+
+/* ==========================================
+   PREMIUM BODY TEXT ENHANCEMENTS — Phase 6
+   ========================================== */
+
+/* Warm body text for descriptions */
+.text-warm {
+  color: #3d4a3f;
+  line-height: 1.75;
+  letter-spacing: 0.005em;
+}
+
+.dark .text-warm {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Accent label (small uppercase label before headings) */
+.label-accent {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #C5963A;
+  margin-bottom: 8px;
+}
+
+/* Drop cap for first paragraph in sections */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 3.2em;
+  line-height: 0.8;
+  padding-right: 8px;
+  padding-top: 4px;
+  color: #1B5E3B;
+  font-weight: 700;
+}
+

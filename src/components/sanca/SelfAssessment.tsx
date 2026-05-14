@@ -182,16 +182,15 @@ export default function SelfAssessment() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <HelpCircle className="h-4 w-4" />
             Interactive Self-Assessment
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
-            Is It Time to <span className="text-gradient-gold">Reach Out</span>?
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark mb-4">
+            Wondering if It's Time to <span className="text-gradient-gold">Talk</span>?
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Take this confidential 5-question assessment to understand your relationship
-            with substances. Your answers are private and not stored.
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+            A gentle, confidential way to reflect on your relationship with substances. Your answers stay completely private — this is just for you.
           </p>
         </motion.div>
 
@@ -226,7 +225,8 @@ export default function SelfAssessment() {
                   >
                     {/* Question Header */}
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 rounded-xl bg-sanca-green/10 flex items-center justify-center text-sanca-green">
+                      <div className="relative w-10 h-10 rounded-full border border-sanca-gold/30 bg-gradient-to-b from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center text-sanca-green hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow">
+                        <span className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                         {question.icon}
                       </div>
                       <div>
@@ -240,7 +240,7 @@ export default function SelfAssessment() {
                     </div>
 
                     {/* Question */}
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-6">
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-foreground mb-6">
                       {question.question}
                     </h3>
 
@@ -377,7 +377,7 @@ export default function SelfAssessment() {
                       >
                         {result.icon}
                       </motion.div>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-2">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-2">
                         Assessment Result
                       </h3>
                       <p className={`text-lg font-semibold ${result.color}`}>

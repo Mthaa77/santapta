@@ -85,16 +85,16 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Users className="h-4 w-4" />
             Stories of Hope
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             Voices of <span className="text-gradient-gold">Recovery</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
             Real stories from those who walked the path before you — proof that
-            transformation is possible.
+            transformation is possible. You&apos;re not alone on this journey.
           </p>
         </motion.div>
 
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
             >
               <Card className="p-5 text-center shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-0 group hover:-translate-y-1">
                 <span className="text-2xl mb-2 block">{stat.icon}</span>
-                <p className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark group-hover:text-sanca-green transition-colors">
+                <p className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark group-hover:text-sanca-green transition-colors tracking-tight">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} duration={2000} />
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
@@ -151,8 +151,9 @@ export default function TestimonialsSection() {
 
                   {/* Author */}
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-sanca-green flex items-center justify-center">
-                      <span className="text-white font-serif font-bold text-sm">
+                    <div className="relative w-10 h-10 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center">
+                      <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                      <span className="text-sanca-green font-serif font-bold text-sm">
                         {testimonials[current].author.charAt(0)}
                       </span>
                     </div>

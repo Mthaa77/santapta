@@ -127,16 +127,16 @@ export default function DrugInfoSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-red-700 text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-red-700 text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <AlertTriangle className="h-4 w-4" />
-            Drug Information
+            Understanding Substances
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             Know the <span className="text-gradient-gold">Facts</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
             Knowledge is power. Understanding the substances, their effects, and withdrawal
-            symptoms is the first step toward making informed decisions.
+            symptoms is the first step toward making informed decisions. We&apos;re here to help you navigate this information.
           </p>
         </motion.div>
 
@@ -158,10 +158,11 @@ export default function DrugInfoSection() {
                   : 'border-gray-100 hover:border-gray-200 bg-white shadow-premium-sm hover:shadow-premium-md'
               }`}
             >
-              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${drug.iconBg} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
-                {drug.icon}
+              <div className={`relative w-10 h-10 sm:w-12 sm:h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]`}>
+                <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                <span className={drug.color}>{drug.icon}</span>
               </div>
-              <h4 className={`font-serif font-bold text-sm sm:text-base text-center ${drug.color}`}>
+              <h4 className={`font-serif font-bold text-sm sm:text-base text-center ${drug.color} tracking-tight`}>
                 {drug.name.split('(')[0].trim()}
               </h4>
               <p className="text-[10px] text-muted-foreground text-center mt-1">
@@ -188,11 +189,12 @@ export default function DrugInfoSection() {
                   {/* Header */}
                   <div className={`${drug.bgColor} p-6 sm:p-8 border-b ${drug.borderColor}`}>
                     <div className="flex items-center gap-4 mb-4">
-                      <div className={`w-14 h-14 rounded-2xl ${drug.iconBg} flex items-center justify-center`}>
-                        {drug.icon}
+                      <div className={`relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center`}>
+                        <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                        <span className={drug.color}>{drug.icon}</span>
                       </div>
                       <div>
-                        <h3 className={`font-serif text-2xl font-bold ${drug.color}`}>
+                        <h3 className={`font-serif text-2xl font-bold ${drug.color} tracking-tight`}>
                           {drug.name}
                         </h3>
                         <p className="text-sm text-muted-foreground">
@@ -210,7 +212,7 @@ export default function DrugInfoSection() {
                       {/* How it's used */}
                       {drug.howUsed && (
                         <div>
-                          <h5 className="font-semibold text-sm text-foreground mb-3 flex items-center gap-2">
+                          <h5 className="font-semibold text-sm text-foreground mb-3 flex items-center gap-2 tracking-tight">
                             <Eye className="h-4 w-4 text-sanca-green" />
                             How It&apos;s Used
                           </h5>
@@ -227,7 +229,7 @@ export default function DrugInfoSection() {
 
                       {/* Short-term effects */}
                       <div>
-                        <h5 className="font-semibold text-sm text-foreground mb-3 flex items-center gap-2">
+                        <h5 className="font-semibold text-sm text-foreground mb-3 flex items-center gap-2 tracking-tight">
                           <Zap className="h-4 w-4 text-sanca-gold" />
                           Short-Term Effects
                         </h5>
@@ -243,7 +245,7 @@ export default function DrugInfoSection() {
 
                       {/* Withdrawal symptoms */}
                       <div>
-                        <h5 className="font-semibold text-sm text-foreground mb-3 flex items-center gap-2">
+                        <h5 className="font-semibold text-sm text-foreground mb-3 flex items-center gap-2 tracking-tight">
                           <AlertTriangle className="h-4 w-4 text-red-500" />
                           Withdrawal Symptoms
                         </h5>
@@ -261,7 +263,7 @@ export default function DrugInfoSection() {
                     {/* Long-term effects */}
                     {drug.longTerm && (
                       <div className="mt-6 p-4 rounded-xl bg-red-50 border border-red-200">
-                        <h5 className="font-semibold text-sm text-red-700 mb-2 flex items-center gap-2">
+                        <h5 className="font-semibold text-sm text-red-700 mb-2 flex items-center gap-2 tracking-tight">
                           <ShieldAlert className="h-4 w-4" />
                           Long-Term Effects
                         </h5>
@@ -312,9 +314,9 @@ export default function DrugInfoSection() {
             <p className="font-serif text-lg sm:text-xl font-bold mb-2">
               The real cost is not rehab — it&apos;s waiting too long.
             </p>
-            <p className="text-white/70 text-sm max-w-xl mx-auto">
+            <p className="text-white/70 text-sm max-w-xl mx-auto leading-relaxed">
               The missed workdays, broken trust at home, and emergency medical bills that come
-              from waiting far exceed the cost of getting help today.
+              from waiting far exceed the cost of getting help today. You deserve support — reach out now.
             </p>
           </div>
         </motion.div>

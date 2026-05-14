@@ -29,10 +29,11 @@ function MissionCard() {
         <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="relative">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+            <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/30 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
               <Target className="h-6 w-6 text-sanca-gold-light" />
             </div>
-            <h3 className="font-serif text-2xl font-bold">Our Mission</h3>
+            <h3 className="font-serif text-2xl font-bold tracking-tight">Our Mission</h3>
           </div>
           <p className="text-white/90 leading-relaxed">
             To prevent and treat substance misuse, empowering individuals with the knowledge
@@ -61,10 +62,11 @@ function VisionCard() {
         <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
         <div className="relative">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+            <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/30 bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow duration-300">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
               <Eye className="h-6 w-6 text-sanca-green-light" />
             </div>
-            <h3 className="font-serif text-2xl font-bold">Our Vision</h3>
+            <h3 className="font-serif text-2xl font-bold tracking-tight">Our Vision</h3>
           </div>
           <p className="text-white/90 leading-relaxed">
             To guide SANCA member organisations in providing high-quality, compassionate
@@ -90,11 +92,11 @@ function ValuesGrid() {
   return (
     <div ref={ref} className={isVisible ? 'animate-reveal-scale' : 'opacity-0'}>
       <div className="text-center mb-10">
-        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark dark:text-white mb-2">
+        <h3 className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-2">
           Our Values: <span className="text-shimmer">C.A.I.R.U.P.</span>
         </h3>
-        <p className="text-muted-foreground dark:text-white/70">
-          The principles that guide everything we do
+        <p className="text-muted-foreground dark:text-white/70 leading-relaxed">
+          The principles that guide every decision we make
         </p>
       </div>
 
@@ -110,10 +112,11 @@ function ValuesGrid() {
             className="group"
           >
             <Card className={`p-5 text-center shadow-premium-sm hover:shadow-premium-lg transition-all duration-300 border dark:bg-[#0D3B22] ${value.color.split(' ').pop()} cursor-default h-full`}>
-              <div className={`w-14 h-14 rounded-2xl ${value.color.split(' ')[0]} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
-                <span className="font-serif text-2xl font-bold text-sanca-green-dark">{value.letter}</span>
+              <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-all duration-300">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                <span className="font-serif text-2xl font-bold text-sanca-green">{value.letter}</span>
               </div>
-              <h4 className="font-serif font-bold text-foreground mb-1">{value.word}</h4>
+              <h4 className="font-serif font-bold tracking-tight text-foreground mb-1">{value.word}</h4>
               <p className="text-xs text-muted-foreground leading-relaxed">{value.desc}</p>
             </Card>
           </motion.div>
@@ -128,11 +131,11 @@ function HeritageTimeline() {
   return (
     <div ref={ref} className={isVisible ? 'animate-slide-up-bounce' : 'opacity-0'}>
       <div className="text-center mb-10">
-        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark dark:text-white mb-2">
+        <h3 className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-2">
           Our <span className="text-gradient-gold">Heritage</span>
         </h3>
-        <p className="text-muted-foreground dark:text-white/70">
-          A legacy of service spanning nearly seven decades
+        <p className="text-muted-foreground dark:text-white/70 leading-relaxed">
+          Seven decades of unwavering service to South African communities
         </p>
       </div>
 
@@ -156,7 +159,7 @@ function HeritageTimeline() {
                 <span className="text-xs font-bold text-sanca-gold uppercase tracking-wider">
                   {item.year}
                 </span>
-                <h4 className="font-serif text-lg font-bold text-sanca-green-dark mt-1">
+                <h4 className="font-serif text-lg font-bold tracking-tight text-sanca-green-dark mt-1">
                   {item.title}
                 </h4>
                 <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
@@ -191,15 +194,15 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Heart className="h-4 w-4" />
-            About SANCA Pretoria
+            Who We Are
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
-            68 Years of <span className="text-gradient-gold">Healing</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
+            A Legacy of <span className="text-gradient-gold">Healing</span> and Hope
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">
-            One of the original eight founding affiliates of SANCA National, the Pretoria Society has served communities with compassion and clinical excellence since 1957.
+            Proudly one of the original eight founding affiliates of SANCA National — serving our communities with heart and clinical excellence since 1957.
           </p>
         </motion.div>
 

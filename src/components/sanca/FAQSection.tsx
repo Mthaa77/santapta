@@ -138,16 +138,16 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 dark:bg-sanca-gold/15 text-sanca-green dark:text-sanca-gold text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <HelpCircle className="h-4 w-4" />
-            Frequently Asked Questions
+            Common Questions
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4 tracking-tight">
             Questions & <span className="text-gradient-gold">Answers</span>
           </h2>
-          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
             Everything you need to know about getting help at SANCA Pretoria. Can&apos;t find
-            your answer? Contact us directly.
+            your answer? We&apos;re just a call away.
           </p>
         </motion.div>
 
@@ -181,8 +181,9 @@ export default function FAQSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: catIndex * 0.1 }}
             >
-              <h3 className="font-serif text-xl font-bold text-sanca-green-dark dark:text-white mb-4 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-sanca-green/10 flex items-center justify-center text-sm font-bold text-sanca-green">
+              <h3 className="font-serif text-xl font-bold text-sanca-green-dark dark:text-white mb-4 flex items-center gap-2 tracking-tight">
+                <div className="relative w-8 h-8 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center text-sm font-bold text-sanca-green">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                   {catIndex + 1}
                 </div>
                 {category.category}
@@ -234,7 +235,7 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <p className="text-muted-foreground mb-4">Still have questions?</p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">Still have questions? We&apos;re here to help.</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
               href="tel:0125421121"

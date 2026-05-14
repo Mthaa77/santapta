@@ -45,17 +45,17 @@ export default function VolunteerSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]"
           >
             <HeartHandshake className="h-4 w-4" />
-            Get Involved
+            Join Our Mission
           </motion.span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             Make a <span className="text-gradient-gold">Difference</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
             Whether you give your time or your resources, every contribution helps
-            rebuild lives and strengthen communities across Pretoria.
+            rebuild lives and strengthen communities across Pretoria. Together, we can make a lasting impact.
           </p>
         </motion.div>
 
@@ -79,13 +79,14 @@ export default function VolunteerSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.3 }}
-                  className="w-16 h-16 rounded-2xl bg-sanca-green/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                  className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]"
                 >
-                  <HeartHandshake className="h-8 w-8 text-sanca-green" />
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                  <HeartHandshake className="h-7 w-7 text-sanca-green" />
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="font-serif text-2xl font-bold text-sanca-green-dark mb-3">
+                <h3 className="font-serif text-2xl font-bold text-sanca-green-dark mb-3 tracking-tight">
                   Volunteer With Us
                 </h3>
 
@@ -143,13 +144,14 @@ export default function VolunteerSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.4 }}
-                  className="w-16 h-16 rounded-2xl bg-sanca-gold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                  className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]"
                 >
-                  <Heart className="h-8 w-8 text-sanca-gold" />
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                  <Heart className="h-7 w-7 text-sanca-gold" />
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="font-serif text-2xl font-bold text-sanca-green-dark mb-3">
+                <h3 className="font-serif text-2xl font-bold text-sanca-green-dark mb-3 tracking-tight">
                   Support Our Mission
                 </h3>
 

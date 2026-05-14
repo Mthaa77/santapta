@@ -115,16 +115,16 @@ export default function DrugSeverityMeter() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-red-600 text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-red-600 text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Gauge className="h-4 w-4" />
-            Severity Meter
+            Severity Guide
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
-            Drug <span className="text-gradient-gold">Severity</span> Comparison
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+            Understanding <span className="text-gradient-gold">Severity</span> & Risks
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
             Understand the relative severity and risks of common substances in South Africa.
-            Select a substance to see detailed information.
+            Select a substance to learn more. You&apos;re not alone — help is available for every level.
           </p>
         </motion.div>
 
@@ -217,7 +217,7 @@ export default function DrugSeverityMeter() {
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
                     <div className="relative">
                       <span className="text-4xl mb-4 block">{selectedSubstance.icon}</span>
-                      <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-2">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-2 tracking-tight">
                         {selectedSubstance.name}
                       </h3>
                       <div className="flex items-center gap-2 mb-4">
@@ -242,14 +242,14 @@ export default function DrugSeverityMeter() {
                           <AlertTriangle className="h-4 w-4" />
                           Withdrawal
                         </p>
-                        <p className="text-xs text-white/80">{selectedSubstance.withdrawal}</p>
+                        <p className="text-xs text-white/80 leading-relaxed">{selectedSubstance.withdrawal}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Middle: Effects */}
                   <div className="p-6 sm:p-8 border-r border-gray-100">
-                    <h4 className="font-serif font-bold text-sanca-green-dark mb-4 flex items-center gap-2">
+                    <h4 className="font-serif font-bold text-sanca-green-dark mb-4 flex items-center gap-2 tracking-tight">
                       <AlertCircle className="h-4 w-4 text-sanca-gold" />
                       Effects & Risks
                     </h4>
@@ -294,7 +294,7 @@ export default function DrugSeverityMeter() {
 
                   {/* Right: Treatment */}
                   <div className="p-6 sm:p-8">
-                    <h4 className="font-serif font-bold text-sanca-green-dark mb-4 flex items-center gap-2">
+                    <h4 className="font-serif font-bold text-sanca-green-dark mb-4 flex items-center gap-2 tracking-tight">
                       <ShieldCheck className="h-4 w-4 text-sanca-emerald" />
                       Treatment at SANCA
                     </h4>
@@ -304,9 +304,9 @@ export default function DrugSeverityMeter() {
                       </p>
                     </div>
                     <div className="p-4 rounded-xl bg-sanca-gold/5 border border-sanca-gold/20 mb-6">
-                      <p className="text-xs text-sanca-gold-dark flex items-start gap-2">
+                      <p className="text-xs text-sanca-gold-dark flex items-start gap-2 leading-relaxed">
                         <Info className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                        SANCA Pretoria provides medical detox and professional treatment regardless of substance type or severity.
+                        SANCA Pretoria provides medical detox and professional treatment regardless of substance type or severity. We&apos;re here for you.
                       </p>
                     </div>
                     <Button
@@ -331,9 +331,9 @@ export default function DrugSeverityMeter() {
           transition={{ delay: 0.4 }}
           className="mt-8 text-center"
         >
-          <p className="text-xs text-muted-foreground italic">
+          <p className="text-xs text-muted-foreground italic leading-relaxed">
             Severity ratings are based on dependency potential, withdrawal severity, and health impact.
-            All substances can be dangerous. If you or someone you know is struggling, reach out to SANCA.
+            All substances can be dangerous. If you or someone you know is struggling, reach out to SANCA — you don&apos;t have to face this alone.
           </p>
         </motion.div>
       </div>

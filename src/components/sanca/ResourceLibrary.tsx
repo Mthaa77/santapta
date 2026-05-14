@@ -141,15 +141,15 @@ export default function ResourceLibrary() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Library className="h-4 w-4" />
-            Resource Library
+            Helpful Resources
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
-            Resource <span className="text-gradient-gold">Library</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
+            Helpful <span className="text-gradient-gold">Resources</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Helpful guides, worksheets, and information for your recovery journey
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+            Practical guides, worksheets, and information for your recovery journey. We&apos;re here to support you every step of the way.
           </p>
         </motion.div>
 
@@ -215,13 +215,14 @@ export default function ResourceLibrary() {
 
                       {/* Document Icon */}
                       <div
-                        className={`w-14 h-14 rounded-2xl ${resource.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                        className={`relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 group-hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]`}
                       >
-                        <IconComponent className={`h-7 w-7 ${resource.iconColor}`} />
+                        <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                        <IconComponent className={`h-6 w-6 ${resource.iconColor}`} />
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-serif text-sm sm:text-base font-bold text-sanca-green-dark leading-snug mb-4 flex-1">
+                      <h3 className="font-serif text-sm sm:text-base font-bold text-sanca-green-dark leading-snug mb-4 flex-1 tracking-tight">
                         {resource.title}
                       </h3>
 
@@ -250,7 +251,7 @@ export default function ResourceLibrary() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-10"
         >
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-sm leading-relaxed">
             All resources are free to download. For printed copies, please contact us at{' '}
             <a href="tel:0125421121" className="text-sanca-green font-medium hover:underline">
               012 542 1121

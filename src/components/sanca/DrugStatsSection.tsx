@@ -135,17 +135,17 @@ export default function DrugStatsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-green/10 text-sanca-green text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <AlertTriangle className="h-4 w-4" />
             National Statistics
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             South Africa&apos;s Substance <span className="text-gradient-gold">Crisis</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
             Understanding the scale of substance use in South Africa is essential to addressing it.
             These figures, drawn from SACENDU and SANCA national reporting, paint a clear picture
-            of the challenges our communities face.
+            of the challenges our communities face. Together, we can turn the tide.
           </p>
         </motion.div>
 
@@ -162,7 +162,7 @@ export default function DrugStatsSection() {
               <Card className="p-6 text-center shadow-premium-lg border-0 bg-white relative overflow-hidden hover-lift">
                 {/* Accent bar */}
                 <div className={`absolute top-0 left-0 right-0 h-1 ${stat.accent}`} />
-                <p className="font-serif text-4xl sm:text-5xl font-bold text-sanca-green-dark mb-2">
+                <p className="font-serif text-4xl sm:text-5xl font-bold text-sanca-green-dark mb-2 tracking-tight">
                   {stat.number}
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-[220px] mx-auto">
@@ -221,12 +221,12 @@ export default function DrugStatsSection() {
             <div className="p-4 sm:p-8">
               {/* Chart title */}
               <div className="mb-6">
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-sanca-green-dark">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-sanca-green-dark tracking-tight">
                   {activeTab === 'substance' && 'Treatment Admissions by Substance Type'}
                   {activeTab === 'trends' && 'Treatment Admission Trends (2019–2024)'}
                   {activeTab === 'age' && 'Age Demographics of Patients'}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-1">
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
                   {activeTab === 'substance' && 'Percentage of total treatment admissions across SANCA centres'}
                   {activeTab === 'trends' && 'Annual treatment admissions showing the impact of COVID-19 and recovery'}
                   {activeTab === 'age' && 'Distribution of patients by age group at first admission'}
@@ -312,7 +312,7 @@ export default function DrugStatsSection() {
                     <AlertTriangle className="h-5 w-5 text-sanca-gold flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold text-sanca-green-dark">COVID-19 Impact</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">
+                      <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
                         The 2020 dip reflects reduced access to treatment facilities during lockdown,
                         not a decline in substance use. Post-pandemic admissions have exceeded pre-COVID levels.
                       </p>
@@ -356,7 +356,7 @@ export default function DrugStatsSection() {
                     <Users className="h-5 w-5 text-sanca-green flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold text-sanca-green-dark">Youth at Risk</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">
+                      <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
                         43% of all patients entering treatment are under 25. SANCA Pretoria places
                         special emphasis on early intervention and youth-oriented programmes.
                       </p>
@@ -384,8 +384,8 @@ export default function DrugStatsSection() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="mt-12 text-center"
         >
-          <p className="text-muted-foreground mb-5 max-w-xl mx-auto">
-            If you or someone you know is struggling with substance use, take the first step today.
+          <p className="text-muted-foreground mb-5 max-w-xl mx-auto leading-relaxed">
+            If you or someone you know is struggling with substance use, take the first step today. You&apos;re not alone.
           </p>
           <Button
             onClick={() => document.getElementById('assessment')?.scrollIntoView({ behavior: 'smooth' })}

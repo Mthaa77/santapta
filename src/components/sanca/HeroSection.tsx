@@ -67,10 +67,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 backdrop-blur-md border border-sanca-gold/40 text-white text-sm mb-8 badge-pulse shadow-lg shadow-black/10"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/15 backdrop-blur-md border border-sanca-gold/40 text-white text-sm mb-8 badge-pulse shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),inset_0_1px_2px_rgba(197,150,58,0.1)]"
           >
             <Shield className="h-4 w-4 text-sanca-gold" />
-            <span>Established 1957 — 68 Years of Healing</span>
+            <span>Est. 1957 — Nearly Seven Decades of Healing and Hope</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -80,9 +80,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] mb-6"
           >
-            <span>Your Journey to </span>
+            <span>Your Path to </span>
             <span className="text-gradient-animated">Healing</span>
-            <span> Starts Here</span>
+            <span> Begins Here</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -92,8 +92,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg sm:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
           >
-            Accessible, affordable, and medically sound addiction recovery — serving
-            Pretoria, Soshanguve, and Hammanskraal. One person at a time.
+            Where compassion meets clinical excellence — accessible, affordable recovery
+            for Pretoria, Soshanguve, and Hammanskraal. Because every person deserves a second chance.
           </motion.p>
 
           {/* CTAs */}
@@ -109,7 +109,7 @@ export default function HeroSection() {
               className="bg-sanca-gold hover:bg-sanca-gold-dark text-white font-semibold text-base px-8 py-6 shadow-gold hover:shadow-xl transition-all duration-300 rounded-xl group btn-ripple"
             >
               <Heart className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Take the Self-Assessment
+              Check Your Wellbeing
             </Button>
             <Button
               onClick={() => document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' })}
@@ -118,7 +118,7 @@ export default function HeroSection() {
               className="border-2 border-white/40 text-white hover:bg-white/15 hover:border-white/70 font-semibold text-base px-8 py-6 bg-white/10 backdrop-blur-md transition-all duration-300 rounded-xl group shadow-lg shadow-black/10"
             >
               <Phone className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-              Admissions Process
+              How Admissions Work
             </Button>
           </motion.div>
 

@@ -73,17 +73,17 @@ export default function MedicalAidSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/15 text-sanca-gold-dark dark:text-sanca-gold text-sm font-semibold mb-4 shadow-sm border border-sanca-gold/20">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/15 text-sanca-gold-dark dark:text-sanca-gold text-sm font-semibold mb-4 shadow-sm border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <CreditCard className="h-4 w-4" />
             Costs & Medical Aid
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark mb-4 tracking-tight">
             Affordable <span className="text-gradient-gold">Care</span> for All
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
             Don&apos;t let medical aid confusion hold you back. The real cost is not rehab — it&apos;s the
             missed workdays, broken trust at home, and emergency medical bills that come from
-            waiting too long.
+            waiting too long. We&apos;re here to help you navigate the process.
           </p>
         </motion.div>
 
@@ -101,10 +101,11 @@ export default function MedicalAidSection() {
                 whileHover={{ y: -4 }}
               >
                 <Card className="p-6 shadow-premium-md hover:shadow-premium-lg transition-all duration-300 border-0 h-full">
-                  <div className={`w-12 h-12 rounded-xl ${point.bg} flex items-center justify-center mb-4`}>
+                  <div className={`relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mb-4 transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)]`}>
+                    <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                     <Icon className={`h-6 w-6 ${point.color}`} />
                   </div>
-                  <h4 className="font-serif font-bold text-sanca-green-dark mb-2">{point.title}</h4>
+                  <h4 className="font-serif font-bold text-sanca-green-dark mb-2 tracking-tight">{point.title}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">{point.description}</p>
                 </Card>
               </motion.div>
@@ -124,11 +125,12 @@ export default function MedicalAidSection() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                  <div className="relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center">
+                    <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                     <Scale className="h-6 w-6 text-sanca-gold-light" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-bold">Your Legal Right to Treatment</h3>
+                    <h3 className="font-serif text-xl font-bold tracking-tight">Your Legal Right to Treatment</h3>
                     <p className="text-sm text-white/60">Prescribed Minimum Benefits (PMB)</p>
                   </div>
                 </div>
@@ -173,11 +175,12 @@ export default function MedicalAidSection() {
           >
             <Card className="p-6 sm:p-8 shadow-premium-lg border-0 h-full">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-sanca-gold/10 flex items-center justify-center">
+                <div className="relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                   <Info className="h-6 w-6 text-sanca-gold" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-sanca-green-dark">How We Handle Medical Aid</h3>
+                  <h3 className="font-serif text-xl font-bold text-sanca-green-dark tracking-tight">How We Handle Medical Aid</h3>
                   <p className="text-sm text-muted-foreground">We manage the entire process for you</p>
                 </div>
               </div>
@@ -185,11 +188,12 @@ export default function MedicalAidSection() {
               <div className="space-y-4 mb-6">
                 {pmbSteps.map((step, i) => (
                   <div key={step.step} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-sanca-green text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+                    <div className="relative w-10 h-10 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center font-bold text-sm flex-shrink-0 text-sanca-green">
+                      <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                       {step.step}
                     </div>
                     <div>
-                      <h5 className="font-semibold text-sm text-foreground">{step.title}</h5>
+                      <h5 className="font-semibold text-sm text-foreground tracking-tight">{step.title}</h5>
                       <p className="text-xs text-muted-foreground">{step.desc}</p>
                     </div>
                   </div>
@@ -197,7 +201,7 @@ export default function MedicalAidSection() {
               </div>
 
               <div className="p-4 rounded-xl bg-sanca-gold/5 border border-sanca-gold/20 mb-4">
-                <p className="text-sm text-sanca-gold-dark flex items-start gap-2">
+                <p className="text-sm text-sanca-gold-dark flex items-start gap-2 leading-relaxed">
                   <AlertCircle className="h-4 w-4 mt-0.5 flex-shrink-0" />
                   Don&apos;t let medical aid confusion delay your recovery. We handle all the paperwork — you focus on healing.
                 </p>

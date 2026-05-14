@@ -145,16 +145,15 @@ export default function DiagnosisTips() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/10 dark:bg-sanca-gold/15 text-sanca-gold-dark dark:text-sanca-gold text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sanca-gold/10 dark:bg-sanca-gold/15 text-sanca-gold-dark dark:text-sanca-gold text-sm font-medium mb-4 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)]">
             <Lightbulb className="h-4 w-4" />
-            Recognition & Guidance
+            Know the Signs
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-4">
-            Spot the <span className="text-gradient-gold">Warning Signs</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4">
+            Recognising the <span className="text-gradient-gold">Signs That Matter</span>
           </h2>
-          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto">
-            Whether you&apos;re concerned about yourself, a loved one, a colleague, or your child —
-            knowing what to look for is the first step.
+          <p className="text-muted-foreground dark:text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
+            Whether you&apos;re worried about yourself, someone you love, a colleague, or your child — knowing what to look for is the first brave step.
           </p>
         </motion.div>
 
@@ -176,10 +175,11 @@ export default function DiagnosisTips() {
                   : 'bg-white dark:bg-[#0D3B22] border-gray-100 shadow-premium-sm hover:shadow-premium-md'
               }`}
             >
-              <div className={`w-10 h-10 rounded-xl ${tip.bgColor} flex items-center justify-center mb-3 ${tip.color}`}>
-                {tip.icon}
+              <div className="relative w-12 h-12 rounded-full border border-sanca-gold/30 bg-gradient-to-b from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mb-3 hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow">
+                <span className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                <span className={tip.color}>{tip.icon}</span>
               </div>
-              <h4 className={`font-serif font-bold text-sm ${tip.color}`}>{tip.category}</h4>
+              <h4 className={`font-serif font-bold tracking-tight text-sm ${tip.color}`}>{tip.category}</h4>
               <p className="text-xs text-muted-foreground mt-1">{tip.signs.length} warning signs</p>
               <ChevronRight className={`h-4 w-4 mt-2 transition-transform ${activeTip === tip.id ? 'rotate-90' : ''} ${tip.color}`} />
             </motion.button>
@@ -201,11 +201,12 @@ export default function DiagnosisTips() {
                 <Card className={`shadow-premium-lg dark:bg-[#0D3B22] border-2 ${tip.borderColor} overflow-hidden`}>
                   <div className={`${tip.bgColor} p-6 border-b ${tip.borderColor}`}>
                     <div className="flex items-center gap-3">
-                      <div className={`w-12 h-12 rounded-xl ${tip.bgColor} flex items-center justify-center ${tip.color}`}>
-                        {tip.icon}
+                      <div className="relative w-12 h-12 rounded-full border border-sanca-gold/30 bg-gradient-to-b from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center hover:shadow-[0_4px_12px_rgba(27,94,59,0.12)] transition-shadow">
+                        <span className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
+                        <span className={tip.color}>{tip.icon}</span>
                       </div>
                       <div>
-                        <h3 className={`font-serif text-xl font-bold ${tip.color}`}>
+                        <h3 className={`font-serif text-xl font-bold tracking-tight ${tip.color}`}>
                           {tip.category}
                         </h3>
                         <p className="text-xs text-muted-foreground">Warning signs to watch for</p>

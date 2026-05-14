@@ -53,10 +53,10 @@ export default function NewsletterSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-sanca-gold/20 shadow-[inset_0_1px_2px_rgba(197,150,58,0.1)] text-white/90 text-sm font-medium mb-6"
             >
               <Mail className="h-4 w-4 text-sanca-gold-light" />
-              Newsletter
+              Stay Connected
             </motion.span>
 
             {/* Heading */}
@@ -65,7 +65,7 @@ export default function NewsletterSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight"
             >
               Stay Connected<br />
               with <span className="text-gradient-gold">SANCA</span>
@@ -80,7 +80,7 @@ export default function NewsletterSection() {
               className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8 max-w-lg"
             >
               Receive recovery tips, the latest news, and event updates straight to your inbox.
-              Stay informed about our programmes and community initiatives.
+              Stay informed about our programmes and community initiatives. We&apos;re in this together.
             </motion.p>
 
             {/* Email form */}
@@ -176,7 +176,8 @@ export default function NewsletterSection() {
 
               {/* Center icon */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-sm shadow-gold">
+                <div className="relative w-24 h-24 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center backdrop-blur-sm shadow-gold">
+                  <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                   <Mail className="h-12 w-12 text-sanca-gold-light" />
                 </div>
               </div>
