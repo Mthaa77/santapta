@@ -79,11 +79,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] mb-6"
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight"
           >
             <span>Your Journey to </span>
             <span className="text-gradient-animated">Healing</span>
-            <span> Starts Right Here</span>
+            <span> Starts Here</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -91,7 +91,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg sm:text-xl text-white/80 max-w-2xl mb-10 leading-relaxed"
+            className="text-lg sm:text-xl text-white/85 max-w-2xl mb-12 leading-relaxed font-light"
           >
             Where heartfelt compassion meets world-class clinical care — accessible, affordable recovery
             for Pretoria, Soshanguve, Hammanskraal, and the greater Tshwane area. Set within
@@ -152,22 +152,22 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.3 }}
-            className="mt-12 grid grid-cols-3 gap-3 sm:gap-4 max-w-lg"
+            className="mt-14 grid grid-cols-3 gap-4 sm:gap-6 max-w-lg"
           >
-            <div className="flex flex-col items-center gap-1 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-sm border border-white/10 text-center">
-              <Award className="h-4 w-4 text-sanca-gold/80" />
-              <span className="text-white font-bold text-sm sm:text-base">68+</span>
-              <span className="text-white/50 text-[10px] sm:text-xs leading-tight">Years of Service</span>
+            <div className="flex flex-col items-center gap-2 px-4 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 text-center hover:bg-white/15 transition-colors duration-300">
+              <Award className="h-5 w-5 text-sanca-gold/90" />
+              <span className="text-white font-serif font-bold text-base sm:text-lg tracking-tight">68+</span>
+              <span className="text-white/60 text-xs sm:text-sm leading-snug font-medium">Years of Service</span>
             </div>
-            <div className="flex flex-col items-center gap-1 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-sm border border-white/10 text-center">
-              <Users className="h-4 w-4 text-sanca-gold/80" />
-              <span className="text-white font-bold text-sm sm:text-base">32</span>
-              <span className="text-white/50 text-[10px] sm:text-xs leading-tight">Societies Nationwide</span>
+            <div className="flex flex-col items-center gap-2 px-4 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 text-center hover:bg-white/15 transition-colors duration-300">
+              <Users className="h-5 w-5 text-sanca-gold/90" />
+              <span className="text-white font-serif font-bold text-base sm:text-lg tracking-tight">32</span>
+              <span className="text-white/60 text-xs sm:text-sm leading-snug font-medium">Societies</span>
             </div>
-            <div className="flex flex-col items-center gap-1 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-sm border border-white/10 text-center">
-              <Star className="h-4 w-4 text-sanca-gold/80" />
-              <span className="text-white font-bold text-sm sm:text-base">1000+</span>
-              <span className="text-white/50 text-[10px] sm:text-xs leading-tight">Patients Annually</span>
+            <div className="flex flex-col items-center gap-2 px-4 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 text-center hover:bg-white/15 transition-colors duration-300">
+              <Star className="h-5 w-5 text-sanca-gold/90" />
+              <span className="text-white font-serif font-bold text-base sm:text-lg tracking-tight">1000+</span>
+              <span className="text-white/60 text-xs sm:text-sm leading-snug font-medium">Patients/Year</span>
             </div>
           </motion.div>
         </div>
@@ -178,11 +178,11 @@ export default function HeroSection() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute right-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-3"
+        className="fixed bottom-8 right-8 xl:absolute xl:right-6 xl:top-1/2 xl:-translate-y-1/2 flex flex-col gap-3 z-50"
       >
         <a
           href="tel:0125421121"
-          className="group relative flex items-center gap-2 bg-sanca-green text-white px-4 py-3 rounded-xl shadow-premium-xl hover:shadow-premium-2xl transition-all duration-300 hover:scale-105 premium-focus"
+          className="group relative flex items-center gap-2 bg-sanca-green hover:bg-sanca-green-dark text-white px-5 py-3 rounded-xl shadow-premium-xl hover:shadow-premium-2xl transition-all duration-300 hover:scale-105 premium-focus"
         >
           <Phone className="h-4 w-4 group-hover:animate-bounce-gentle" />
           <span className="text-sm font-medium">Call Now</span>
@@ -192,7 +192,7 @@ export default function HeroSection() {
           href="https://wa.me/27813181511"
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex items-center gap-2 bg-sanca-emerald text-white px-4 py-3 rounded-xl shadow-premium-xl hover:shadow-premium-2xl transition-all duration-300 hover:scale-105 premium-focus"
+          className="group relative flex items-center gap-2 bg-sanca-emerald hover:bg-sanca-green text-white px-5 py-3 rounded-xl shadow-premium-xl hover:shadow-premium-2xl transition-all duration-300 hover:scale-105 premium-focus"
         >
           <MessageCircle className="h-4 w-4 group-hover:animate-bounce-gentle" />
           <span className="text-sm font-medium">WhatsApp</span>

@@ -145,19 +145,23 @@
   }
   h1 {
     letter-spacing: -0.025em;
-    line-height: 1.08;
+    line-height: 1.1;
+    font-weight: 700;
   }
   h2 {
     letter-spacing: -0.02em;
-    line-height: 1.12;
+    line-height: 1.15;
+    font-weight: 700;
   }
   h3 {
     letter-spacing: -0.015em;
-    line-height: 1.2;
+    line-height: 1.25;
+    font-weight: 700;
   }
   p {
     font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
     hyphens: auto;
+    line-height: 1.6;
   }
 }
 
@@ -295,6 +299,10 @@
 
 .shadow-premium-xl {
   box-shadow: 0 20px 25px rgba(27, 94, 59, 0.1), 0 40px 50px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-premium-2xl {
+  box-shadow: 0 25px 35px rgba(27, 94, 59, 0.12), 0 50px 70px rgba(0, 0, 0, 0.15);
 }
 
 .shadow-gold {
