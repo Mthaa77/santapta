@@ -359,6 +359,47 @@ export default function AboutSection() {
           <VisionCard />
         </div>
 
+        {/* African Sunset Divider Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mb-20 group"
+        >
+          <div className="relative w-full h-40 sm:h-48 md:h-56 rounded-2xl overflow-hidden shadow-premium-lg">
+            {/* Gold accent corners — top-left */}
+            <div className="absolute top-0 left-0 w-10 h-10 z-20 pointer-events-none">
+              <div className="absolute top-3 left-3 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+              <div className="absolute top-3 left-3 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+            </div>
+            {/* Gold accent corners — bottom-right */}
+            <div className="absolute bottom-0 right-0 w-10 h-10 z-20 pointer-events-none">
+              <div className="absolute bottom-3 right-3 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+              <div className="absolute bottom-3 right-3 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+            </div>
+
+            <img
+              src="/images/sanca/african-sunset-hope.png"
+              alt="African sunset with golden clouds — a symbol of hope and new beginnings"
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+
+            {/* Gradient overlay from both sides */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/70" />
+
+            {/* Centered text overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight drop-shadow-lg text-center px-4">
+                Rooted in Africa, Reaching for Tomorrow
+              </h3>
+              <p className="text-white/80 text-sm sm:text-base mt-2 drop-shadow-md">
+                Our values guide everything we do
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* C.A.I.R.U.P. Values */}
         <div className="mb-20">
           <ValuesGrid />

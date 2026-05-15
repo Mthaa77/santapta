@@ -584,6 +584,34 @@ export default function ContactSection() {
                 </p>
               </Card>
             </motion.div>
+
+            {/* Consultation room image */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="group rounded-2xl overflow-hidden shadow-premium-md"
+            >
+              {/* Gold gradient accent line at top */}
+              <div className="h-[2px] bg-gradient-to-r from-sanca-gold to-sanca-gold-light" />
+
+              {/* Image container */}
+              <div className="relative overflow-hidden">
+                <img
+                  src="/images/sanca/consultation-warm.png"
+                  alt="Warm and inviting consultation room at SANCA Pretoria — a safe space to share your story"
+                  className="w-full h-48 sm:h-56 object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+
+                {/* Gradient overlay at bottom with text */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-sanca-green-dark/80 via-sanca-green-dark/40 to-transparent pt-12 pb-4 px-5">
+                  <p className="text-white font-serif text-sm sm:text-base italic leading-snug drop-shadow-md">
+                    &ldquo;A safe space to share your story&rdquo;
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
 

@@ -59,6 +59,60 @@ export default function VolunteerSection() {
           </p>
         </motion.div>
 
+        {/* Hero Image Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative rounded-2xl overflow-hidden mb-12 sm:mb-16 group"
+        >
+          {/* Gold accent corners — top-left */}
+          <div className="absolute top-0 left-0 w-8 h-8 z-20 pointer-events-none">
+            <div className="absolute top-2 left-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
+            <div className="absolute top-2 left-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
+          </div>
+          {/* Gold accent corners — bottom-right */}
+          <div className="absolute bottom-0 right-0 w-8 h-8 z-20 pointer-events-none">
+            <div className="absolute bottom-2 right-2 w-5 h-[2px] bg-sanca-gold/50 rounded-full" />
+            <div className="absolute bottom-2 right-2 w-[2px] h-5 bg-sanca-gold/50 rounded-full" />
+          </div>
+
+          {/* Banner image */}
+          <img
+            src="/images/sanca/volunteer-community.png"
+            alt="Community volunteers working together to build stronger communities"
+            className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+
+          {/* Gradient overlay — left (dark) to right (lighter) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
+
+          {/* Text overlay */}
+          <div className="absolute inset-0 flex items-center z-10">
+            <div className="px-6 sm:px-10 md:px-14 max-w-xl">
+              <motion.h3
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight"
+              >
+                Together, We Build Stronger Communities
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="mt-2 sm:mt-3 text-white/80 text-sm sm:text-base max-w-sm"
+              >
+                Every act of kindness creates ripples of hope and healing.
+              </motion.p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Two Cards */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {/* Volunteer Card */}
@@ -114,6 +168,23 @@ export default function VolunteerSection() {
                   ))}
                 </ul>
 
+                {/* Circular accent image */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className="flex justify-center mb-6"
+                >
+                  <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-sanca-green/20 shadow-premium-md">
+                    <img
+                      src="/images/sanca/volunteer-community.png"
+                      alt="Volunteers making a difference in the community"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
+
                 {/* CTA Button */}
                 <Button
                   variant="outline"
@@ -162,7 +233,7 @@ export default function VolunteerSection() {
                 </p>
 
                 {/* Impact cards */}
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-6">
                   {donationImpacts.map((impact, i) => (
                     <motion.div
                       key={impact.amount}
@@ -179,6 +250,23 @@ export default function VolunteerSection() {
                     </motion.div>
                   ))}
                 </div>
+
+                {/* Accent image — growth sprout */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                  className="flex justify-end mb-6"
+                >
+                  <div className="w-32 h-32 rounded-2xl overflow-hidden shadow-premium-md border border-sanca-gold/15">
+                    <img
+                      src="/images/sanca/growth-sprout-hands.png"
+                      alt="Hands nurturing a plant sprout — symbolising growth through support"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </motion.div>
 
                 {/* CTA Button */}
                 <Button

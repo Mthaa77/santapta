@@ -120,6 +120,46 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
+        {/* Image Banner — Visual Bridge Between Stats & Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="relative w-full h-40 sm:h-48 md:h-56 rounded-2xl overflow-hidden group mb-12"
+        >
+          {/* Gold accent corners — top-left */}
+          <div className="absolute top-0 left-0 w-10 h-10 z-20 pointer-events-none">
+            <div className="absolute top-3 left-3 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+            <div className="absolute top-3 left-3 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+          </div>
+          {/* Gold accent corners — bottom-right */}
+          <div className="absolute bottom-0 right-0 w-10 h-10 z-20 pointer-events-none">
+            <div className="absolute bottom-3 right-3 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+            <div className="absolute bottom-3 right-3 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+          </div>
+
+          {/* Image */}
+          <img
+            src="/images/sanca/group-support-circle.png"
+            alt="Support circle of diverse people sharing their recovery stories at SANCA Pretoria"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+
+          {/* Gradient overlay — left dark, right dark, center lighter */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/70" />
+
+          {/* Center text overlay */}
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="text-center px-4">
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight drop-shadow-lg">
+                Real Stories. Real Hope. Real Recovery.
+              </h3>
+              <div className="mt-2 mx-auto w-16 h-[2px] bg-sanca-gold/70 rounded-full" />
+            </div>
+          </div>
+        </motion.div>
+
         {/* Testimonial Carousel */}
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-premium-2xl border-0 overflow-hidden">

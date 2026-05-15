@@ -155,6 +155,48 @@ export default function AdmissionsSection() {
           </p>
         </motion.div>
 
+        {/* Hero Image Banner — Welcoming Entrance */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="relative w-full h-40 sm:h-48 md:h-56 rounded-2xl overflow-hidden group mb-12"
+        >
+          {/* Gold accent corners — top-left */}
+          <div className="absolute top-0 left-0 w-10 h-10 z-20 pointer-events-none">
+            <div className="absolute top-3 left-3 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+            <div className="absolute top-3 left-3 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+          </div>
+          {/* Gold accent corners — bottom-right */}
+          <div className="absolute bottom-0 right-0 w-10 h-10 z-20 pointer-events-none">
+            <div className="absolute bottom-3 right-3 w-6 h-[2px] bg-sanca-gold/60 rounded-full" />
+            <div className="absolute bottom-3 right-3 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
+          </div>
+
+          {/* Image */}
+          <img
+            src="/images/sanca/admissions-welcome.png"
+            alt="Welcoming entrance to the Castle Carey rehabilitation facility at SANCA Pretoria"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+
+          {/* Gradient overlay — left dark, right lighter */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
+
+          {/* Text overlay — left side */}
+          <div className="absolute inset-0 flex items-center z-10 pl-6 sm:pl-10 md:pl-14">
+            <div>
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight drop-shadow-lg">
+                Your Journey Starts at Our Door
+              </h3>
+              <p className="text-white/80 text-sm sm:text-base mt-1.5 drop-shadow-md">
+                Castle Carey Clinic — Where Healing Begins
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Interactive Stepper */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Step List */}
@@ -365,8 +407,13 @@ export default function AdmissionsSection() {
           className="mt-12"
         >
           <div className="text-center mb-8">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark dark:text-white tracking-tight">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-sanca-green-dark dark:text-white tracking-tight flex items-center gap-3 justify-center">
               Why These <span className="text-gradient-gold">Rules</span> Exist
+              <img
+                src="/images/sanca/lotus-healing-abstract.png"
+                alt="Lotus flower — a symbol of healing and renewal"
+                className="w-16 h-16 rounded-full border-2 border-sanca-gold/30 object-cover flex-shrink-0"
+              />
             </h3>
             <p className="text-muted-foreground dark:text-white/70 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
               Every rule at Castle Carey is grounded in clinical evidence and designed to give you the strongest possible foundation for lasting recovery.

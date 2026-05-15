@@ -35,6 +35,14 @@ export default function CEOWelcomeSection() {
                 <div className="h-1 bg-gradient-to-r from-sanca-green via-sanca-gold to-sanca-emerald" />
 
                 <div className="p-8 sm:p-10 lg:p-12 relative">
+                  {/* Lotus watermark — subtle decorative accent */}
+                  <img
+                    src="/images/sanca/lotus-healing-abstract.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute bottom-4 right-4 w-48 h-48 sm:w-56 sm:h-56 object-contain opacity-[0.06] pointer-events-none select-none dark:opacity-[0.04]"
+                  />
+
                   {/* Decorative quote mark */}
                   <span className="absolute top-4 left-6 sm:top-6 sm:left-8 text-7xl sm:text-8xl font-serif text-sanca-gold/10 leading-none select-none">
                     &ldquo;

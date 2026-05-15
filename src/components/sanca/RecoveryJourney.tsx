@@ -30,6 +30,8 @@ interface Phase {
   borderColor: string;
   quote: string;
   emoji: string;
+  image: string;
+  imageAlt: string;
 }
 
 const phases: Phase[] = [
@@ -48,6 +50,8 @@ const phases: Phase[] = [
     borderColor: 'border-sanca-green-light',
     quote: '"Even the longest journey begins with a single, courageous step." — Inspired by an African proverb',
     emoji: '🤝',
+    image: '/images/sanca/recovery-reaching-out.png',
+    imageAlt: 'A hand reaching out in solidarity and hope — the first step of recovery',
   },
   {
     id: 2,
@@ -64,6 +68,8 @@ const phases: Phase[] = [
     borderColor: 'border-sanca-emerald',
     quote: '"When you understand your own story, you begin to rewrite it." — South African saying',
     emoji: '📋',
+    image: '/images/sanca/recovery-assessment.png',
+    imageAlt: 'A compassionate assessment session — understanding your unique needs',
   },
   {
     id: 3,
@@ -80,6 +86,8 @@ const phases: Phase[] = [
     borderColor: 'border-sanca-gold',
     quote: '"Courage is not the absence of fear, but the triumph over it." — Nelson Mandela',
     emoji: '💪',
+    image: '/images/sanca/recovery-detox.png',
+    imageAlt: 'Safe and supported medical detoxification — healing with care',
   },
   {
     id: 4,
@@ -96,6 +104,8 @@ const phases: Phase[] = [
     borderColor: 'border-sanca-green',
     quote: '"Each new day brings a chance to rebuild, to grow, and to become the person you were meant to be." — Inspired by Desmond Tutu',
     emoji: '🧠',
+    image: '/images/sanca/recovery-treatment.png',
+    imageAlt: 'Therapeutic treatment sessions — building a stronger foundation',
   },
   {
     id: 5,
@@ -112,6 +122,8 @@ const phases: Phase[] = [
     borderColor: 'border-sanca-gold-dark',
     quote: '"Ubuntu — I am because we are." — African philosophy',
     emoji: '👨‍👩‍👧‍👦',
+    image: '/images/sanca/recovery-family.png',
+    imageAlt: 'Families healing together — rebuilding bonds and trust',
   },
   {
     id: 6,
@@ -128,6 +140,8 @@ const phases: Phase[] = [
     borderColor: 'border-sanca-green-dark',
     quote: '"A journey of recovery is walked one day at a time — and every day you keep going is a victory." — South African wisdom',
     emoji: '🛡️',
+    image: '/images/sanca/recovery-aftercare.png',
+    imageAlt: 'Ongoing aftercare support — your lifeline continues',
   },
 ];
 
@@ -398,8 +412,20 @@ export default function RecoveryJourney() {
                         <div className="absolute bottom-0 left-0 w-16 h-16 bg-sanca-gold/10 rounded-full translate-y-1/2 -translate-x-1/2" />
 
                         <div className="relative">
-                          {/* Illustration area */}
-                          <div className="text-4xl mb-3">{currentPhase.emoji}</div>
+                          {/* Illustration area — AI-generated phase image */}
+                          <div className="group relative mb-4 rounded-xl overflow-hidden shadow-premium-md">
+                            {/* Gold gradient accent at top */}
+                            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-sanca-gold via-sanca-gold-light to-sanca-gold z-10" />
+                            <img
+                              src={currentPhase.image}
+                              alt={currentPhase.imageAlt}
+                              className="w-full h-36 sm:h-44 object-cover rounded-xl transition-transform duration-500 ease-out group-hover:scale-105"
+                            />
+                            {/* Emoji overlay badge */}
+                            <div className="absolute bottom-2 left-2 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-lg shadow-premium-sm border border-sanca-gold/30">
+                              {currentPhase.emoji}
+                            </div>
+                          </div>
 
                           <Quote className="h-5 w-5 text-sanca-gold-light mb-2 opacity-70" />
 

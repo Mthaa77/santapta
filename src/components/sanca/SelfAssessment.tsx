@@ -200,7 +200,7 @@ export default function SelfAssessment() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <Card className="shadow-premium-2xl border-0 overflow-hidden">
             {/* Progress Bar */}
@@ -213,8 +213,24 @@ export default function SelfAssessment() {
               />
             </div>
 
-            <div className="p-6 sm:p-8">
-              <AnimatePresence mode="wait">
+            {/* Mobile Banner */}
+            <div className="md:hidden h-32 relative overflow-hidden">
+              <img
+                src="/images/sanca/serene-garden-morning.png"
+                alt="Serene healing garden with morning dew"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-sanca-green-dark/60 via-sanca-green-dark/40 to-sanca-green-dark/70" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                <span className="text-white/80 text-xs font-medium uppercase tracking-widest mb-1 drop-shadow-md">You&apos;re Not Alone</span>
+                <h3 className="text-white font-serif text-lg font-bold drop-shadow-lg">Take the First Step</h3>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-5">
+              {/* Left Column - Quiz Content */}
+              <div className="md:col-span-3 p-6 sm:p-8">
+                <AnimatePresence mode="wait">
                 {!showResult ? (
                   <motion.div
                     key={`q-${currentQ}`}
@@ -433,7 +449,31 @@ export default function SelfAssessment() {
                     </p>
                   </motion.div>
                 )}
-              </AnimatePresence>
+                </AnimatePresence>
+              </div>
+
+              {/* Right Column - Image Panel */}
+              <div className="hidden md:flex md:col-span-2 relative flex-col justify-between min-h-[480px]">
+                <img
+                  src="/images/sanca/serene-garden-morning.png"
+                  alt="Serene healing garden with morning dew"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-sanca-green-dark/80" />
+                <div className="relative z-10 flex flex-col justify-between h-full p-6 lg:p-8 text-white">
+                  <div>
+                    <span className="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-xs font-medium uppercase tracking-widest mb-4 drop-shadow-md">You&apos;re Not Alone</span>
+                    <h3 className="font-serif text-2xl lg:text-3xl font-bold drop-shadow-lg mb-3">Take the First Step</h3>
+                    <p className="text-white/80 text-sm leading-relaxed drop-shadow-md max-w-[200px]">A confidential self-assessment to help you understand your relationship with substances.</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-sanca-gold/80 flex items-center justify-center">
+                      <span className="text-white text-[10px] font-bold">S</span>
+                    </div>
+                    <span className="text-white/60 text-xs font-medium">SANCA Pretoria</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </Card>
         </motion.div>

@@ -554,12 +554,21 @@ export default function FamiliesSection() {
           transition={{ duration: 0.6 }}
         >
           <Card className="shadow-premium-2xl border-0 overflow-hidden">
-            <div className="bg-gradient-to-br from-sanca-green-dark via-sanca-green to-sanca-emerald p-8 sm:p-12 text-center relative">
+            <div className="p-8 sm:p-12 text-center relative overflow-hidden bg-gradient-to-br from-sanca-green-dark via-sanca-green to-sanca-emerald">
+              {/* Meditation garden background image */}
+              <img
+                src="/images/sanca/meditation-garden.png"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* Gradient overlay on top of image for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-br from-sanca-green-dark/95 via-sanca-green/90 to-sanca-emerald/85" />
               {/* Decorative circles */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none z-[1]" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3 pointer-events-none z-[1]" />
 
-              <div className="relative">
+              <div className="relative z-10">
                 <div className="relative w-14 h-14 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center mx-auto mb-6">
                   <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
                   <Heart className="h-7 w-7 text-sanca-gold-light" />
