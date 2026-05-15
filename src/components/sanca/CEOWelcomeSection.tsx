@@ -42,36 +42,52 @@ export default function CEOWelcomeSection() {
 
                   <div className="relative">
                     <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-8 leading-snug tracking-tight section-heading">
-                      Welcome to <span className="text-gradient-gold">SANCA Pretoria</span>
+                      Welcome to <span className="text-gradient-gold">SANCA Pretoria</span>{' '}
+                      <span className="block sm:inline">Castle Carey Clinic</span>
                     </h2>
 
                     <div className="space-y-5 text-foreground/90 dark:text-white/85 text-base sm:text-lg leading-relaxed font-light">
                       <p>
-                        For nearly seven decades, SANCA Pretoria has stood as a beacon of hope for
-                        individuals and families affected by substance misuse. What began in 1957 as
-                        one of eight founding societies of SANCA National has grown into a
-                        multi-clinic operation serving communities across Pretoria, Soshanguve, and
-                        Hammanskraal.
+                        Since 1957, SANCA Pretoria Castle Carey Clinic has been a cornerstone of
+                        healing and hope in our community. As one of the eight founding societies of
+                        SANCA National, our legacy is rooted in nearly seven decades of unwavering
+                        commitment to individuals and families affected by substance misuse — and
+                        today, that commitment burns brighter than ever.
                       </p>
                       <p>
-                        Set within tranquil, landscaped gardens, our facilities provide a serene
-                        sanctuary where healing begins the moment you arrive. The quiet beauty of
-                        our grounds offers a gentle reminder that recovery, like nature, unfolds
-                        one step at a time — and that even in the most difficult seasons, new
-                        growth is always possible.
+                        Nestled within tranquil, beautifully landscaped gardens in Elandsoord,
+                        Castle Carey Clinic offers a serene sanctuary where the journey to recovery
+                        begins the moment you walk through our gates. The quiet rustle of trees and
+                        the warmth of our welcome serve as a gentle reminder that healing, like
+                        nature itself, unfolds one step at a time — and that even in your darkest
+                        season, new growth is always possible.
                       </p>
                       <p>
-                        We believe that every person — regardless of background, circumstance, or
-                        financial means — deserves access to compassionate, evidence-based treatment.
-                        Addiction is not a moral failing; it is a treatable medical condition, and
-                        recovery is absolutely possible with the right support.
+                        Our approach is grounded in a simple but powerful belief:{' '}
+                        <span className="font-semibold text-sanca-green dark:text-sanca-gold">every person — regardless
+                        of background, circumstance, or financial means — deserves access to
+                        compassionate, evidence-based treatment.</span> Addiction is not a moral
+                        failing; it is a treatable medical condition, and recovery is not only
+                        possible — it is probable — when met with the right support, the right
+                        people, and the right environment.
+                      </p>
+                      <p>
+                        Castle Carey Clinic provides a comprehensive continuum of care: from
+                        medically supervised inpatient detoxification and structured rehabilitation
+                        at our flagship facility, to specialised youth services at Lapalamé Youth
+                        Drug Unit, and accessible outpatient counselling at our Soshanguve and
+                        Hammanskraal satellite clinics. Every programme is delivered by a dedicated
+                        multidisciplinary team of social workers, medical professionals, psychologists,
+                        and trained counsellors who bring both clinical expertise and genuine heart
+                        to the work they do.
                       </p>
                       <p>
                         Whether you are reaching out for yourself, a loved one, or simply seeking
-                        guidance, I want you to know: <span className="font-semibold text-sanca-green dark:text-sanca-gold">you are not alone, and it is never too
-                        late to begin again.</span> Our dedicated team of social workers, medical
-                        professionals, and counsellors is here to walk alongside you every step of
-                        the way — not to judge, but to journey with you toward the life you deserve.
+                        guidance, I want you to know:{' '}
+                        <span className="font-semibold text-sanca-green dark:text-sanca-gold">you are not alone, and it
+                        is never too late to begin again.</span> We are not here to judge — we are
+                        here to journey alongside you, to help you rediscover your strength, and to
+                        walk with you toward the healthier, fuller life you deserve.
                       </p>
                     </div>
 
