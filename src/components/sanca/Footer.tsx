@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, Heart, Shield, ExternalLink, ArrowUp, MessageCircle, Navigation } from 'lucide-react';
 
 const quickLinks = [
@@ -63,7 +64,10 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-12 h-12 rounded-full border-[1.5px] border-sanca-gold/25 bg-gradient-to-br from-sanca-green/8 to-sanca-cream/5 flex items-center justify-center shadow-gold overflow-hidden">
                 <div className="absolute -top-[1.5px] left-1/2 -translate-x-1/2 w-[3px] h-[3px] rounded-full bg-sanca-gold" />
-                <img src="/images/sanca/sanca-logo-official.png" alt="SANCA Pretoria Logo" className="w-full h-full object-contain p-1" />
+                {/* SVG Caduceus Icon */}
+                <svg className="w-6 h-6 text-sanca-gold" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                </svg>
               </div>
               <div>
                 <p className="font-serif font-bold text-xl tracking-tight">SANCA Pretoria</p>
@@ -236,8 +240,49 @@ export default function Footer() {
           </motion.div>
         </div>
 
+        {/* Partners Row */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/30 mb-5 text-center sm:text-left">
+            In Collaboration With
+          </p>
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-8 sm:gap-12">
+            <a
+              href="https://www.up.ac.za"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="University of Pretoria — Academic Research & Training Partner"
+              className="opacity-50 hover:opacity-100 transition-opacity duration-300"
+            >
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/UP_edit_18542722435737-WhoBDgielGj1QzPnz6jTvc2AZVdTF9.png"
+                alt="University of Pretoria"
+                width={200}
+                height={60}
+                className="h-12 w-auto object-contain brightness-0 invert"
+                sizes="200px"
+              />
+            </a>
+            <a
+              href="https://www.dsd.gov.za"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Department of Social Development — Republic of South Africa"
+              className="opacity-50 hover:opacity-100 transition-opacity duration-300"
+            >
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%281%29-52F4zYYrJj6QmQi1Wlo1F41ZmQeWcl.png"
+                alt="Department of Social Development — Republic of South Africa"
+                width={220}
+                height={60}
+                className="h-12 w-auto object-contain brightness-0 invert"
+                sizes="220px"
+              />
+            </a>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} SANCA Pretoria / Soshanguve / Hammanskraal. All rights reserved.
           </p>

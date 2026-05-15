@@ -41,7 +41,7 @@ export default function CEOWelcomeSection() {
                   </span>
 
                   <div className="relative">
-                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-sanca-green-dark dark:text-white mb-8 leading-snug tracking-tight">
+                    <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-sanca-green-dark dark:text-white mb-8 leading-snug tracking-tight section-heading">
                       Welcome to <span className="text-gradient-gold">SANCA Pretoria</span>
                     </h2>
 

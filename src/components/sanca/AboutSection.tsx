@@ -342,7 +342,7 @@ export default function AboutSection() {
             <Heart className="h-4 w-4" />
             Who We Are — A Family of Care
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient section-heading-lg">
             A Legacy of <span className="text-gradient-gold">Healing</span>, Hope, and Humanity
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg max-w-3xl mx-auto leading-relaxed">

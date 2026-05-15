@@ -150,7 +150,7 @@ export default function ProgrammesSection() {
             <Stethoscope className="h-4 w-4" />
             Our Programmes
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient section-heading-lg">
             Care That Meets You <span className="text-gradient-gold">Where You Are</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">

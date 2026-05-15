@@ -3,6 +3,7 @@
 import Navbar from '@/components/sanca/Navbar';
 import HeroSection from '@/components/sanca/HeroSection';
 import HeroTicker from '@/components/sanca/HeroTicker';
+import PartnersStrip from '@/components/sanca/PartnersStrip';
 import CEOWelcomeSection from '@/components/sanca/CEOWelcomeSection';
 import SelfAssessment from '@/components/sanca/SelfAssessment';
 import RecoveryVisualizer from '@/components/sanca/RecoveryVisualizer';
@@ -47,6 +48,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <HeroTicker />
+        <PartnersStrip />
         <CEOWelcomeSection />
         <div className="parallax-divider" />
         <SelfAssessment />

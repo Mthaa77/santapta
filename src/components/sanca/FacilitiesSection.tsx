@@ -180,7 +180,7 @@ export default function FacilitiesSection() {
             <MapPin className="h-4 w-4" />
             Our Clinics
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-sanca-green-dark dark:text-white mb-4 heading-gradient section-heading-lg">
             Four Facilities, <span className="text-gradient-gold">One Purpose</span>
           </h2>
           <p className="text-muted-foreground dark:text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
