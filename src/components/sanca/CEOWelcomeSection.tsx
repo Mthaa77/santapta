@@ -79,16 +79,22 @@ export default function CEOWelcomeSection() {
                     <div className="mt-10 pt-8 border-t border-sanca-gold/20">
                       <div className="flex items-start gap-5">
                         <div className="flex-shrink-0">
-                          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-sanca-gold to-sanca-gold-dark flex items-center justify-center shadow-premium-md border border-sanca-gold/30">
-                            <span className="text-white font-serif font-bold text-2xl sm:text-3xl">L.M.</span>
+                          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shadow-premium-md border-2 border-sanca-gold/40 relative">
+                            <Image
+                              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2015%2C%202026%2C%2002_26_26%20PM-Jb5EVZp5BzbDSW5RmzAMfT4TtaPVzu.png"
+                              alt="Celeste du Preez"
+                              fill
+                              className="object-cover object-top"
+                              sizes="96px"
+                            />
                           </div>
                         </div>
                         <div className="pt-1">
                           <p className="font-serif text-xl sm:text-2xl font-bold text-sanca-green-dark dark:text-white tracking-tight">
-                            Advocate L. Mathebula
+                            Celeste Du Preez
                           </p>
                           <p className="text-sm sm:text-base text-sanca-gold-dark dark:text-sanca-gold font-semibold mt-1">
-                            Chief Executive Officer
+                            Centre Manager, Castle Carey Clinic
                           </p>
                           <p className="text-xs sm:text-sm text-muted-foreground dark:text-white/70 mt-2 font-medium">
                             SANCA Pretoria &mdash; Est. 1957
@@ -104,7 +110,7 @@ export default function CEOWelcomeSection() {
 
           {/* Right: Image, Quote & Commitment */}
           <div className="lg:col-span-2 space-y-5">
-            {/* Garden Courtyard Image */}
+            {/* CEO Portrait Graphic */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -122,23 +128,15 @@ export default function CEOWelcomeSection() {
                   <div className="absolute bottom-2 right-2 w-[2px] h-6 bg-sanca-gold/60 rounded-full" />
                 </div>
 
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-[3/4]">
                   <Image
-                    src="/images/sanca/garden-courtyard.jpg"
-                    alt="Beautiful garden courtyard at SANCA Pretoria's Castle Carey Clinic with stepping stones and lush greenery"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2015%2C%202026%2C%2002_26_26%20PM-Jb5EVZp5BzbDSW5RmzAMfT4TtaPVzu.png"
+                    alt="Celeste du Preez, Centre Manager of SANCA Castle Carey Clinic, speaking at a SANCA podium"
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 40vw"
+                    priority
                   />
-                  {/* Bottom overlay gradient with caption */}
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-16 pb-4 px-5">
-                    <p className="text-white text-sm font-serif font-semibold leading-snug">
-                      Our Healing Gardens
-                    </p>
-                    <p className="text-white/80 text-xs mt-0.5">
-                      Castle Carey Clinic, Pretoria North
-                    </p>
-                  </div>
                 </div>
               </div>
             </motion.div>
